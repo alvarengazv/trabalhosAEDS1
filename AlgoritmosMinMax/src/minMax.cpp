@@ -1,24 +1,31 @@
 #include "minMax.hpp"
 
-void deletaVetor(int *&vetor){
-    delete vetor;
-}
-
 void controladorMinMax(int *&vetor, int n, int &min, int &max, int *tamanhos){    
-    for(int i = 0; i < 4; i++){
-        preencheVetor(vetor, tamanhos[i]);
+    std::ofstream arquivo;
+    std::string linha;
+    arquivo.open("medias.csv", std::ios::app);
 
-        for(int j = 0; j < 3; j++){
-            mudarOrdem(vetor, tamanhos[i], j);
-            encontraMediaMinMax1(vetor, tamanhos[i], min, max, i, j);
-            encontraMediaMinMax2(vetor, tamanhos[i], min, max, i, j);
-            encontraMediaMinMax3(vetor, tamanhos[i], min, max, i, j);
+    if(arquivo.is_open()){
+        for(int i = 0; i < 4; i++){
+            preencheVetor(vetor, tamanhos[i]);
+            arquivo << "TAMANHO: " << tamanhos[i] << " ELEMENTOS." << std::endl;
+
+            for(int j = 0; j < 3; j++){
+                mudarOrdem(vetor, tamanhos[i], j);
+                std::string ordemString = (j == 0 ? "ALEATÓRIA" : (j == 1 ? "CRESCENTE" : "DECRESCENTE"));
+
+                arquivo << "ORDEM: " << ordemString << "." << std::endl;
+
+                encontraMediaMinMax1(vetor, tamanhos[i], min, max, i, j, arquivo);
+                encontraMediaMinMax2(vetor, tamanhos[i], min, max, i, j, arquivo);
+                encontraMediaMinMax3(vetor, tamanhos[i], min, max, i, j, arquivo);
+            }
+
+            arquivo << "\t";
         }
-
-        mostraVetor(vetor, tamanhos[i]);
     }
 
-    deletaVetor(vetor);
+    delete vetor;
 }
 
 void mudarOrdem(int *&vetor, int n, int ordem){
@@ -32,19 +39,23 @@ void mudarOrdem(int *&vetor, int n, int ordem){
     }
 }
 
-void encontraMediaMinMax1(int *&vetor, int n, int &min, int &max, int tamanho, int ordem){
+void encontraMediaMinMax1(int *&vetor, int n, int &min, int &max, int tamanho, int ordem, std::ofstream& arquivo){
     double soma = 0;
+    arquivo << std::endl << "Média MinMax1" << std::endl;
+    arquivo << "Valores:" << std::endl;
 
     for(int i = 0; i < 10; i++){
         auto inicio = std::chrono::high_resolution_clock::now();
         minMax1(vetor, n, min, max);
         auto final = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double, std::milli> tempoExec = (final - inicio);
+        arquivo << "t" << i+1 << ": " << tempoExec.count() << std::endl;
         soma += tempoExec.count();
     }
 
+    arquivo << "Média: " << calculaMedia(soma) << std::endl;
+
     std::cout << "Média 1/" << (tamanho+1) << "/" << ordem << ": " << calculaMedia(soma) << "ms" << std::endl;
-    calculaMedia(soma);
 }
 
 void minMax1(int *&vetor, int n, int &min, int &max){
@@ -60,19 +71,23 @@ void minMax1(int *&vetor, int n, int &min, int &max){
     
 }
 
-void encontraMediaMinMax2(int *&vetor, int n, int &min, int &max, int tamanho, int ordem){
+void encontraMediaMinMax2(int *&vetor, int n, int &min, int &max, int tamanho, int ordem, std::ofstream& arquivo){
     double soma = 0;
+    arquivo << std::endl << "Média MinMax2" << std::endl;
+    arquivo << "Valores:" << std::endl;
 
     for(int i = 0; i < 10; i++){
         auto inicio = std::chrono::high_resolution_clock::now();
         minMax2(vetor, n, min, max);
         auto final = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double, std::milli> tempoExec = (final - inicio);
+        arquivo << "t" << i+1 << ": " << tempoExec.count() << std::endl;
         soma += tempoExec.count();
     }
 
+    arquivo << "Média: " << calculaMedia(soma) << std::endl;
+
     std::cout << "Média 2/" << (tamanho+1) << "/" << ordem <<  ": " << calculaMedia(soma) << "ms" << std::endl;
-    calculaMedia(soma);
 }
 
 void minMax2(int *&vetor, int n, int &min, int &max){
@@ -87,19 +102,23 @@ void minMax2(int *&vetor, int n, int &min, int &max){
     }
 }
 
-void encontraMediaMinMax3(int *&vetor, int n, int &min, int &max, int tamanho, int ordem){
+void encontraMediaMinMax3(int *&vetor, int n, int &min, int &max, int tamanho, int ordem, std::ofstream& arquivo){
     double soma = 0;
+    arquivo << std::endl << "Média MinMax2" << std::endl;
+    arquivo << "Valores:" << std::endl;
 
     for(int i = 0; i < 10; i++){
         auto inicio = std::chrono::high_resolution_clock::now();
         minMax3(vetor, n, min, max);
         auto final = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double, std::milli> tempoExec = (final - inicio);
+        arquivo << "t" << i+1 << ": " << tempoExec.count() << std::endl;
         soma += tempoExec.count();
     }
 
+    arquivo << "Média: " << calculaMedia(soma) << std::endl;
+
     std::cout << "Média 3/" << (tamanho+1) << "/" << ordem << ": " << calculaMedia(soma) << "ms" << std::endl;
-    calculaMedia(soma);
 }
 
 void minMax3(int *&vetor, int n, int &min, int &max){
