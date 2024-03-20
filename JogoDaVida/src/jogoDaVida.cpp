@@ -76,7 +76,7 @@ void getTamanho(int &linhas, int &colunas){
     }
 }
 
-void controladorJogoDaVida(bool **matriz, bool **matrizAux, int linhas, int colunas){
+void controladorJogoDaVida(bool **matriz, bool **matrizAux, int linhas, int colunas){    
     int qtdGeracoes = numeroGeracoes();
     int geracao = 0;
 
