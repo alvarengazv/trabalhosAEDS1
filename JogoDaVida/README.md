@@ -32,7 +32,7 @@ Algoritmos e Estruturas de Dados I
     <li><a href="#Objetivos">Objetivos</a></li>
     <li><a href="#Metodologia">Metodologia</a></li>
     <li>
-      <a href="#Testando">Testando</a>
+      <a href="#Começando">Começando</a>
       <ul>
         <li><a href="#Pré-requisitos">Pré-requisitos</a></li>
         <li><a href="#Instalação-e-Execução">Instalação e Execução</a></li>
@@ -65,7 +65,54 @@ Algoritmos e Estruturas de Dados I
 
 <p align="right">(<a href="#readme-topo">voltar ao topo</a>)</p>
 
-## Testando
+## Começando
+
+Nesta seção estão exemplificados os meios para que se possa compilar e executar o programa apresentado.
+
+### Pré-requisitos
+
+Inicialmente, algumas considerações importantes sobre como se deve preparar o ambiente para compilar e executar o programa:
+
+  - Recomenda-se usar o sistema operacional Linux ou o Windows Subsystem for Linux (WSL), pois os comandos no [`makefile`][makefile] foram selecionados para funcionar em um ambiente [_shell/bash_][bash-url].
+
+  - Considerando um ambiente _shell_, garanta que os seguintes comandos já foram executados:
+    - Atualize os pacotes antes da instalação dos compiladores:
+    ```properties
+    sudo apt update
+    ```
+    - Instale a coleção de compiladores ___GNU/g++___ e o ___make___:
+    ```bash
+    sudo apt install build-essential
+    ```
+    - Se necessário, instale o ___make___ individualmente:
+    ```console
+    sudo apt install make
+    ```
+
+### Instalando
+
+Com o ambiente preparado, os seguintes passos são para a instalação, compilação e execução do programa localmente:
+
+<!-- Ensinar a clonar a pasta do repositório -->
+1. Clone o repositório no diretório desejado e acesse o diretório do projeto:
+  ```properties
+  git clone https://github.com/alvarengazv/trabalhosAEDS1.git
+  cd trabalhosAEDS1/JogoDaVida
+  ```
+2. Compile o programa através do ___g++___ e crie um arquivo executável na pasta [`build`][build-folder]:
+  ```properties
+  make
+  ```
+3. Execute o programa da pasta [`build`][build-folder] após a compilação:
+  ```properties
+  make run
+  ```
+4. Se necessário, apague a última compilação da pasta [`build`][build-folder]:
+  ```properties
+  make clean
+  ```
+
+O programa estará pronto para ser testado.
 
 <p align="right">(<a href="#readme-topo">voltar ao topo</a>)</p>
 
@@ -88,7 +135,7 @@ Ubuntu 22.04.4 LTS | Ryzen 5 5500U 2.1GHz | 2x4GB 3200MHz
 
 ## Referências
 
-[¹] JOHNSTON, N; GREENE, D. **Conway's Game of Life:** Mathematics and Construction. [_S.l.: s.n._], 2022. _E-book_. Disponível em: https://conwaylife.com/book/conway_life_book.pdf. Acesso em: 29 mar. 2024.
+[1] JOHNSTON, N; GREENE, D. **Conway's Game of Life:** Mathematics and Construction. [_S.l.: s.n._], 2022. _E-book_. Disponível em: https://conwaylife.com/book/conway_life_book.pdf. Acesso em: 29 mar. 2024.
 
 <p align="right">(<a href="#readme-topo">voltar ao topo</a>)</p>
 
@@ -111,6 +158,9 @@ Ubuntu 22.04.4 LTS | Ryzen 5 5500U 2.1GHz | 2x4GB 3200MHz
 [make-url]: https://www.gnu.org/software/make/manual/make.html
 [cpp-badge]: https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white
 [cpp-url]: https://en.cppreference.com/w/cpp
+[makefile]: ./makefile
+[bash-url]: https://www.hostgator.com.br/blog/o-que-e-bash/
+[build-folder]: ./build
 [lenovo-badge]: https://img.shields.io/badge/lenovo%20laptop-E2231A?style=for-the-badge&logo=lenovo&logoColor=white
 [ubuntu-badge]: https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white
 [ryzen-badge]: https://img.shields.io/badge/AMD%20Ryzen_5_5500U-ED1C24?style=for-the-badge&logo=amd&logoColor=white
