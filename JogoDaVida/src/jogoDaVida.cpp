@@ -93,8 +93,16 @@ void controladorJogoDaVida(bool **matriz, bool **matrizAux, int linhas, int colu
         gerarArquivosResultado(matriz, linhas, colunas, geracao++);
 
         calcularGeracao(matriz, matrizAux, linhas, colunas);
-        matriz = matrizAux;
-    }while(qtdGeracoes--);
+        copiarMatriz(matrizAux, matriz, linhas, colunas);
+    } while(qtdGeracoes--);
+}
+
+void copiarMatriz(bool **matriz, bool **matrizAux, int linhas, int colunas){
+    for(int i = 0; i < linhas; i++){
+        for(int j = 0; j < colunas; j++){
+            matrizAux[i][j] = matriz[i][j];
+        }
+    }
 }
 
 void deletarMatrizes(bool **matriz, bool **matrizAux, int linhas){
@@ -119,14 +127,14 @@ void gerarMatrizes(bool **&matriz, bool **&matrizAux, int linhas, int colunas){
 
 void calcularGeracao(bool **matriz, bool **matrizAux, int linhas, int colunas){
     for(int i = 0; i < linhas; i++){
-            for(int j = 0; j < colunas; j++){
-                int vizinhosVivos = qtdVizinhosVivos(matriz, linhas, colunas, i, j);
+        for(int j = 0; j < colunas; j++){
+            int vizinhosVivos = qtdVizinhosVivos(matriz, linhas, colunas, i, j);
 
-                if(matriz[i][j])
-                    matrizAux[i][j] = !(vizinhosVivos < 2 || vizinhosVivos > 3);
-                else
-                    matrizAux[i][j] = vizinhosVivos == 3;
-            }
+            if(matriz[i][j])
+                matrizAux[i][j] = vizinhosVivos == 2 || vizinhosVivos == 3;
+            else
+                matrizAux[i][j] = vizinhosVivos == 3;
+        }
     }
 }
 
@@ -182,45 +190,30 @@ int qtdVizinhosVivos(bool **matriz, int linhas, int colunas, int i, int j){
     int cima = i - 1;
     int baixo = i + 1;
 
-    if(esquerda != -1 && cima != -1){
-        if(matriz[cima][esquerda])
-            qtdVizinhosVivos++;
-    }
 
-    if(cima != -1){
-        if(matriz[cima][j])
-            qtdVizinhosVivos++;
-    }
+    if(esquerda != -1 && cima != -1 && matriz[cima][esquerda])
+        qtdVizinhosVivos++;
 
-    if(direita != colunas && cima != -1){
-        if(matriz[cima][direita])
-            qtdVizinhosVivos++;
-    }
+    if(cima != -1 && matriz[cima][j])
+        qtdVizinhosVivos++;
 
-    if(esquerda != -1){
-        if(matriz[i][esquerda])
-            qtdVizinhosVivos++;
-    }
+    if(direita != colunas && cima != -1 && matriz[cima][direita])
+        qtdVizinhosVivos++;
 
-    if(direita != colunas){
-        if(matriz[i][direita])
-            qtdVizinhosVivos++;
-    }
+    if(esquerda != -1 && matriz[i][esquerda])
+        qtdVizinhosVivos++;
+    
+    if(direita != colunas && matriz[i][direita])
+        qtdVizinhosVivos++;
+    
+    if(esquerda != -1 && baixo != linhas && matriz[baixo][esquerda])
+        qtdVizinhosVivos++;
 
-    if(esquerda != -1 && baixo != linhas){
-        if(matriz[baixo][esquerda])
-            qtdVizinhosVivos++;
-    }
+    if(baixo != linhas && matriz[baixo][j])
+        qtdVizinhosVivos++;
 
-    if(baixo != linhas){
-        if(matriz[baixo][j])
-            qtdVizinhosVivos++;
-    }
-
-    if(direita != colunas && baixo != linhas){
-        if(matriz[baixo][direita])
-            qtdVizinhosVivos++;
-    }
+    if(direita != colunas && baixo != linhas && matriz[baixo][direita])
+        qtdVizinhosVivos++;
 
     return qtdVizinhosVivos;
 }

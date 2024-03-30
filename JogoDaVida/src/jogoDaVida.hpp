@@ -16,5 +16,6 @@ void leituraMatrizArquivo(bool **matriz, int linhas, int colunas);
 void gerarArquivosResultado(bool **matriz, int linhas, int colunas, int geracao);
 void gerarMatrizes(bool **&matriz, bool **&matrizAux, int linhas, int colunas);
 void deletarMatrizes(bool **matriz, bool **matrizAux, int linhas);
+void copiarMatriz(bool **matriz, bool **matrizAux, int linhas, int colunas);
 
 #endif
