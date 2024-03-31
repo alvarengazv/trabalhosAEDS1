@@ -81,8 +81,8 @@ Nesta seção estão exemplificados os meios para que se possa compilar e execut
 
 Inicialmente, algumas considerações importantes sobre como se deve preparar o ambiente para compilar e executar o programa:
 
-  > [!NOTE]
-  > Recomenda-se usar uma distribuição de sistema operacional Linux ou o Windows Subsystem for Linux (WSL), pois os comandos no [`makefile`][makefile] foram selecionados para funcionar em um ambiente [_shell/bash_][bash-url].
+> [!NOTE]
+> Recomenda-se usar uma distribuição de sistema operacional Linux ou o Windows Subsystem for Linux (WSL), pois os comandos no [`makefile`][makefile] foram selecionados para funcionar em um ambiente [_shell/bash_][bash-url].
 
   - Considerando um ambiente _shell_, garanta que os seguintes comandos já foram executados:
     - Atualize os pacotes antes da instalação dos compiladores:
@@ -126,6 +126,7 @@ O programa estará pronto para ser testado.
 <p align="right">(<a href="#readme-topo">voltar ao topo</a>)</p>
 
 ## Ambiente de Compilação
+
 > [!IMPORTANT] 
 > O trabalho foi desenvolvido, compilado e executado em um ambiente com as seguintes especificações:
 
@@ -146,7 +147,7 @@ Ubuntu 22.04.4 LTS | Ryzen 5 5500U 2.1GHz | 2x4GB 3200MHz
 ## Referências
 
 [^1]: JOHNSTON, N; GREENE, D. **Conway's Game of Life:** Mathematics and Construction. [_S.l.: s.n._], 2022. _E-book_. Disponível em: https://conwaylife.com/book/conway_life_book.pdf. Acesso em: 29 mar. 2024.
-<br>
+
 [^2]: GARDNER, M. **Mathematical games:** the fantastic combinations of John Conway’s new solitaire game “life”, Scientific American 223:120–123, 1970.
 <p align="right">(<a href="#readme-topo">voltar ao topo</a>)</p>
 
