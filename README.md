@@ -231,7 +231,7 @@ Caso seja requisitado que sejam calculadas oito gerações, elas devem ser impre
 | 1 | 1 | 0 | 0 | 0 |
 | 0 | 1 | 0 | 0 | 0 |
 
-</td><td>
+</td>
 <tr><th>Geração 5</th>
 <th>Geração 6</th>
 <th>Geração 7</th>
@@ -277,6 +277,77 @@ Caso seja requisitado que sejam calculadas oito gerações, elas devem ser impre
 | 0 | 0 | 0 | 0 | 0 |
 
 </td></tr> </table>
+
+Neste caso, após oito gerações o padrão inicial se desenvolveu até chegar no ponto em que todas as células se encontram mortas. 
+
+#### 1.2 Matriz 6x6
+
+Geração Inicial:
+
+|   |   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 0 | 1 | 1 |
+| 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 1 | 0 | 1 |
+| 0 | 0 | 0 | 0 | 0 | 0 |
+
+Caso seja requisitado que sejam calculadas quatro gerações, elas devem ser impressas na saída da seguinte maneira:
+
+<table>
+<tr><th>Geração 1</th>
+<th>Geração 2</th>
+<th>Geração 3</th>
+<th>Geração 4</th>
+<tr><td>
+
+|   |   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 1 | 0 | 1 | 1 | 1 |
+| 0 | 1 | 0 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 0 | 1 | 0 |
+| 0 | 1 | 1 | 0 | 1 | 0 |
+| 0 | 0 | 0 | 0 | 0 | 0 |
+
+</td><td>
+
+|   |   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 1 | 0 | 1 |
+| 0 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 1 | 0 |
+| 0 | 1 | 1 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 | 0 |
+
+</td><td>
+
+|   |   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 | 0 |
+
+</td><td>
+
+|   |   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 | 0 |
+
+</td></tr> 
+</table>
+
+Neste caso, apesar da matriz ser maior e da razão de células vivas e mortas continuar a mesma, bastou apenas quatro gerações para o padrão inicial se desenvolver até chegar no ponto em que todas as células se encontram mortas. 
 
 <p align="right">(<a href="#readme-topo">voltar ao topo</a>)</p>
 
