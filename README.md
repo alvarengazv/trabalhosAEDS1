@@ -144,9 +144,7 @@ Abaixo estão as funções essenciais para o funcionamento do programa. Com a fi
 
   - Duas variáveis `bool **matriz` e `bool **matrizAux` foram criadas e são "ponteiros para ponteiros" de um tipo booleano*. Isto é, são capazes de representar uma matriz bidimensional com valores 0 ou 1. Após isso, ambas as matrizes são alocadas dinamicamente com a chamada de função `void gerarMatrizes()` e, em seguida, os valores da matriz de entrada do arquivo [`datasets/input.mps`][input-ref] são posicionados na variável `matriz`.
 
-<div style='font-size: 11px'> 
-*O tipo booleano foi escolhido pois os valores da matriz sempre representará vivo ou morto, ou seja, 1 ou 0.
-</div>
+*O tipo booleano foi escolhido pois os valores da matriz sempre representarão o estado vivo ou morto, ou seja, 1 ou 0 (verdadeiro ou falso).
 
   #### 3. Parte principal do Jogo da Vida
 
@@ -176,13 +174,109 @@ Abaixo estão as funções essenciais para o funcionamento do programa. Com a fi
 
 #### 1.1 Matriz 5x5
 
-| **Geração Inicial** | **** | **** | **** | **** |
-|:-------------------:|:----:|:----:|:----:|:----:|
-| 0                   | 0    | 1    | 0    | 1    |
-| 1                   | 1    | 0    | 0    | 1    |
-| 0                   | 0    | 0    | 0    | 0    |
-| 0                   | 1    | 0    | 0    | 0    |
-| 1                   | 0    | 1    | 0    | 0    |
+Geração Inicial
+
+|   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 1 | 0 | 1 |
+| 1 | 1 | 0 | 0 | 1 |
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 0 | 0 |
+
+Caso seja requisitado que sejam calculadas oito gerações, elas devem ser impressas na saída da seguinte maneira: 
+
+<table>
+<tr><th>Geração 1</th>
+<th>Geração 2</th>
+<th>Geração 3</th>
+<th>Geração 4</th>
+<tr><td>
+
+|   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|
+| 0 | 1 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 0 |
+
+</td><td>
+
+|   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 |
+
+</td><td>
+
+|   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 |
+
+</td><td>
+
+|   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 0 |
+
+</td><td>
+<tr><th>Geração 5</th>
+<th>Geração 6</th>
+<th>Geração 7</th>
+<th>Geração 8</th>
+<tr><td>
+
+|   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 0 |
+
+</td><td>
+
+|   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 0 | 0 |
+
+</td><td>
+
+|   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 0 |
+| 0 | 0 | 0 | 0 | 0 |
+
+</td><td>
+
+|   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 |
+
+</td></tr> </table>
 
 <p align="right">(<a href="#readme-topo">voltar ao topo</a>)</p>
 
