@@ -43,15 +43,18 @@ Algoritmos e Estruturas de Dados I
   </ol>
 </details>
 
-<div align="justify">
 
 ## Introdução
+
+<div align="justify">
 
 Este [trabalho][trabalho-url] foi proposto na disciplina de Algoritmos e Estruturas de Dados I (AEDSI) pelo professor [Michel Pires da Silva][github-prof].
 
 Simplificadamente, o trabalho consiste numa implementação computacional do autômato celular chamado de Jogo da Vida (do inglês, [Game of Life][livroJV-url][^2]). O conceito por trás deste jogo foi criado no ano de 1970 pelo matemático John Horton Conway (1937-2020), que foi mundialmente reconhecido por realizar outras contribuições matemáticas ao meio.
 
 A implementação computacional proposta consiste, basicamente, na manipulação de elementos de uma matriz de duas dimensões e de tamanho mínimo 5x5, com seus valores variando entre 1 ou 0 (verdadeiro ou falso/vivo ou morto). Seus elementos devem estar inicialmente dispostos numa proporção de 2 para 1 para os valores de 0 e 1, respectivamente. Isto é, há o dobro de células mortas em relação às vivas na matriz inicial. Com tudo isso preparado, o jogo se inicia seguindo um conjunto de regras simples - que serão apresentadas nas seções subsequentes - e continua pela quantidade de gerações indicadas pelo usuário.
+
+</div>
 
 <p align="right">(<a href="#readme-topo">voltar ao topo</a>)</p>
 
@@ -146,9 +149,10 @@ Ubuntu 22.04.4 LTS | Ryzen 5 5500U 2.1GHz | 2x4GB 3200MHz
 
 ## Referências
 
-[^1]: JOHNSTON, N; GREENE, D. **Conway's Game of Life:** Mathematics and Construction. [_S.l.: s.n._], 2022. _E-book_. Disponível em: https://conwaylife.com/book/conway_life_book.pdf. Acesso em: 29 mar. 2024.
+GARDNER, M. **Mathematical games:** the fantastic combinations of John Conway’s new solitaire game “life”, Scientific American 223:120–123, 1970.
 
-[^2]: GARDNER, M. **Mathematical games:** the fantastic combinations of John Conway’s new solitaire game “life”, Scientific American 223:120–123, 1970.
+JOHNSTON, N; GREENE, D. **Conway's Game of Life:** Mathematics and Construction. [_S.l.: s.n._], 2022. _E-book_. Disponível em: https://conwaylife.com/book/conway_life_book.pdf. Acesso em: 29 mar. 2024.
+
 <p align="right">(<a href="#readme-topo">voltar ao topo</a>)</p>
 
 ## Contato
@@ -164,7 +168,10 @@ Ubuntu 22.04.4 LTS | Ryzen 5 5500U 2.1GHz | 2x4GB 3200MHz
 
 <p align="right">(<a href="#readme-topo">voltar ao topo</a>)</p>
 
-</div>
+
+[^1]: JOHNSTON, N; GREENE, D. **Conway's Game of Life:** Mathematics and Construction. [_S.l.: s.n._], 2022. _E-book_. Disponível em: https://conwaylife.com/book/conway_life_book.pdf. Acesso em: 29 mar. 2024.
+
+[^2]: GARDNER, M. **Mathematical games:** the fantastic combinations of John Conway’s new solitaire game “life”, Scientific American 223:120–123, 1970.
 
 [vscode-badge]: https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white
 [vscode-url]: https://code.visualstudio.com/docs/?dv=linux64_deb
