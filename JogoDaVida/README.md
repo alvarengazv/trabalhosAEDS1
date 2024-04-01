@@ -39,7 +39,7 @@ Algoritmos e Estruturas de Dados I
             <li><a href='#Outros'>Outros</a></li>
           </ul>
         </li>
-        <li><a href='#Curiosidades'>Curiosidades</a></li>
+        <li><a href='#Curiosidade'>Curiosidade</a></li>
       </ul>  
     </li>
     <li><a href="#-Objetivos">🎯 Objetivos</a></li>
@@ -56,30 +56,30 @@ Algoritmos e Estruturas de Dados I
       <a href="#-Testes-e-Resultados-Esperados">📊 Testes e Resultados Esperados</a>
       <ul>
         <li>
-          <a href='#Testes-Seguindo-a-Razão-de-2-para-1'>Testes Seguindo a Razão de 2 para 1</a>
+          <a href='#1-Testes-Seguindo-a-Razão-de-2-para-1'>Testes Seguindo a Razão de 2 para 1</a>
           <ul>
-            <li><a href='#Matriz-5x5'>Matriz 5x5</a></li>
-            <li><a href='#Matriz-6x6'>Matriz 6x6</a></li>
+            <li><a href='#11-Matriz-5x5'>Matriz 5x5</a></li>
+            <li><a href='#12-Matriz-6x6'>Matriz 6x6</a></li>
           </ul>
         </li>
         <li>
-          <a href='#Outros-Testes'>Outros Testes</a>
+          <a href='#2-Outros-Testes'>Outros Testes</a>
           <ul>
-            <li><a href='#Objeto-Estável-(Still Life)'>Objeto Estável (Still Life)</a></li>
-            <li><a href='#Objeto-Móvel-(LWSS)'>Objeto Móvel (LWSS)</a></li>
+            <li><a href='#21-Objeto-Estável-Still-Life'>Objeto Estável (Still Life)</a></li>
+            <li><a href='#22-Objeto-Móvel-LWSS'>Objeto Móvel (LWSS)</a></li>
           </ul>
         </li>
       </ul>
     </li>
     <li><a href="#-Conclusão">🏁 Conclusão</a></li>
     <li>
-      <a href="#-Começando">⛏️ Começando</a>
+      <a href="#-Começando">🔨 Começando</a>
       <ul>
         <li><a href="#Pré-requisitos">Pré-requisitos</a></li>
-        <li><a href="#Instalação-e-Execução">Instalação e Execução</a></li>
+        <li><a href="#Instalando">Instalando</a></li>
       </ul>
     </li>
-    <li><a href="#-Ambiente-de-Compilação/Execução">🧪 Ambiente de Compilação/Execução</a></li>
+    <li><a href="#-Ambiente-de-Compilação-e-Execução">🧪 Ambiente de Compilação e Execução</a></li>
     <li><a href="#-Referências">📚 Referências</a></li>
     <li><a href="#-Contato">📨 Contato</a></li>
   </ol>
@@ -704,7 +704,7 @@ Através do trabalho desenvolvido foi possível não só atingir o objetivo prin
 
 <p align="right">(<a href="#readme-topo">voltar ao topo</a>)</p>
 
-## ⛏️ Começando
+## 🔨 Começando
 
 Nesta seção estão exemplificados os meios através dos quais se tornam possíveis a compilação e execução do programa apresentado.
 
@@ -755,7 +755,7 @@ O programa estará pronto para ser testado.
 
 <p align="right">(<a href="#readme-topo">voltar ao topo</a>)</p>
 
-## 🧪 Ambiente de Compilação/Execução
+## 🧪 Ambiente de Compilação e Execução
 
 > [!IMPORTANT] 
 > Para que os testes tenham validade, considere as especificações técnicas do computador utilizado
