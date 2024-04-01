@@ -25,9 +25,9 @@ Algoritmos e Estruturas de Dados I
   </b>
   </summary>
   <ol>
-    <li><a href="#-Introdução">Introdução</a></li>
+    <li><a href="#-Introdução">🔍 Introdução</a></li>
     <li>
-      <a href="#-Fundamentação-Teórica">Fundamentação Teórica</a>
+      <a href="#-Fundamentação-Teórica">💡 Fundamentação Teórica</a>
       <ul>
         <li><a href='#Ideia-Original'>Ideia Original</a></li>
         <li><a href='#Regras-do-Jogo'>Regras do Jogo</a></li>
@@ -42,9 +42,9 @@ Algoritmos e Estruturas de Dados I
         <li><a href='#Curiosidades'>Curiosidades</a></li>
       </ul>  
     </li>
-    <li><a href="#-Objetivos">Objetivos</a></li>
+    <li><a href="#-Objetivos">🎯 Objetivos</a></li>
     <li>
-      <a href="#-Metodologia">Metodologia</a>
+      <a href="#-Metodologia">🔬 Metodologia</a>
       <ul>
         <li><a href='#Arquivos'>Arquivos</a></li>
         <li><a href='#Bibliotecas'>Bibliotecas</a></li>
@@ -53,7 +53,7 @@ Algoritmos e Estruturas de Dados I
       </ul>
     </li>
     <li>
-      <a href="#-Testes-e-Resultados-Esperados">Testes e Resultados Esperados</a>
+      <a href="#-Testes-e-Resultados-Esperados">📊 Testes e Resultados Esperados</a>
       <ul>
         <li>
           <a href='#Testes-Seguindo-a-Razão-de-2-para-1'>Testes Seguindo a Razão de 2 para 1</a>
@@ -71,17 +71,17 @@ Algoritmos e Estruturas de Dados I
         </li>
       </ul>
     </li>
-    <li><a href="#-Conclusão">Conclusão</a></li>
+    <li><a href="#-Conclusão">🏁 Conclusão</a></li>
     <li>
-      <a href="#-Começando">Começando</a>
+      <a href="#-Começando">⛏️ Começando</a>
       <ul>
         <li><a href="#Pré-requisitos">Pré-requisitos</a></li>
         <li><a href="#Instalação-e-Execução">Instalação e Execução</a></li>
       </ul>
     </li>
-    <li><a href="#-Ambiente-de-Compilação/Execução">Ambiente de Compilação/Execução</a></li>
-    <li><a href="#-Referências">Referências</a></li>
-    <li><a href="#-Contato">Contato</a></li>
+    <li><a href="#-Ambiente-de-Compilação/Execução">🧪 Ambiente de Compilação/Execução</a></li>
+    <li><a href="#-Referências">📚 Referências</a></li>
+    <li><a href="#-Contato">📨 Contato</a></li>
   </ol>
 </details>
 
@@ -114,7 +114,7 @@ O "jogo sem jogador", como foi nomeado pelo próprio inventor da ideia[^4], inic
 
 - Não deveria haver um padrão inicial para o qual exista uma prova simples de que a população pode crescer sem limites;
 - Deveria haver padrões iniciais que aparentemente crescem sem limites;
-- Deve haver padrões iniciais simples que crescem e mudam por um período considerável de tempo antes de terminar de três maneiras possíveis: desaparecendo completamente (por superlotação ou tornando-se muito esparso), estabelecendo-se em uma configuração estável que permanece inalterada depois disso, ou entrando em uma fase oscilante na qual repetem um ciclo interminável de dois ou mais períodos.
+- Deveria haver padrões iniciais simples que crescem e mudam por um período considerável de tempo antes de terminar de três maneiras possíveis: desaparecendo completamente (por superlotação ou tornando-se muito esparso), estabelecendo-se em uma configuração estável que permanece inalterada depois disso, ou entrando em uma fase oscilante na qual repetem um ciclo interminável de dois ou mais períodos.
 
 Em outras palavras, Conway queria que seu jogo fosse imprevisível.
 
@@ -191,7 +191,7 @@ Já as armas de _glider_ são estruturas normalmente formadas por osciladores qu
 
 <div align='center' style='font-size: 11px'>
 
-**Figura 4**: Estrutura chamada de arma de _glider_
+**Figura 5**: Estrutura chamada de arma de _glider_
 
 <img src='imgs/armaDeGlider.png'>
 
@@ -301,6 +301,9 @@ Abaixo estão as funções essenciais para o funcionamento do programa. Com a fi
       <br>
 
       $-1 \neq i \neq linhas $
+      
+      <br>
+
       $-1 \neq j \neq colunas $
 
 
@@ -775,11 +778,11 @@ Ubuntu 22.04.4 LTS | Ryzen 5 5500U 2.1GHz | 2x4GB 3200MHz
 
 ## 📚 Referências
 
+C++ Reference. **CPPReference**, 2017. Disponível em: https://en.cppreference.com/w/cpp. Acesso em: 29 mar. 2024.
+
 GARDNER, M. **Mathematical games:** the fantastic combinations of John Conway’s new solitaire game “life”, Scientific American 223:120–123, 1970.
 
 JOHNSTON, N; GREENE, D. **Conway's Game of Life:** Mathematics and Construction. [_S.l.: s.n._], 2022. _E-book_. Disponível em: https://conwaylife.com/book/conway_life_book.pdf. Acesso em: 29 mar. 2024.
-
-C++ Reference. **CPPReference**, 2017. Disponível em: https://en.cppreference.com/w/cpp. Acesso em: 29 mar. 2024.
 
 Numberphile. Inventing Game of Life (John Conway) - Numberphile. Youtube, 2014. Disponível em: https://www.youtube.com/watch?v=R9Plq-D1gEk. Acesso em: 29 mar. 2024
 
