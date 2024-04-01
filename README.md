@@ -65,8 +65,8 @@ Algoritmos e Estruturas de Dados I
         <li>
           <a href='#2-Outros-Testes'>Outros Testes</a>
           <ul>
-            <li><a href='#21-Objeto-Estável-(Still Life)'>Objeto Estável (Still Life)</a></li>
-            <li><a href='#22-Objeto-Móvel-(LWSS)'>Objeto Móvel (LWSS)</a></li>
+            <li><a href='#21-Objeto-Estável-Still-Life'>Objeto Estável (Still Life)</a></li>
+            <li><a href='#22-Objeto-Móvel-LWSS'>Objeto Móvel (LWSS)</a></li>
           </ul>
         </li>
       </ul>
