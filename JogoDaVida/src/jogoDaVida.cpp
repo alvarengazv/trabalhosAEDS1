@@ -1,5 +1,40 @@
 #include "jogoDaVida.hpp"
 
+int qtdVizinhosVivos(bool **matriz, int linhas, int colunas, int i, int j){
+    int qtdVizinhosVivos = 0;
+    int esquerda = j - 1;
+    int direita = j + 1;
+    int cima = i - 1;
+    int baixo = i + 1;
+
+
+    if(esquerda != -1 && cima != -1 && matriz[cima][esquerda])
+        qtdVizinhosVivos++;
+
+    if(cima != -1 && matriz[cima][j])
+        qtdVizinhosVivos++;
+
+    if(direita != colunas && cima != -1 && matriz[cima][direita])
+        qtdVizinhosVivos++;
+
+    if(esquerda != -1 && matriz[i][esquerda])
+        qtdVizinhosVivos++;
+    
+    if(direita != colunas && matriz[i][direita])
+        qtdVizinhosVivos++;
+    
+    if(esquerda != -1 && baixo != linhas && matriz[baixo][esquerda])
+        qtdVizinhosVivos++;
+
+    if(baixo != linhas && matriz[baixo][j])
+        qtdVizinhosVivos++;
+
+    if(direita != colunas && baixo != linhas && matriz[baixo][direita])
+        qtdVizinhosVivos++;
+
+    return qtdVizinhosVivos;
+}
+
 int numeroGeracoes(){
     int geracoes;
     std::cout << "Informe o número de gerações: ";
@@ -8,40 +43,17 @@ int numeroGeracoes(){
     return geracoes;
 }
 
-void leituraMatrizArquivo(bool **matriz, int linhas, int colunas){
-    std::ifstream arquivo;
-    int i = 0, j = 0;
-    std::string linha;
+int contarQtdVivos(bool **matriz, int linhas, int colunas){
+    int qtdVivos = 0;
 
-    arquivo.open("datasets/input.mps");
-
-    if(arquivo.is_open()){
-        while(std::getline(arquivo, linha)){
-            std::istringstream ss(linha);
-            int valor;
-            j = 0;
-            
-            while(ss >> valor){
-                matriz[i][j] = valor;
-                j++;
-            }
-
-            i++;
-        }
-        
-        arquivo.close();
-    } else {
-        std::cout << "Erro ao abrir o arquivo" << std::endl;
-    }
-}
-
-void mostraMatriz(bool **matriz, int linhas, int colunas){
     for(int i = 0; i < linhas; i++){
         for(int j = 0; j < colunas; j++){
-            std::cout << matriz[i][j] << " ";
+            if(matriz[i][j])
+                qtdVivos++;
         }
-        std::cout << std::endl;
     }
+
+    return qtdVivos;
 }
 
 void getTamanho(int &linhas, int &colunas){
@@ -97,34 +109,6 @@ void controladorJogoDaVida(bool **matriz, bool **matrizAux, int linhas, int colu
     } while(qtdGeracoes--);
 }
 
-void copiarMatriz(bool **matriz, bool **matrizAux, int linhas, int colunas){
-    for(int i = 0; i < linhas; i++){
-        for(int j = 0; j < colunas; j++){
-            matrizAux[i][j] = matriz[i][j];
-        }
-    }
-}
-
-void deletarMatrizes(bool **matriz, bool **matrizAux, int linhas){
-    for(int i = 0; i < linhas; i++){
-        delete[] matriz[i];
-        delete[] matrizAux[i];
-    }
-
-    delete[] matriz;
-    delete[] matrizAux;
-}
-
-void gerarMatrizes(bool **&matriz, bool **&matrizAux, int linhas, int colunas){
-    matriz = new bool*[linhas];
-    matrizAux = new bool*[linhas];
-
-    for(int i = 0; i < linhas; i++){
-        matriz[i] = new bool[colunas];
-        matrizAux[i] = new bool[colunas];
-    }
-}
-
 void calcularGeracao(bool **matriz, bool **matrizAux, int linhas, int colunas){
     for(int i = 0; i < linhas; i++){
         for(int j = 0; j < colunas; j++){
@@ -135,6 +119,42 @@ void calcularGeracao(bool **matriz, bool **matrizAux, int linhas, int colunas){
             else
                 matrizAux[i][j] = vizinhosVivos == 3;
         }
+    }
+}
+
+void mostraMatriz(bool **matriz, int linhas, int colunas){
+    for(int i = 0; i < linhas; i++){
+        for(int j = 0; j < colunas; j++){
+            std::cout << matriz[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+}
+
+void leituraMatrizArquivo(bool **matriz, int linhas, int colunas){
+    std::ifstream arquivo;
+    int i = 0, j = 0;
+    std::string linha;
+
+    arquivo.open("datasets/input.mps");
+
+    if(arquivo.is_open()){
+        while(std::getline(arquivo, linha)){
+            std::istringstream ss(linha);
+            int valor;
+            j = 0;
+            
+            while(ss >> valor){
+                matriz[i][j] = valor;
+                j++;
+            }
+
+            i++;
+        }
+        
+        arquivo.close();
+    } else {
+        std::cout << "Erro ao abrir o arquivo" << std::endl;
     }
 }
 
@@ -170,50 +190,30 @@ void gerarArquivosResultado(bool **matriz, int linhas, int colunas, int geracao)
     }
 }
 
-int contarQtdVivos(bool **matriz, int linhas, int colunas){
-    int qtdVivos = 0;
+void gerarMatrizes(bool **&matriz, bool **&matrizAux, int linhas, int colunas){
+    matriz = new bool*[linhas];
+    matrizAux = new bool*[linhas];
 
     for(int i = 0; i < linhas; i++){
-        for(int j = 0; j < colunas; j++){
-            if(matriz[i][j])
-                qtdVivos++;
-        }
+        matriz[i] = new bool[colunas];
+        matrizAux[i] = new bool[colunas];
     }
-
-    return qtdVivos;
 }
 
-int qtdVizinhosVivos(bool **matriz, int linhas, int colunas, int i, int j){
-    int qtdVizinhosVivos = 0;
-    int esquerda = j - 1;
-    int direita = j + 1;
-    int cima = i - 1;
-    int baixo = i + 1;
+void deletarMatrizes(bool **matriz, bool **matrizAux, int linhas){
+    for(int i = 0; i < linhas; i++){
+        delete[] matriz[i];
+        delete[] matrizAux[i];
+    }
 
+    delete[] matriz;
+    delete[] matrizAux;
+}
 
-    if(esquerda != -1 && cima != -1 && matriz[cima][esquerda])
-        qtdVizinhosVivos++;
-
-    if(cima != -1 && matriz[cima][j])
-        qtdVizinhosVivos++;
-
-    if(direita != colunas && cima != -1 && matriz[cima][direita])
-        qtdVizinhosVivos++;
-
-    if(esquerda != -1 && matriz[i][esquerda])
-        qtdVizinhosVivos++;
-    
-    if(direita != colunas && matriz[i][direita])
-        qtdVizinhosVivos++;
-    
-    if(esquerda != -1 && baixo != linhas && matriz[baixo][esquerda])
-        qtdVizinhosVivos++;
-
-    if(baixo != linhas && matriz[baixo][j])
-        qtdVizinhosVivos++;
-
-    if(direita != colunas && baixo != linhas && matriz[baixo][direita])
-        qtdVizinhosVivos++;
-
-    return qtdVizinhosVivos;
+void copiarMatriz(bool **matriz, bool **matrizAux, int linhas, int colunas){
+    for(int i = 0; i < linhas; i++){
+        for(int j = 0; j < colunas; j++){
+            matrizAux[i][j] = matriz[i][j];
+        }
+    }
 }
