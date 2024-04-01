@@ -56,17 +56,17 @@ Algoritmos e Estruturas de Dados I
       <a href="#-Testes-e-Resultados-Esperados">📊 Testes e Resultados Esperados</a>
       <ul>
         <li>
-          <a href='#1.-Testes-Seguindo-a-Razão-de-2-para-1'>Testes Seguindo a Razão de 2 para 1</a>
+          <a href='#1-Testes-Seguindo-a-Razão-de-2-para-1'>Testes Seguindo a Razão de 2 para 1</a>
           <ul>
-            <li><a href='#1.1-Matriz-5x5'>Matriz 5x5</a></li>
-            <li><a href='#1.2-Matriz-6x6'>Matriz 6x6</a></li>
+            <li><a href='#11-Matriz-5x5'>Matriz 5x5</a></li>
+            <li><a href='#12-Matriz-6x6'>Matriz 6x6</a></li>
           </ul>
         </li>
         <li>
-          <a href='#2.-Outros-Testes'>Outros Testes</a>
+          <a href='#2-Outros-Testes'>Outros Testes</a>
           <ul>
-            <li><a href='#2.1-Objeto-Estável-(Still Life)'>Objeto Estável (Still Life)</a></li>
-            <li><a href='#2.2-Objeto-Móvel-(LWSS)'>Objeto Móvel (LWSS)</a></li>
+            <li><a href='#21-Objeto-Estável-(Still Life)'>Objeto Estável (Still Life)</a></li>
+            <li><a href='#22-Objeto-Móvel-(LWSS)'>Objeto Móvel (LWSS)</a></li>
           </ul>
         </li>
       </ul>
