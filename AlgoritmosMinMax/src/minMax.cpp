@@ -1,9 +1,9 @@
 #include "minMax.hpp"
 
-void controladorMinMax(int *&vetor, int n, int &min, int &max, int *tamanhos){    
+void controladorMinMax(int *&vetor, int n, int &min, int &max, int *tamanhos, std::string nomeArquivo){    
     std::ofstream arquivo;
     std::string linha, stringMedia1, stringMedia2, stringMedia3;
-    arquivo.open("output/csv/medias04.csv", std::ios::app);
+    arquivo.open(nomeArquivo);
     int t = 1;
     arquivo << "# Algoritmo,Ordenação do Vetor,Tamanho do vetor (n),";
 
@@ -71,6 +71,7 @@ void encontraMediaMinMax1(int *&vetor, int n, int &min, int &max, int tamanho, i
     //arquivo << calculaMedia(soma) << "," << min << "," << max << std::endl;
 
     std::cout << "Média 1/" << (tamanho+1) << "/" << ordem << ": " << calculaMedia(soma) << "ms" << std::endl;
+    mostraVetor(vetor, n);
 }
 
 void minMax1(int *&vetor, int n, int &min, int &max){
@@ -107,6 +108,7 @@ void encontraMediaMinMax2(int *&vetor, int n, int &min, int &max, int tamanho, i
     stringMedia2 += std::to_string(calculaMedia(soma)) + "," + std::to_string(min) + "," + std::to_string(max) + "\n";
 
     std::cout << "Média 2/" << (tamanho+1) << "/" << ordem <<  ": " << calculaMedia(soma) << "ms" << std::endl;
+    mostraVetor(vetor, n);
 }
 
 void minMax2(int *&vetor, int n, int &min, int &max){
@@ -142,6 +144,7 @@ void encontraMediaMinMax3(int *&vetor, int n, int &min, int &max, int tamanho, i
     stringMedia3 += std::to_string(calculaMedia(soma)) + "," + std::to_string(min) + "," + std::to_string(max) + "\n";
 
     std::cout << "Média 3/" << (tamanho+1) << "/" << ordem << ": " << calculaMedia(soma) << "ms" << std::endl;
+    mostraVetor(vetor, n);
 }
 
 void minMax3(int *&vetor, int n, int &min, int &max){
@@ -186,10 +189,6 @@ void mostraVetor(int *vetor, int n){
     for(int i = 0; i < 20; i++)
         std::cout << vetor[i] << " ";
     std::cout << std::endl;
-}
-
-double calculaMedia(double soma){
-    return soma/10;
 }
 
 //Método de ordenação QuickSort para ordenar o vetor em ordem crescente 
@@ -250,4 +249,8 @@ void quicksortOrdenacaoDecrescente(int *&vetor, int inicio, int fim) {
         quicksortOrdenacaoDecrescente(vetor, inicio, pi - 1);
         quicksortOrdenacaoDecrescente(vetor, pi + 1, fim);
     }
+}
+
+double calculaMedia(double soma){
+    return soma/10;
 }
