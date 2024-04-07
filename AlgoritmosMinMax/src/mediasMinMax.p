@@ -41,8 +41,8 @@ plot 'output/csv/medias.csv' skip 25 every 3::::9 u 3:14 t "Ordem Aleatória" wi
 
 f(n) = n - 1 
 g(n) = 2*(n - 1) 
-h(n) = 3*n/2 - 3/2 
-q(n) = 3*n/2 - 2
+h(n) = 3*(n/2) - 3/2 
+q(n) = 3*(n/2) - 2
 p(n) = n
 
 unset ytics
@@ -99,8 +99,8 @@ plot 'output/csv/medias.csv' skip 3 every 3::::9 u 3:14 t "MinMax1" with lp,\
 
 f(n) = n - 1 
 g(n) = 2*(n - 1) 
-h(n) = 3*n/2 - 3/2 
-q(n) = 3*n/2 - 2
+h(n) = 3*(n/2) - 3/2 
+q(n) = 3*(n/2) - 2
 p(n) = n
 
 unset ytics

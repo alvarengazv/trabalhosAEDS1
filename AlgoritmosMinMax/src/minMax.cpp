@@ -164,7 +164,8 @@ void minMax3(int *&vetor, int n, int &min, int &max){
         min = vetor[0];
     }
 
-    for(int i = 2; i < fimDoAnel; i+=2){
+    int i = 2;
+    while(i < fimDoAnel){
         if(vetor[i] > vetor[i+1]){
             if(vetor[i] > max)
                 max = vetor[i];
@@ -176,6 +177,7 @@ void minMax3(int *&vetor, int n, int &min, int &max){
             if(vetor[i] < min)
                 min = vetor[i];
         }
+        i += 2;
     }
 } 
 
