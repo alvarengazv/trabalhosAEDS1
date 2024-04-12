@@ -15,7 +15,6 @@ set yrange [0:4]
 set xtics 50000
 set ytics 0.2
 
-set key left spacing 1.5 samplen 0.6 width 1
 set grid
 
 set ylabel "Média de tempo de Execução (ms)"
@@ -23,19 +22,16 @@ set xlabel "Tamanho da entrada (n)"
 
 set title "MediaMinMax1"
 plot 'output/csv/medias.csv' skip 1 every 3::::9 u 3:14 t "Ordem Aleatória" with lp,\
-'' skip 1 every 3::::9 u 3:14:(sprintf("%.2f", $14)) with labels center offset 0,1 notitle,\
 '' skip 2 every 3::::9 u 3:14 t "Ordem Crescente" with lp,\
 '' skip 3 every 3::::9 u 3:14 t "Ordem Decrescente" with lp
 
 set title 'MediaMinMax2'
 plot 'output/csv/medias.csv' skip 13 every 3::::9 u 3:14 t "Ordem Aleatória" with lp,\
-'' skip 13 every 3::::9 u 3:14:(sprintf("%.2f", $14)) with labels center offset 0,1 notitle,\
 '' skip 14 every 3::::9 u 3:14 t "Ordem Crescente" with lp,\
 '' skip 15 every 3::::9 u 3:14 t "Ordem Decrescente" with lp
 
 set title 'MediaMinMax3'
 plot 'output/csv/medias.csv' skip 25 every 3::::9 u 3:14 t "Ordem Aleatória" with lp,\
-'' skip 25 every 3::::9 u 3:14:(sprintf("%.2f", $14)) with labels center offset 0,1 notitle,\
 '' skip 26 every 3::::9 u 3:14 t "Ordem Crescente" with lp,\
 '' skip 27 every 3::::9 u 3:14 t "Ordem Decrescente" with lp
 
@@ -43,7 +39,6 @@ f(n) = n - 1
 g(n) = 2*(n - 1) 
 h(n) = 3*(n/2) - 3/2 
 q(n) = 3*(n/2) - 2
-p(n) = n
 
 unset ytics
 unset xtics
@@ -56,11 +51,10 @@ set yrange [0:85]
 # set ytics 100000
 
 set title "Funções de cada Algoritmo em relação ao de custo ótimo"
-plot f(x) with lines lc rgb 'blue' lw 2 title 'f(n) = n - 1',\
-g(x) with lines lc rgb 'red' lw 2 title 'g(n) = 2(n - 1)',\
-h(x) with lines lc rgb 'green' lw 2 title 'h(n) = 3n/2 - 3/2',\
-q(x) with lines lc rgb 'yellow' lw 2 title 'q(n) = 3n/2 - 2',\
-p(x) with lines lc rgb 'orange' lw 2 title 'p(n) = n'
+plot f(x) with lines lc rgb 'blue' lw 2 title 'f(n) = n - 1 >> MinMax2 (Melhor)',\
+g(x) with lines lc rgb 'red' lw 2 title 'g(n) = 2(n - 1) >> MinMax1 (Melhor, pior e médio) & MinMax2 (Pior)',\
+h(x) with lines lc rgb 'green' lw 2 title 'h(n) = 3n/2 - 3/2 >> MinMax2 (Médio)',\
+q(x) with lines lc rgb 'yellow' lw 2 title 'q(n) = 3n/2 - 2 >> MinMax3 (Melhor, pior e médio)'
 
 unset multiplot
 
@@ -76,7 +70,6 @@ set yrange [0:4]
 set xtics 50000
 set ytics 0.2
 
-set key left spacing 1.5 samplen 0.6 width 1
 set grid
 
 set ylabel "Média de tempo de Execução (ms)"
@@ -101,7 +94,6 @@ f(n) = n - 1
 g(n) = 2*(n - 1) 
 h(n) = 3*(n/2) - 3/2 
 q(n) = 3*(n/2) - 2
-p(n) = n
 
 unset ytics
 unset xtics
@@ -113,9 +105,8 @@ set yrange [0:85]
 
 # set ytics 100000
 
-set title 'Funções de cada Algoritmo em relação ao de custo ótimo"
-plot f(x) with lines lc rgb 'blue' lw 2 title 'f(n) = n - 1',\
-g(x) with lines lc rgb 'red' lw 2 title 'g(n) = 2(n - 1)',\
-h(x) with lines lc rgb 'green' lw 2 title 'h(n) = 3n/2 - 3/2',\
-q(x) with lines lc rgb 'yellow' lw 2 title 'q(n) = 3n/2 - 2',\
-p(x) with lines lc rgb 'orange' lw 2 title 'p(n) = n'
+set title "Funções de cada Algoritmo em relação ao de custo ótimo"
+plot f(x) with lines lc rgb 'blue' lw 2 title 'f(n) = n - 1 >> MinMax2 (Melhor)',\
+g(x) with lines lc rgb 'red' lw 2 title 'g(n) = 2(n - 1) >> MinMax1 (Melhor, pior e médio) & MinMax2 (Pior)',\
+h(x) with lines lc rgb 'green' lw 2 title 'h(n) = 3n/2 - 3/2 >> MinMax2 (Médio)',\
+q(x) with lines lc rgb 'yellow' lw 2 title 'q(n) = 3n/2 - 2 >> MinMax3 (Melhor, pior e médio)'
