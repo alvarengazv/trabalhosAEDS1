@@ -29,12 +29,12 @@ Algoritmos e Estruturas de Dados I
     <li>
       <a href="#-Fundamentação-Teórica">💡 Fundamentação Teórica</a>
       <ul>
-        <li><a href='#Algoritmos-MinMax-MaxMin'>Algoritmos MinMax/MaxMin </a>
+        <li><a href='#Algoritmos-MinMaxMaxMin'>Algoritmos MinMax/MaxMin </a>
         <ul>
           <li><a href='#1-MinMax-1'>1. MinMax 1</a></li>
           <li><a href='#2-MinMax-2'>2. MinMax 2</a></li>
           <li><a href='#3-MinMax-3'>3. MinMax 3</a></li>
-          <li><a href='#4-Técnica-do-uso-de-um-Oráculo'>Técnica do uso de um Oráculo</a></li>
+          <li><a href='#4-Técnica-do-uso-de-um-Oráculo'>4. Técnica do uso de um Oráculo</a></li>
           <li><a href='#5-Curiosidade-MinMax-4'>5. Curiosidade MinMax 4</a></li>
         </ul>
         </li>
@@ -59,7 +59,7 @@ Algoritmos e Estruturas de Dados I
       </ul>
     </li>
     <li>
-      <a href="#-Testes-e-Resultados-Esperados">📊 Testes e Resultados Esperados</a>
+      <a href="#-Testes-e-Análises-dos-Resultados">📊 Testes e Análises dos Resultados</a>
       <ul>
         <li><a href="#Arquivo-de-Saída">Arquivo de Saída</a></li>
         <li>
@@ -296,8 +296,6 @@ $(0, 1, 1, n - 2)$
 
 Realizando a técnica, chega-se exatamente ao resultado esperado. Como foi mostrado, o mínimo de operações necessárias para que um Algoritmo MinMax chegue ao resultado final, é de: $(\frac{n}{2}) + (\frac{n}{2} - 1) + (\frac{n}{2} - 1) = \frac{3n}{2} - 2$ comparações. Dessa forma, podemos concluir que "se o número de comparações entre os elementos de um vetor for utilizado como medida de custo, então o algoritmo MaxMin3 é ótimo" (ZIVIANI, 2006, p. 30, cap. 1)[^1].
 
-</div>
-
 ##### 5. Curiosidade MinMax 4
 
 O problema Minmax pode ser resolvido com outro algoritmo, utilizado como exemplo por Ziviani (2006, p. 23, cap. 2)[^1]. Este método, por sua vez, utiliza do conceito de `Divisão e Conquista`, muito bem abordado e explicado por Cormen (2012, p. 48-78)[^2].
@@ -458,7 +456,7 @@ Abaixo estão as funções essenciais para o funcionamento do programa. Com a fi
 
   - Mais um _loop_, agora `while`, que se inicia com a edição da _string_ do vetor `stringsMinmax[alg]`, na posição referente ao algoritmo em questão. Essa modificação adiciona a primeira parte das linhas de saída, que conta com o tipo do Minmax, a ordem atual e o tamanho do vetor.
 
-  - Agora o último _loop_ `for` da execução padrão do programa (excluindo os que estão nos Algoritmos Minmax e serão discutidos na seção [Testes e Resultados Esperados](#-Testes-e-Resultados-Esperados)). Esse laço de repetição varia `i` de 0 a `QTDEXECUCOES` (constante, por padrão = 10). Nesta parte do código são feitos:
+  - Agora o último _loop_ `for` da execução padrão do programa (excluindo os que estão nos Algoritmos Minmax e serão discutidos na seção [📊 Testes e Análises dos Resultados](#-Testes-e-Análises-dos-Resultados)). Esse laço de repetição varia `i` de 0 a `QTDEXECUCOES` (constante, por padrão = 10). Nesta parte do código são feitos:
 
     - A marcação de tempo do início e fim do Algoritmo Minmax executado, através da função `std::chrono::high_resolution_clock::now()` e a subtração `final - inicio`;
     - Um `switch-case` para escolher o método `minMax1()`, `minMax2()` ou `minMax3()`;
@@ -690,7 +688,7 @@ Os algoritmos por si só abaixaram muito a média de valores de tempo de execuç
 
 <div align='center' style='font-size: 11px'>
 
-**Figura 11**: Gráficos de Algoritmos Comparados por Ordem com a _flag_ -O3
+**Figura 12**: Gráficos de Algoritmos Comparados por Ordem com a _flag_ -O3
 
 <img src='output/img/graficoComparacaoAlgoritmosPorOrdemComFlag.png'>
 
