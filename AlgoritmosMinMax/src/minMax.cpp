@@ -1,34 +1,34 @@
 #include "minMax.hpp"
 
-void controladorMinMax(int *&vetor, int n, int &min, int &max, int *tamanhos, std::string nomeArquivo){    
+void controladorMinMax(std::string nomeArquivo){
+    int tamanhos[4] = {1000, 10000, 100000, 500000};
+    int *vetor, min, max, t = 1;
+
     std::ofstream arquivo;
-    std::string linha, stringMedia1, stringMedia2, stringMedia3;
+    std::string *stringsMinmax = new std::string[3];
+    
     arquivo.open(nomeArquivo);
-    int t = 1;
-    arquivo << "# Algoritmo,Ordenação do Vetor,Tamanho do vetor (n),";
-
-    while (t <= 10){
-        arquivo << "t" << t << " (ms)" << ",";
-        t++;
-    }
-
-    arquivo << "Média (ms),Min,Max" << std::endl;
 
     if(arquivo.is_open()){
+        arquivo << "# Algoritmo,Ordenação do Vetor,Tamanho do vetor (n),";
+
+        while (t <= QTDEXECUCOES){
+            arquivo << "t" << t << " (ms)" << ",";
+            t++;
+        }
+
+        arquivo << "Média (ms),Min,Max" << std::endl;
         for(int i = 0; i < 4; i++){
             preencheVetor(vetor, tamanhos[i]);
 
             for(int j = 0; j < 3; j++){
                 mudarOrdem(vetor, tamanhos[i], j);
 
-                encontraMediaMinMax1(vetor, tamanhos[i], min, max, i, j, arquivo, stringMedia1);
-                encontraMediaMinMax2(vetor, tamanhos[i], min, max, i, j, arquivo, stringMedia2);
-                encontraMediaMinMax3(vetor, tamanhos[i], min, max, i, j, arquivo, stringMedia3);
-                //arquivo << std::endl;
+                encontraMediaMinMaxGeral(vetor, tamanhos[i], min, max, j, stringsMinmax);
             }
         }
 
-        arquivo << stringMedia1 << stringMedia2 << stringMedia3;
+        arquivo << stringsMinmax[0] << stringsMinmax[1] << stringsMinmax[2];
 
         arquivo.close();
     } else {
@@ -41,37 +41,46 @@ void controladorMinMax(int *&vetor, int n, int &min, int &max, int *tamanhos, st
 void mudarOrdem(int *&vetor, int n, int ordem){
     switch (ordem){
         case 1:
-            quicksortOrdenacaoCrescente(vetor, 0, n - 1);
+            quickSortOrdenacaoCrescente(vetor, 0, n - 1);
             break;
         case 2:
-            quicksortOrdenacaoDecrescente(vetor, 0, n - 1);
+            quickSortOrdenacaoDecrescente(vetor, 0, n - 1);
             break;
     }
 }
 
-void encontraMediaMinMax1(int *&vetor, int n, int &min, int &max, int tamanho, int ordem, std::ofstream& arquivo, std::string &stringMedia1){
+void encontraMediaMinMaxGeral(int *&vetor, int n, int &min, int &max, int ordem, std::string *stringsMinmax){
     double soma = 0;
     std::string ordemString = (ordem == 0 ? "Aleatória" : (ordem == 1 ? "Crescente" : "Decrescente"));
-    stringMedia1 += "MinMax1," + ordemString + "," + std::to_string(n) + ",";
+    int alg = 0;
 
-    //arquivo << "MinMax1," << ordemString << "," << n << ",";
+    while(alg < 3){
+        stringsMinmax[alg] += "MinMax" + std::to_string((alg+1)) + "," + ordemString + "," + std::to_string(n) + ",";
 
-    for(int i = 0; i < 10; i++){
-        auto inicio = std::chrono::high_resolution_clock::now();
-        minMax1(vetor, n, min, max);
-        auto final = std::chrono::high_resolution_clock::now();
-        std::chrono::duration<double, std::milli> tempoExec = (final - inicio);
-        //arquivo << tempoExec.count() << ",";
-        stringMedia1 += std::to_string(tempoExec.count()) + ",";
-        soma += tempoExec.count();
+        for(int i = 0; i < QTDEXECUCOES; i++){
+            auto inicio = std::chrono::high_resolution_clock::now();
+            switch (alg){
+                case 0:
+                    minMax1(vetor, n, min, max);
+                    break;
+                case 1:
+                    minMax2(vetor, n, min, max);
+                    break;
+                case 2:
+                    minMax3(vetor, n, min, max);
+                    break;
+            }
+            auto final = std::chrono::high_resolution_clock::now();
+            std::chrono::duration<double, std::milli> tempoExec = (final - inicio);
+            stringsMinmax[alg] += std::to_string(tempoExec.count()) + ",";
+            soma += tempoExec.count();
+        }
+        stringsMinmax[alg] += std::to_string(soma/QTDEXECUCOES) + "," + std::to_string(min) + "," + std::to_string(max) + "\n";
+        soma = 0;
+
+        alg++;
     }
-
-    stringMedia1 += std::to_string(calculaMedia(soma)) + "," + std::to_string(min) + "," + std::to_string(max) + "\n";
-
-    //arquivo << calculaMedia(soma) << "," << min << "," << max << std::endl;
-
-    std::cout << "Média 1/" << (tamanho+1) << "/" << ordem << ": " << calculaMedia(soma) << "ms" << std::endl;
-    mostraVetor(vetor, n);
+    
 }
 
 void minMax1(int *&vetor, int n, int &min, int &max){
@@ -84,31 +93,6 @@ void minMax1(int *&vetor, int n, int &min, int &max){
         if(vetor[i] < min)
             min = vetor[i];   
     }
-    
-}
-
-void encontraMediaMinMax2(int *&vetor, int n, int &min, int &max, int tamanho, int ordem, std::ofstream& arquivo, std::string &stringMedia2){
-    double soma = 0;
-    std::string ordemString = (ordem == 0 ? "Aleatória" : (ordem == 1 ? "Crescente" : "Decrescente"));
-
-    //arquivo << "MinMax2," << ordemString << "," << n << ",";
-    stringMedia2 += "MinMax2," + ordemString + "," + std::to_string(n) + ",";
-
-    for(int i = 0; i < 10; i++){
-        auto inicio = std::chrono::high_resolution_clock::now();
-        minMax2(vetor, n, min, max);
-        auto final = std::chrono::high_resolution_clock::now();
-        std::chrono::duration<double, std::milli> tempoExec = (final - inicio);
-        //arquivo << tempoExec.count() << ",";
-        stringMedia2 += std::to_string(tempoExec.count()) + ",";
-        soma += tempoExec.count();
-    }
-
-    //arquivo << calculaMedia(soma) << "," << min << "," << max << std::endl;
-    stringMedia2 += std::to_string(calculaMedia(soma)) + "," + std::to_string(min) + "," + std::to_string(max) + "\n";
-
-    std::cout << "Média 2/" << (tamanho+1) << "/" << ordem <<  ": " << calculaMedia(soma) << "ms" << std::endl;
-    mostraVetor(vetor, n);
 }
 
 void minMax2(int *&vetor, int n, int &min, int &max){
@@ -121,30 +105,6 @@ void minMax2(int *&vetor, int n, int &min, int &max){
         else if(vetor[i] < min)
             min = vetor[i];
     }
-}
-
-void encontraMediaMinMax3(int *&vetor, int n, int &min, int &max, int tamanho, int ordem, std::ofstream& arquivo, std::string &stringMedia3){
-    double soma = 0;
-    std::string ordemString = (ordem == 0 ? "Aleatória" : (ordem == 1 ? "Crescente" : "Decrescente"));
-
-    //arquivo << "MinMax3," << ordemString << "," << n << ",";
-    stringMedia3 += "MinMax3," + ordemString + "," + std::to_string(n) + ",";
-
-    for(int i = 0; i < 10; i++){
-        auto inicio = std::chrono::high_resolution_clock::now();
-        minMax3(vetor, n, min, max);
-        auto final = std::chrono::high_resolution_clock::now();
-        std::chrono::duration<double, std::milli> tempoExec = (final - inicio);
-        //arquivo << tempoExec.count() << ",";
-        stringMedia3 += std::to_string(tempoExec.count()) + ",";
-        soma += tempoExec.count();
-    }
-
-    //arquivo << calculaMedia(soma) << "," << min << "," << max << std::endl;
-    stringMedia3 += std::to_string(calculaMedia(soma)) + "," + std::to_string(min) + "," + std::to_string(max) + "\n";
-
-    std::cout << "Média 3/" << (tamanho+1) << "/" << ordem << ": " << calculaMedia(soma) << "ms" << std::endl;
-    mostraVetor(vetor, n);
 }
 
 void minMax3(int *&vetor, int n, int &min, int &max){
@@ -179,80 +139,80 @@ void minMax3(int *&vetor, int n, int &min, int &max){
         }
         i += 2;
     }
-} 
+}
 
 void preencheVetor(int *&vetor, int n){
     vetor = new int[n];
     for(int i = 0; i < n; i++)
-        vetor[i] = rand() % 1000 + 1;
+        vetor[i] = rand() % 1001;
 }
 
-void mostraVetor(int *vetor, int n){
-    for(int i = 0; i < 20; i++)
-        std::cout << vetor[i] << " ";
-    std::cout << std::endl;
+void geraGraficos(){
+    const char* command = "gnuplot -persist -e \"load 'src/mediasMinMax.p'\"";
+
+    FILE* pipe = popen(command, "r");
+    if (!pipe) {
+        std::cerr << "Erro! Não foi possível abrir um pipe para o gnuplot" << std::endl;
+        return;
+    }
+
+    pclose(pipe);
 }
 
-//Método de ordenação QuickSort para ordenar o vetor em ordem crescente 
 int particionaCrescente(int *&vetor, int inicio, int fim) {
-    int pivot = vetor[fim];
-    int i = (inicio - 1);
+    int pivo = vetor[fim];
+    int i = (inicio - 1), aux;
 
     for (int j = inicio; j <= fim - 1; j++) {
-        if (vetor[j] < pivot) {
+        if (vetor[j] < pivo) {
             i++;
-            int temp = vetor[i];
+            aux = vetor[i];
             vetor[i] = vetor[j];
-            vetor[j] = temp;
+            vetor[j] = aux;
         }
     }
 
-    int temp = vetor[i + 1];
+    aux = vetor[i + 1];
     vetor[i + 1] = vetor[fim];
-    vetor[fim] = temp;
+    vetor[fim] = aux;
 
     return (i + 1);
 }
 
-void quicksortOrdenacaoCrescente(int *&vetor, int inicio, int fim) {
+void quickSortOrdenacaoCrescente(int *&vetor, int inicio, int fim) {
     if (inicio < fim) {
-        int pi = particionaCrescente(vetor, inicio, fim);
+        int pivo = particionaCrescente(vetor, inicio, fim);
 
-        quicksortOrdenacaoCrescente(vetor, inicio, pi - 1);
-        quicksortOrdenacaoCrescente(vetor, pi + 1, fim);
+        quickSortOrdenacaoCrescente(vetor, inicio, pivo - 1);
+        quickSortOrdenacaoCrescente(vetor, pivo + 1, fim);
     }
 }
 
-//Método de ordenação QuickSort para ordenar o vetor em ordem decrescente 
 int particionaDecrescente(int *&vetor, int inicio, int fim) {
-    int pivot = vetor[fim];
-    int i = (inicio - 1);
+    int pivo = vetor[fim];
+    int i = (inicio - 1), aux;
 
     for (int j = inicio; j <= fim - 1; j++) {
-        if (vetor[j] > pivot) {
+        if (vetor[j] > pivo) {
             i++;
-            int temp = vetor[i];
+            aux = vetor[i];
             vetor[i] = vetor[j];
-            vetor[j] = temp;
+            vetor[j] = aux;
         }
     }
 
-    int temp = vetor[i + 1];
+    aux = vetor[i + 1];
     vetor[i + 1] = vetor[fim];
-    vetor[fim] = temp;
+    vetor[fim] = aux;
 
     return (i + 1);
 }
 
-void quicksortOrdenacaoDecrescente(int *&vetor, int inicio, int fim) {
+void quickSortOrdenacaoDecrescente(int *&vetor, int inicio, int fim) {
     if (inicio < fim) {
-        int pi = particionaDecrescente(vetor, inicio, fim);
+        int pivo = particionaDecrescente(vetor, inicio, fim);
 
-        quicksortOrdenacaoDecrescente(vetor, inicio, pi - 1);
-        quicksortOrdenacaoDecrescente(vetor, pi + 1, fim);
+        quickSortOrdenacaoDecrescente(vetor, inicio, pivo - 1);
+        quickSortOrdenacaoDecrescente(vetor, pivo + 1, fim);
     }
-}
-
-double calculaMedia(double soma){
-    return soma/10;
 }
