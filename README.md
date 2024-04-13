@@ -560,7 +560,7 @@ Como pode ser visto, os dados são gerados em ordem. Primeiro, todas as execuç�
 
 ##### 1. Execução Padrão
 
-Com o arquivo gerado e dados organizados, foi possível gerar duas plotagens de gráficos do **gnuplot**. A primeira, conta com três principais gráficos e um para a visualização das funções $f(n)$ de cada Algoritmo Minmax em seus casos médio, pior e melhor. Os três outros gráficos mostram, cada um, um dos Algoritmos Minmax avaliado em relação às três ordens do vetor de entrada.
+Com o arquivo gerado e dados organizados, foi possível gerar duas plotagens de gráficos do **gnuplot**. A primeira, conta com três principais gráficos e outro para a visualização das funções $f(n)$ de cada Algoritmo Minmax em seus casos médio, pior e melhor. Os três primeiros gráficos mostram, cada um, um dos Algoritmos Minmax avaliado em relação às três ordens do vetor de entrada.
 
 <div align='center' style='font-size: 11px'>
 
@@ -572,7 +572,7 @@ Com o arquivo gerado e dados organizados, foi possível gerar duas plotagens de 
 
 </div>
 
-Como pode ser observado na imagem acima, os gráficos mantêm um mesmo comportamento linear e quase idênticos na maioria dos casos (e isso faz sentido, considerando que todos os algoritmos possue $f(n)$ diferentes por valores constantes). O único caso a se dar maior atenção, é o gráfico de tempo de execução do Algoritmo MinMax3 (Título do Gráfico - MediaMinMax 3) com a disposição aleatória do vetor de entrada. Este resultado gera uma dúvida, pois, se em todos os outros casos, o tempo de execução é mais ou menos o mesmo, por qual razão no MinMax 3 - que também possui um custo ótimo - possui quase o dobro das médias de tempo de execução?*
+Como pode ser observado na imagem acima, os gráficos mantêm um mesmo comportamento linear e quase idênticos na maioria dos casos (e isso faz sentido, considerando que todos os algoritmos possui $f(n)$ diferenciados apenas por valores constantes). O único caso a se dar maior atenção, é o gráfico de tempo de execução do Algoritmo MinMax3 (Título do Gráfico - MediaMinMax 3) com a disposição aleatória do vetor de entrada. Este resultado gera uma dúvida, pois, se em todos os outros casos, o tempo de execução é mais ou menos o mesmo, por qual razão no MinMax 3 - que também possui um custo ótimo - possui quase o dobro das médias de tempo de execução?*
 
 <div align='center' style='font-size: 11px'>
 
@@ -584,7 +584,7 @@ Como pode ser observado na imagem acima, os gráficos mantêm um mesmo comportam
 
 </div>
 
-Analisando o gráfico acima é notável a paridade entre os algoritmos MinMax 1 e 2, que andam praticamente juntos em todas as comparações. O único que se distancia é o MinMax 3, que nas ordens Crescente e Aleatória fica abaixo dos outros dois (mais rápido), e, **curiosamente** fica acima de ambos na ordem Aleatória (mais lento). Novamente algo que não é necessariamente intuitivo de se pensar.*
+Analisando o gráfico acima é notável a paridade entre os algoritmos MinMax 1 e 2, que andam praticamente juntos em todas as comparações. O único que se distancia é o MinMax 3, que nas ordens Crescente e Decrescente fica abaixo dos outros dois (mais rápido), e, **curiosamente** fica acima de ambos na ordem Aleatória (mais lento). Novamente algo que não é necessariamente intuitivo de se pensar.*
 
 *A explicação desses resultados será discutida na última [seção](#Interpretação-dos-Resultados-e-Primeiras-Conclusões).
 
@@ -696,11 +696,11 @@ Os algoritmos por si só abaixaram muito a média de valores de tempo de execuç
 
 </div>
 
-Agora, os algoritmos quando comparados entre si, tiveram uma diferença maior entre o Minmax 1 e 2, sendo o primeiro um *pouco* mais lento. Isso pode ser explicado pela forma como a _flag_ `-O3` alterou o código final, que pode ter gerado uma instrução que facilita a execução do segundo algoritmo. Porém, ainda há uma diferença entre os dois primeiros e o Minmax 3 no caso de ordem Aleatória. 
+Agora, os algoritmos quando comparados entre si, tiveram uma diferença maior entre o Minmax 1 e 2, sendo o primeiro um **pouco** mais lento. Isso pode ser explicado pela forma como a _flag_ `-O3` alterou o código final, que pode ter gerado uma instrução que facilita a execução do segundo algoritmo. Porém, ainda há uma diferença entre os dois primeiros e o Minmax 3 no caso de ordem Aleatória. 
 
 ### Interpretação dos Resultados e Primeiras Conclusões
 
-A explicação plausível para as discrepâncias visualizadas acima, com foco no Algoritmo Minmax 3 com ordem da entrada Aleatória, seria pela quantidade de estruturas `if` e `else` dentro do `while-loop` do código. Essas estruturas atrapalham o _pipeline_ do processador, que funciona melhor com um código linear, isto é, que acessa a memória por palavrasde bits consecutivas. E, por conta dos desvios condicionais, o processador gasta mais ciclos de operação para realizar essas instruções. Além disso, a ordem do vetor de entrada possui papel crucial nessa visualização e análise gráfica. O fato de o vetor estar ordenado aleatoriamente também "confunde" (ou atrapalha) a implementação no processador de `previsão de desvios`[^9], já que as técnicas dos "preditores" costumam se aproveitar de conceitos lógicos e exatos para tentar prever e não consideram aleatoriedade. 
+A explicação plausível para as discrepâncias visualizadas acima, com foco no Algoritmo Minmax 3 com ordem da entrada Aleatória, seria pela quantidade de estruturas `if` e `else` dentro do `while-loop` do código. Essas estruturas atrapalham o _pipeline_ do processador, que funciona melhor com um código linear, isto é, que acessa a memória por palavras de bits consecutivas. E, por conta dos desvios condicionais, o processador gasta mais ciclos de operação para realizar essas instruções. Além disso, a ordem do vetor de entrada possui papel crucial nessa visualização e análise gráfica. O fato de o vetor estar ordenado aleatoriamente também "confunde" (ou atrapalha) a implementação no processador de `previsão de desvios`[^9], já que as técnicas dos "preditores" costumam se aproveitar de conceitos lógicos e exatos para tentar prever e não consideram aleatoriedade. 
 
 Uma dessas técnicas consiste na criação de um histórico de desvios condicionais no processador, para serem consultados posteriormente. Porém, como a quantidade da entrada $n$ sempre varia, e pode ser muito alta e sempre com valores distintos, essa técnica cai por água abaixo, pois não há como prever se muitos números aleatórios serão comparados novamente. Segundo Tanembaum (2012, p.312)[^8]:
 
