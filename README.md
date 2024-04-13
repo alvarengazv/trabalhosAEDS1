@@ -572,7 +572,7 @@ Com o arquivo gerado e dados organizados, foi possível gerar duas plotagens de 
 
 </div>
 
-Como pode ser observado na imagem acima, os gráficos mantêm um mesmo comportamento linear e quase idênticos na maioria dos casos (e isso faz sentido, considerando que todos os algoritmos possui $f(n)$ diferenciados apenas por valores constantes). O único caso a se dar maior atenção, é o gráfico de tempo de execução do Algoritmo MinMax3 (Título do Gráfico - MediaMinMax 3) com a disposição aleatória do vetor de entrada. Este resultado gera uma dúvida, pois, se em todos os outros casos, o tempo de execução é mais ou menos o mesmo, por qual razão no MinMax 3 - que também possui um custo ótimo - possui quase o dobro das médias de tempo de execução?*
+Como pode ser observado na imagem acima, os gráficos mantêm um mesmo comportamento linear e quase idênticos na maioria dos casos (e isso faz sentido, considerando que todos os algoritmos possuem $f(n)$ diferenciados apenas por valores constantes). O único caso a se dar maior atenção, é o gráfico de tempo de execução do Algoritmo MinMax3 (Título do Gráfico - MediaMinMax 3) com a disposição aleatória do vetor de entrada. Este resultado gera uma dúvida, pois, se em todos os outros casos, o tempo de execução é mais ou menos o mesmo, por qual razão no MinMax 3 - que também possui um custo ótimo - possui quase o dobro das médias de tempo de execução?*
 
 <div align='center' style='font-size: 11px'>
 
