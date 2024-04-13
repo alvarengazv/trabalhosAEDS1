@@ -1,7 +1,7 @@
 <a name="readme-topo"></a>
 
 <div align='center'>
-  <img src='imgs/banner.png'>
+  <img src='imgs/banner.png' width='350'>
 </div>
 
 <h1 align='center'>
@@ -27,9 +27,28 @@ Algoritmos e Estruturas de Dados I
   <ol>
     <li><a href="#-Introdução">🔍 Introdução</a></li>
     <li>
-      <a href="#-Fundamentação-Teórica">💡 Fundamentação Teórica</a>  
+      <a href="#-Fundamentação-Teórica">💡 Fundamentação Teórica</a>
+      <ul>
+        <li><a href='#Algoritmos-MinMax-MaxMin'>Algoritmos MinMax/MaxMin </a>
+        <ul>
+          <li><a href='#1-MinMax-1'>1. MinMax 1</a></li>
+          <li><a href='#2-MinMax-2'>2. MinMax 2</a></li>
+          <li><a href='#3-MinMax-3'>3. MinMax 3</a></li>
+          <li><a href='#4-Técnica-do-uso-de-um-Oráculo'>Técnica do uso de um Oráculo</a></li>
+          <li><a href='#5-Curiosidade-MinMax-4'>5. Curiosidade MinMax 4</a></li>
+        </ul>
+        </li>
+        <li><a href='#Método-de-Ordenação-QuickSort'>Método de Ordenação (QuickSort)</a></li>
+        <li><a href='#Outros-Fatores-Determinantes'>Outros Fatores Determinantes</a></li>
+      </ul>
     </li>
-    <li><a href="#-Objetivos">🎯 Objetivos</a></li>
+    <li>
+      <a href="#-Objetivos">🎯 Objetivos</a>
+      <ul>
+        <li><a href='#Objetivo-Geral'>Objetivo Geral</a></li>
+        <li><a href='#Objetivos-Específicos'>Objetivos Específicos</a></li>
+      </ul>
+    </li>
     <li>
       <a href="#-Metodologia">🔬 Metodologia</a>
       <ul>
@@ -41,6 +60,25 @@ Algoritmos e Estruturas de Dados I
     </li>
     <li>
       <a href="#-Testes-e-Resultados-Esperados">📊 Testes e Resultados Esperados</a>
+      <ul>
+        <li><a href="#Arquivo-de-Saída">Arquivo de Saída</a></li>
+        <li>
+          <a href="#Gráficos-Gerados">Gráficos Gerados</a>
+          <ul>
+            <li><a href="#1-Execução-Padrão">1. Execução Padrão</a></li>
+            <li><a href="#2-Testes-no-desktop">2. Testes no desktop</a></li>
+            <li><a href="#3-Gráfico-de-Funções-de-Custo">3. Gráfico de Funções de Custo</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#Geração-do-Código-no-Compilador">Geração do Código no Compilador</a>
+          <ul>
+            <li><a href="#1-Padrão">1. Padrão</a></li>
+            <li><a href="#2-Testes-com-Flag--O3">2. Testes com Flag -O3</a></li>
+          </ul>
+        </li>
+        <li><a href="#Interpretação-dos-Resultados-e-Primeiras-Conclusões">Interpretação dos Resultados e Primeiras Conclusões</a></li>
+      </ul>
     </li>
     <li><a href="#-Conclusão">🏁 Conclusão</a></li>
     <li>
@@ -70,7 +108,9 @@ Neste contexto, o professor Nívio Ziviani da UFMG demonstrou, inicialmente, tr�
 <div align='center' style='font-size: 11px'>
 
 **Figura 1**: Funções $f(n)$ para 3 casos de cada Algoritmo MaxMin proposto
+
 <img src='imgs/fnMinmaxes.png'>
+
 **Fonte**: Projeto de Algoritmos com Implementações em Java e C++. [^1]
 
 </div>
@@ -113,7 +153,7 @@ $f(n) = (n-1) + (n-1) = 2(n-1)$*.
 
 </div>
 
-*O fator $(n-1)$ possui o "$-1$" pois o `for-loop` se inicia no segundo elemento do `vetor`, já que o primeiro já foi atribuído às variáveis `min` e `max`.
+*O fator $(n-1)$ possui o $(-1)$ pois o `for-loop` se inicia no segundo elemento do `vetor`, já que o primeiro já foi atribuído às variáveis `min` e `max`.
 
 ##### 2. MinMax 2
 ```cpp
@@ -265,7 +305,9 @@ O problema Minmax pode ser resolvido com outro algoritmo, utilizado como exemplo
 <div align='center' style='font-size: 11px'>
 
 **Figura 2**: Minmax 4 - Divisão e Conquista
+
 <img src='imgs/maxMin4.png' width='300'>
+
 **Fonte**: Projeto de Algoritmos com Implementações em Java e C++
 
 </div>
@@ -321,14 +363,17 @@ Aqui, foi estudada e testada a opção `-O3` do `gcc` na versão indicada em [�
 Para a solução proposta os seguintes diretórios/arquivos foram utilizados: 
 
   - [`output/csv/medias.csv`][medias-ref]: arquivo em que se encontra os resultados de saída do programa em CSV obtidos em testes no _notebook_;
+  - [`output/csv/mediasComFlag.csv`][mediasFlag-ref]: arquivo em que se encontra os resultados de saída do programa em CSV obtidos em testes no _notebook_ com a _flag_ `-O3`;
   - [`output/csv/mediasPC.csv`][mediasPC-ref]: arquivo em que se encontra os resultados de saída do programa em CSV obtidos em testes no _desktop_;
   - [`output/img/graficoComparacaoAlgoritmosPorOrdem.png`][graficoAO-ref]: arquivo em que se encontra os gráficos de comparação entre os algoritmos por ordem, plotados com gnuplot no _notebook_;
   - [`output/img/graficoComparacaoOrdensPorAlgoritmo.png`][graficoOA-ref]: arquivo em que se encontra os gráficos de comparação entre as execuções por ordens diferentes do mesmo algoritmo, plotados com gnuplot no _notebook_;
+  - [`output/img/graficoComparacaoAlgoritmosPorOrdemComFlag.png`][graficoAOFlag-ref]: arquivo em que se encontra os gráficos de comparação entre os algoritmos por ordem, plotados com gnuplot no _notebook_, com tempos calculados com a _flag_ `-O3`;
+  - [`output/img/graficoComparacaoOrdensPorAlgoritmoComFlag.png`][graficoOAFlag-ref]: arquivo em que se encontra os gráficos de comparação entre as execuções por ordens diferentes do mesmo algoritmo, plotados com gnuplot no _notebook_, com tempos calculados com a _flag_ `-O3`;
   - [`output/img/graficoComparacaoAlgoritmosPorOrdemPC.png`][graficoAOPC-ref]: arquivo em que se encontra os gráficos de comparação entre os algoritmos por ordem, plotados com gnuplot no _desktop_;
   - [`output/img/graficoComparacaoOrdensPorAlgoritmoPC.png`][graficoOAPC-ref]: arquivo em que se encontra os gráficos de comparação entre as execuções por ordens diferentes do mesmo algoritmo, plotados com gnuplot no _desktop_;
   - [`src/main.cpp`][main-ref]: arquivo em que se encontra a função `main()` que executa comandos cruciais do programa;
   - [`src/minMax.cpp`][cppAMM-ref]: arquivo em que se encontra as implementações das funções utilizadas;
-  - [`src/mediasMinMax.p`][gnuAMM-ref]: arquivo em que se encontra o script do gnuplot utilizado para a geração dos gráficos em PNG;
+  - [`src/mediasMinMax.p`][gnuAMM-ref]: arquivo de extensão P[^4] em que se encontra o script do gnuplot utilizado para a geração dos gráficos em PNG;
   - [`src/minMax.hpp`][hppAMM-ref]: arquivo em que se encontra as assinaturas das funções utilizadas e importações de bibliotecas padrão;
   - [`makefile`][makefile]: arquivo com os comandos para a compilação e execução do programa.
 
@@ -361,7 +406,7 @@ Abaixo estão as funções essenciais para o funcionamento do programa. Com a fi
 
   - `void minMax3()`: esta função é responsável por encontrar os valores mínimo (min) e máximo (max) em um vetor vetor de inteiros com tamanho n, seguindo as especificidades do Algoritmo MaxMin3 (ZIVIANI, 2006, p. 24, cap. 1)[^1];
 
-  - `void preencheVetor()`: esta função muda o tamanho do vetor utilizado para `n` e o preenche com valores aleatórios entre 0 e 1000 gerados pela função `rand()` da biblioteca `<random>`;
+  - `void preencheVetor()`: esta função muda o tamanho do vetor utilizado para $n$ e o preenche com valores aleatórios entre 0 e 1000 gerados pela função `rand()` da biblioteca `<random>`;
 
   - `void geraGraficos()`: esta função executa um comando através da função `popen()`, que permite a execução de comandos em terminal através do código em C++. O comando seleciona um arquivo contendo um script para geração de gráficos utilizando o software ___gnuplot___. O conteúdo desse arquivo inclui instruções para plotar dados, ajustar estilos, configurar rótulos e legendas, entre outras configurações gráficas;
 
@@ -469,8 +514,8 @@ Abaixo estão as funções essenciais para o funcionamento do programa. Com a fi
   - Muda-se os títulos e o arquivo PNG de saída e se repete os mesmos comando alterando apenas quais linhas serão consideradas em cada;
 
   ```console
-  plot 'output/csv/medias.csv' skip 1 every 3::::9 u 3:14 t "Ordem Aleatória" with lp
-  ``` 
+  * plot 'output/csv/medias.csv' skip 1 every 3::::9 u 3:14 t "Ordem Aleatória" with lp
+  ```
   *Aqui, inicialmente se indica o arquivo CSV de entrada. O comando `skip 1` pula a primeira linha do arquivo CSV. Já o comando `every 3::::9` salta 3 linhas a partir da inicial do comando e faz isso 3 vezes (9/3) até o final do bloco de dados (9). O comando `u 3:14`, por sua vez, indica quais colunas devem ser consideradas, no caso 3 (tamanho do vetor de entrada) e 14 (média dos testes daquela linha). Por fim, `t "Ordem Aleatória"` indica o título e `with lp` define o tipo de linha do gráfico (lp -> linepoints).
 
 </div>
@@ -515,47 +560,158 @@ Como pode ser visto, os dados são gerados em ordem. Primeiro, todas as execuç�
 
 ### Gráficos Gerados
 
+##### 1. Execução Padrão
+
 Com o arquivo gerado e dados organizados, foi possível gerar duas plotagens de gráficos do **gnuplot**. A primeira, conta com três principais gráficos e um para a visualização das funções $f(n)$ de cada Algoritmo Minmax em seus casos médio, pior e melhor. Os três outros gráficos mostram, cada um, um dos Algoritmos Minmax avaliado em relação às três ordens do vetor de entrada.
 
 <div align='center' style='font-size: 11px'>
 
-**Figura 2**: Gráficos de Ordens Comparadas por Algoritmo
+**Figura 3**: Gráficos de Ordens Comparadas por Algoritmo
+
 <img src='output/img/graficoComparacaoOrdensPorAlgoritmo.png'>
+
 **Fonte**: Autor.
 
 </div>
 
+Como pode ser observado na imagem acima, os gráficos mantêm um mesmo comportamento linear e quase idênticos na maioria dos casos (e isso faz sentido, considerando que todos os algoritmos possue $f(n)$ diferentes por valores constantes). O único caso a se dar maior atenção, é o gráfico de tempo de execução do Algoritmo MinMax3 (Título do Gráfico - MediaMinMax 3) com a disposição aleatória do vetor de entrada. Este resultado gera uma dúvida, pois, se em todos os outros casos, o tempo de execução é mais ou menos o mesmo, por qual razão no MinMax 3 - que também possui um custo ótimo - possui quase o dobro das médias de tempo de execução?*
+
 <div align='center' style='font-size: 11px'>
 
-**Figura 3**: Gráficos de Algoritmos Comparados por Ordem
+**Figura 4**: Gráficos de Algoritmos Comparados por Ordem
+
 <img src='output/img/graficoComparacaoAlgoritmosPorOrdem.png'>
+
 **Fonte**: Autor.
 
 </div>
 
-### Testes no [desktop](#-Ambiente-de-Compilação-e-Execução)
+Analisando o gráfico acima é notável a paridade entre os algoritmos MinMax 1 e 2, que andam praticamente juntos em todas as comparações. O único que se distancia é o MinMax 3, que nas ordens Crescente e Aleatória fica abaixo dos outros dois (mais rápido), e, **curiosamente** fica acima de ambos na ordem Aleatória (mais lento). Novamente algo que não é necessariamente intuitivo de se pensar.*
+
+*A explicação desses resultados será discutida na última [seção](#Interpretação-dos-Resultados-e-Primeiras-Conclusões).
+
+##### 2. Testes no [desktop](#-Ambiente-de-Compilação-e-Execução)
+
+A fim de se confirmar que os resultados encontrados no ambiente padrão de desenvolvimento, compilação e execução (notebook com Ubuntu/compilador gcc), o código também foi testado em um computador desktop com especificações um pouco melhores que o anterior. Além disso, vale ressaltar que neste segundo ambiente, o sistema operacional é o Windows 10 e o compilador é o oficial do Microsoft Visual Studio.
 
 <div align='center' style='font-size: 11px'>
 
-**Figura 4**: Gráficos de Ordens Comparadas por Algoritmo no Desktop
+**Figura 5**: Gráficos de Ordens Comparadas por Algoritmo no Desktop
+
 <img src='output/img/graficoComparacaoOrdensPorAlgoritmoPC.png'>
+
 **Fonte**: Autor.
 
 </div>
+
+Nos primeiros gráficos acima, nota-se novamente a paridade da performance de um mesmo algoritmo independentemente da ordem do vetor de entrada. E, novamente, o Algoritmo MinMax 3, com o vetor disposto aleatoriamente, performa muito pior relativamente em relação aos outros. A única diferença em relação aos gráficos da execução padrão é que os valores são relativamente menores, justamente por conta das características dos componentes do computador.
 
 <div align='center' style='font-size: 11px'>
 
-**Figura 5**: Gráficos de Algoritmos Comparados por Ordem no Desktop
+**Figura 6**: Gráficos de Algoritmos Comparados por Ordem no Desktop
+
 <img src='output/img/graficoComparacaoAlgoritmosPorOrdemPC.png'>
+
 **Fonte**: Autor.
 
 </div>
+
+Na figura acima, percebe-se, mais uma vez, que os algoritmos Minmax 1 e 2 são muito próximos em relação ao tempo de execução, independentemente da ordem do vetor de entrada. Já o Minmax 3 continua performando melhor nas ordens Crescente e Decrescente, e pior na Aleatória. Novamente, relacionando os gráficos acima com os da primeira execução, as médias dos tempos de execução foi menor graças às especificações de _hardware_.
+
+##### 3. Gráfico de Funções de Custo
+
+Por último, mas não menos importante, em cada uma das figuras, o último gráfico não representa necessariamente os tempos de execução dos algoritmos. Mas, indica a ideia de crescimento e o comportamento esperado para cada uma das funções de custo dos Algoritmos Minmax de acordo com seus casos médio, pior e melhor. Vale ressaltar que todos são muito próximos, já que são lineares, então terão resultados não muito distantes entre si.
 
 ### Geração do Código no Compilador
 
+Com a dúvida ainda não sanada, decidiu-se realizar testes no [Compiler Explorer](https://godbolt.org). Essa ferramenta é um compilador online que inclui diversos compiladores utilizados mundialmente, e que mostra o código `Assembly` gerado.
+
 ##### 1. Padrão
 
+<div align='center' style='font-size: 11px'>
+
+**Figura 7**: Minmax1 compilado para `Assembly`
+
+<img src='imgs/minMax1Padrao.jpeg'>
+
+**Figura 8**: Minmax2 compilado para `Assembly`
+
+<img src='imgs/minMax2Padrao.jpeg'>
+
+**Figura 9**: Minmax3 compilado para `Assembly`
+
+<img src='imgs/minMax3Padrao.jpeg'>
+
+**Fonte**: Autor com Software [Compiler Explorer](https://godbolt.org).
+
+</div>
+
+As três imagens acima mostram o código de cada um dos Algoritmos Minmax testados neste trabalho, compilados a partir do compilador `gcc`, para a linguagem `Assembly`. A quantidade de linhas de cada um nos dá uma ideia de qual pode ser a razão de discrepâncias nos gráficos gerados, pois possuem:
+
+- Minmax 1: **71 linhas**;
+- Minmax 2: **72 linhas**;
+- Minmax 3: **189 linhas**;
+
+A pequena diferença entre o Minmax 1 e 2 é esperada, já que eles se diferenciam por apenas um `else-if`. Já a quantidade de quase o dobro do Minmax 3 em relação aos anteriores, pode nos dizer alguma coisa. Por mais que em C++ o código também seja pouco mais da metade, precisamos considerar o que isso pode afetar na execução das instruções do processador, considerando as ordenações dos vetores de entrada.
+
 ##### 2. Testes com Flag -O3
+
+Por fim, o último teste realizado foi com uma opção ou _flag_ a mais, `-O3`, no comando de compilação do código no `gcc`. Inicialmente, pelo código `Assembly`, nota-se as seguintes alterações no código compilado final:
+
+- Minmax 1: **25 linhas**;
+- Minmax 2: **29 linhas**;
+- Minmax 3: **74 linhas**;
+
+As diferenças relativas entre elas continuou quase as mesmas, porém, o código do trabalho foi compilado e executado com a opção `-O3` adicionada no início do `makefile`:
+
+<div align='center' style='font-size: 11px'>
+
+**Figura 10**: Adição da _flag_ -O3 no makefile
+
+<img src='imgs/adicionarFlag.png'>
+
+**Fonte**: Autor.
+
+</div>
+
+Ao rodar o `makefile` dessa forma, nota-se uma velocidade superior à padrão. E os gráficos sofreram algumas alterações:
+
+<div align='center' style='font-size: 11px'>
+
+**Figura 11**: Gráficos de Ordens Comparadas por Algoritmo com a _flag_ -O3
+
+<img src='output/img/graficoComparacaoOrdensPorAlgoritmoComFlag.png'>
+
+**Fonte**: Autor.
+
+</div>
+
+Os algoritmos por si só abaixaram muito a média de valores de tempo de execução comparados aos anteriores. Porém os gráficos lineares de cada um se mantiveram muito próximos (ordens Aleatória, Crescente e Decrescente). Com exceção, novamente, do Algoritmo Minmax 3 com o vetor de entrada disposto de forma Aleatória, que foi muito maior do que os outros.
+
+<div align='center' style='font-size: 11px'>
+
+**Figura 11**: Gráficos de Algoritmos Comparados por Ordem com a _flag_ -O3
+
+<img src='output/img/graficoComparacaoAlgoritmosPorOrdemComFlag.png'>
+
+**Fonte**: Autor.
+
+</div>
+
+Agora, os algoritmos quando comparados entre si, tiveram uma diferença maior entre o Minmax 1 e 2, sendo o primeiro um *pouco* mais lento. Isso pode ser explicado pela forma como a _flag_ `-O3` alterou o código final, que pode ter gerado uma instrução que facilita a execução do segundo algoritmo. Porém, ainda há uma diferença entre os dois primeiros e o Minmax 3 no caso de ordem Aleatória. 
+
+### Interpretação dos Resultados e Primeiras Conclusões
+
+A explicação plausível para as discrepâncias visualizadas acima, com foco no Algoritmo Minmax 3 com ordem da entrada Aleatória, seria pela quantidade de estruturas `if` e `else` dentro do `while-loop` do código. Essas estruturas atrapalham o _pipeline_ do processador, que funciona melhor com um código linear, isto é, que acessa a memória por palavrasde bits consecutivas. E, por conta dos desvios condicionais, o processador gasta mais ciclos de operação para realizar essas instruções. Além disso, a ordem do vetor de entrada possui papel crucial nessa visualização e análise gráfica. O fato de o vetor estar ordenado aleatoriamente também "confunde" (ou atrapalha) a implementação no processador de `previsão de desvios`[^9], já que as técnicas dos "preditores" costumam se aproveitar de conceitos lógicos e exatos para tentar prever e não consideram aleatoriedade. 
+
+Uma dessas técnicas consiste na criação de um histórico de desvios condicionais no processador, para serem consultados posteriormente. Porém, como a quantidade da entrada $n$ sempre varia, e pode ser muito alta e sempre com valores distintos, essa técnica cai por água abaixo, pois não há como prever se muitos números aleatórios serão comparados novamente. Segundo Tanembaum (2012, p.312)[^8]:
+
+<div style='font-size: 14px; margin-left: 50px'>
+
+"Se um desvio for previsto corretamente, não há nada de especial a fazer. A execução apenas continua no endereço de destino. O problema começa quando o desvio é previsto de forma errada. Imaginar para onde ir e ir para lá não é difícil. A parte difícil é desfazer as instruções que já foram executadas e não deveriam ter sido."*
+
+</div>
+*Versão traduzida.
 
 </div>
 
@@ -565,7 +721,9 @@ Com o arquivo gerado e dados organizados, foi possível gerar duas plotagens de 
 
 <div  align="justify">
 
-<!-- TODO -->
+O trabalho proposto de se realizar uma análise assintótica das funções de custo dos três Algoritmos Minmax por si só pode não ser capaz de explicar certos comportamentos dos algoritmos com certas massas de dados. Apesar das diferenças notadas entre os valores das médias de tempo de execução de cada um dos algoritmos, eles continuam fazendo parte da mesma classe de problemas (linear - $\mathcal{O}(n)$). Eles, também, não possuem muito custo computacional nem demandam muito tempo de execução, mesmo que o tamanho $n$ da entrada seja muito alto.
+
+Portanto, para se explicar as diferenças ínfimas que existem entre os tempos de execução desses algoritmos, é necessário buscar uma base na implementação de mais baixo nível de _software_ e, principalmente, a nível de _hardware_. Dessa forma, é possível entender o porquê de um algoritmo como o Minmax 3, que possui a menor função de custo na maioria dos casos, pode perder performance em certas situações. Isso ocorre justamente pela complexidade da implementação do código, que foi criada na busca do algoritmo perfeito. Então, considerando uma grande massa de dados $n$ e uma ordem desconhecida desses dados, os algoritmos Minmax 1 e 2 são preferíveis se considerarmos apenas o tempo de execução do programa. Porém, para entradas ordenadas crescente ou decrescentemente, o algoritmo Minmax 3 deve ser considerado.
 
 </div>
 
@@ -672,6 +830,10 @@ C++ Reference. **CPPReference**, 2017. Disponível em: https://en.cppreference.c
 
 CORMEN, T. H; LEISERSON C. E; RIVEST R. L; STEIN C. **Algoritmos**: Teoria e Prática. Tradução: Arlete S. Marques. 3. Ed. Rio de Janeiro: ELSEVIER, 2012.
 
+How branches influence the performance of your code and what can you do about it?. **Johnny’s Software Lab LLC**. 2020. Disponível em: https://johnnysswlab.com/how-branches-influence-the-performance-of-your-code-and-what-can-you-do-about-it/. Acesso em: 10 abr. 2024.
+
+Individual option description: -O, -qoptimize. **IBM**. 2021. Disponível em: https://www.ibm.com/docs/en/xl-c-aix/13.1.3?topic=descriptions-qoptimize. Acesso em: 11 abr. 2024.
+
 Official gnuplot documentation. **gnuplot**, 2022. Disponível em: http://www.gnuplot.info/documentation.html. Acesso em: 10 abr. 2024.
 
 Pipes em C - Comunicação entre Processos (IPC - Interprocess Communication). **Programação Progressiva**, 2017. Disponível em: https://www.programacaoprogressiva.net/2014/09/Pipes-em-C-Comunicao-entre-Processos-IPC-Interprocess-Communication.html. Acesso em: 10 abr. 2024.
@@ -683,8 +845,6 @@ TANENBAUM, A. S.; AUSTIN, T. **Structured Computer Organization**. [S.l.], 2012.
 Why Was 1 January 1970 Used as the Epoch Time?. **Baeldung**, 2024. Disponível em: https://www.baeldung.com/linux/epoch-time. Acesso em: 10 abr. 2024.
 
 ZIVIANI, N. **Projeto de Algoritmos com Implementações em Java e C++**. [S.l.] 1. Ed. Cengage Learning, 2006.
-
-https://johnnysswlab.com/how-branches-influence-the-performance-of-your-code-and-what-can-you-do-about-it/
 
 <p align="right">(<a href="#readme-topo">voltar ao topo</a>)</p>
 
@@ -717,9 +877,9 @@ https://johnnysswlab.com/how-branches-influence-the-performance-of-your-code-and
 
 [^8]: TANENBAUM, A. S.; AUSTIN, T. **Structured Computer Organization**. [S.l.], 2012. 800 p.
 
-[^9]: asd https://johnnysswlab.com/how-branches-influence-the-performance-of-your-code-and-what-can-you-do-about-it/ 
+[^9]: How branches influence the performance of your code and what can you do about it?. **Johnny’s Software Lab LLC**. 2020. Disponível em: https://johnnysswlab.com/how-branches-influence-the-performance-of-your-code-and-what-can-you-do-about-it/. Acesso em: 11 abr. 2024.
 
-[^10]: ads https://www.ibm.com/docs/en/xl-c-aix/13.1.3?topic=descriptions-qoptimize
+[^10]: Individual option description: -O, -qoptimize. **IBM**. 2021. Disponível em: https://www.ibm.com/docs/en/xl-c-aix/13.1.3?topic=descriptions-qoptimize. Acesso em: 11 abr. 2024.
 
 [vscode-badge]: https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white
 [vscode-url]: https://code.visualstudio.com/docs/?dv=linux64_deb
@@ -730,9 +890,12 @@ https://johnnysswlab.com/how-branches-influence-the-performance-of-your-code-and
 [trabalho-url]: https://drive.google.com/file/d/1m3pVwTmCQPWp7HDzCqwcy_aB0x4A3yIx/view?usp=sharing
 [github-prof]: https://github.com/mpiress
 [medias-ref]: output/csv/medias.csv
+[mediasFlag-ref]: output/csv/mediasComFlag.csv
 [mediasPC-ref]: output/csv/mediasPC.csv
 [graficoAO-ref]: output/img/graficoComparacaoAlgoritmosPorOrdem.png
 [graficoOA-ref]: output/img/graficoComparacaoOrdensPorAlgoritmo.png
+[graficoAOFlag-ref]: output/img/graficoComparacaoAlgoritmosPorOrdemComFlag.png
+[graficoOAFlag-ref]: output/img/graficoComparacaoOrdensPorAlgoritmoComFlag.png
 [graficoAOPC-ref]: output/img/graficoComparacaoAlgoritmosPorOrdemPC.png
 [graficoOAPC-ref]: output/img/graficoComparacaoOrdensPorAlgoritmoPC.png
 [main-ref]: src/main.cpp
