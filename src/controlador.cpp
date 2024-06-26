@@ -81,13 +81,26 @@ std::pair<std::string, double> executarLinhaProcesso(std::string linha){
     sort(numerosLinha.begin(), numerosLinha.end());
 
     double resultadoLinhaProcesso = 0.0;
-
     
+    /* VERSÃO 2
     int max = *std::max_element(numerosLinha.begin(), numerosLinha.end());
-    double resultadosArquivos[max] = {0.0};
+    double resultadosArquivos[max] = {0.0};*/
+    double resultadoAnterior = 0.0;
 
     for(i = 0; i < numerosLinha.size(); i++){
-        if(resultadosArquivos[numerosLinha[i] - 1] == 0.0){
+        if(i > 0){
+            if(numerosLinha[i] != numerosLinha[i - 1]){
+                std::string numero;
+                if(numerosLinha[i] < 10)
+                    numero = '0' + std::to_string(numerosLinha[i]);
+                else
+                    numero = std::to_string(numerosLinha[i]);
+                
+                std::string linhaArquivo = leituraLinhaArquivoNumero("datasets/" + numero + ".txt");
+                double resultadoArquivo = calcularResultadoArquivoNumero(linhaArquivo);
+                resultadoAnterior = resultadoArquivo;
+            }
+        } else {
             std::string numero;
             if(numerosLinha[i] < 10)
                 numero = '0' + std::to_string(numerosLinha[i]);
@@ -96,9 +109,17 @@ std::pair<std::string, double> executarLinhaProcesso(std::string linha){
             
             std::string linhaArquivo = leituraLinhaArquivoNumero("datasets/" + numero + ".txt");
             double resultadoArquivo = calcularResultadoArquivoNumero(linhaArquivo);
+            resultadoAnterior = resultadoArquivo;
+        }
+        resultadoLinhaProcesso += resultadoAnterior;
+
+        /* VERSÃO 2
+        if(resultadosArquivos[numerosLinha[i] - 1] == 0.0){
+            std::string linhaArquivo = leituraLinhaArquivoNumero("datasets/" + numero + ".txt");
+            double resultadoArquivo = calcularResultadoArquivoNumero(linhaArquivo);
             resultadosArquivos[numerosLinha[i] - 1] = resultadoArquivo;
         }
-        resultadoLinhaProcesso += resultadosArquivos[numerosLinha[i] - 1];
+        resultadoLinhaProcesso += resultadosArquivos[numerosLinha[i] - 1];*/
     }
 
     return std::make_pair(elementosLinha[0], resultadoLinhaProcesso);
