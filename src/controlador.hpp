@@ -10,7 +10,7 @@
 #include <map>
 #include <vector>
 
-#define VERSION 1
+#define VERSION 2
 
 void controladorEscolha(int escolha);
 void executarProcessos(int qtdProcessos);

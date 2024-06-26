@@ -1,0 +1,81 @@
+Versão 2 - 26-06-2024-18:16:35
+Processo P1
+Resultado: -5933931366.672382
+Tempo de execução L1: 0.072914s
+Tempo de execução L2: 0.082945s
+Tempo de execução L3: 0.082022s
+Tempo de execução L4: 0.033132s
+Tempo de execução L5: 0.050228s
+Tempo de execução L6: 0.066883s
+Tempo de execução L7: 0.086351s
+Tempo de execução L8: 0.082849s
+Tempo de execução L9: 0.083368s
+Tempo de execução L10: 0.066614s
+Tempo de execução total do processo P1: 0.707307s
+
+
+Processo P2
+Resultado: -6533863422.032606
+Tempo de execução L1: 0.050829s
+Tempo de execução L2: 0.068470s
+Tempo de execução L3: 0.051016s
+Tempo de execução L4: 0.085927s
+Tempo de execução L5: 0.083833s
+Tempo de execução L6: 0.066302s
+Tempo de execução L7: 0.066724s
+Tempo de execução L8: 0.082661s
+Tempo de execução L9: 0.067494s
+Tempo de execução L10: 0.066149s
+Tempo de execução L11: 0.083582s
+Tempo de execução L12: 0.066455s
+Tempo de execução total do processo P2: 0.839442s
+
+
+Processo P3
+Resultado: -6332355404.929948
+Tempo de execução L1: 0.067211s
+Tempo de execução L2: 0.066160s
+Tempo de execução L3: 0.081769s
+Tempo de execução L4: 0.082165s
+Tempo de execução L5: 0.083361s
+Tempo de execução L6: 0.067192s
+Tempo de execução L7: 0.067442s
+Tempo de execução L8: 0.067525s
+Tempo de execução L9: 0.067000s
+Tempo de execução L10: 0.050199s
+Tempo de execução L11: 0.084965s
+Tempo de execução total do processo P3: 0.784989s
+
+
+Processo P4
+Resultado: -5333213265.537414
+Tempo de execução L1: 0.084942s
+Tempo de execução L2: 0.089023s
+Tempo de execução L3: 0.082110s
+Tempo de execução L4: 0.082085s
+Tempo de execução L5: 0.065809s
+Tempo de execução L6: 0.083674s
+Tempo de execução L7: 0.050416s
+Tempo de execução L8: 0.068242s
+Tempo de execução L9: 0.083514s
+Tempo de execução L10: 0.066717s
+Tempo de execução total do processo P4: 0.756532s
+
+
+Processo P5
+Resultado: -5667576258.458121
+Tempo de execução L1: 0.083553s
+Tempo de execução L2: 0.082969s
+Tempo de execução L3: 0.082700s
+Tempo de execução L4: 0.066525s
+Tempo de execução L5: 0.082524s
+Tempo de execução L6: 0.066368s
+Tempo de execução L7: 0.050031s
+Tempo de execução L8: 0.050189s
+Tempo de execução L9: 0.050608s
+Tempo de execução L10: 0.050606s
+Tempo de execução L11: 0.083384s
+Tempo de execução total do processo P5: 0.749456s
+
+
+Tempo de execução total dos processos: 3.837726s

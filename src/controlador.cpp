@@ -80,7 +80,11 @@ std::pair<std::string, double> executarLinhaProcesso(std::string linha){
     }
     //sort(numerosLinha.begin(), numerosLinha.end());
 
-    double resultadoLinhaProcesso = 0;
+    double resultadoLinhaProcesso = 0.0;
+
+    int max = *std::max_element(numerosLinha.begin(), numerosLinha.end());
+
+    double resultadosArquivos[max] = {0.0};
 
     for(i = 0; i < numerosLinha.size(); i++){
         std::string numero;
@@ -89,8 +93,12 @@ std::pair<std::string, double> executarLinhaProcesso(std::string linha){
         else
             numero = std::to_string(numerosLinha[i]);
         
-        std::string linhaArquivo = leituraLinhaArquivoNumero("datasets/" + numero + ".txt");
-        resultadoLinhaProcesso += calcularResultadoArquivoNumero(linhaArquivo);
+        if(resultadosArquivos[numerosLinha[i] - 1] == 0.0){
+            std::string linhaArquivo = leituraLinhaArquivoNumero("datasets/" + numero + ".txt");
+            double resultadoArquivo = calcularResultadoArquivoNumero(linhaArquivo);
+            resultadosArquivos[numerosLinha[i] - 1] = resultadoArquivo;
+        }
+        resultadoLinhaProcesso += resultadosArquivos[numerosLinha[i] - 1];
     }
 
     return std::make_pair(elementosLinha[0], resultadoLinhaProcesso);
