@@ -10,13 +10,13 @@
 #include <map>
 #include <vector>
 
-#define VERSION 3
+#define VERSION 4
 
 void controladorEscolha(int escolha);
 void executarProcessos(int qtdProcessos);
 int menu();
 int entradaNumero(std::string mensagem);
-std::pair<std::string, double> executarLinhaProcesso(std::string linha);
+std::pair<std::string, double> executarLinhaProcesso(std::string linha, std::map<int, double> &resultadosArquivos);
 double calcularResultadoArquivoNumero(std::string linhaArquivo);
 
 #endif

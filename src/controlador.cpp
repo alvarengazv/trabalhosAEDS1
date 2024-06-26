@@ -65,7 +65,7 @@ int entradaNumero(std::string mensagem){
     return numero;
 }
 
-std::pair<std::string, double> executarLinhaProcesso(std::string linha){
+std::pair<std::string, double> executarLinhaProcesso(std::string linha, std::map<int, double> &resultadosArquivos){
     std::stringstream streamLinha(linha);
     std::string stringNumero;
     std::vector<std::string> elementosLinha;
@@ -74,52 +74,35 @@ std::pair<std::string, double> executarLinhaProcesso(std::string linha){
 
     while(std::getline(streamLinha, stringNumero, ',')){
         elementosLinha.push_back(stringNumero);
-        if(i > 0)
-            numerosLinha.push_back(std::stoi(stringNumero));
+        if(i > 0){
+            int num = std::stoi(stringNumero);
+            numerosLinha.push_back(num);
+            resultadosArquivos.try_emplace(num, 0.0);
+        }
         i++;
     }
+    /* VERSÃO 3
     sort(numerosLinha.begin(), numerosLinha.end());
-
+    */
     double resultadoLinhaProcesso = 0.0;
-    
+
     /* VERSÃO 2
     int max = *std::max_element(numerosLinha.begin(), numerosLinha.end());
     double resultadosArquivos[max] = {0.0};*/
-    double resultadoAnterior = 0.0;
 
     for(i = 0; i < numerosLinha.size(); i++){
-        if(i > 0){
-            if(numerosLinha[i] != numerosLinha[i - 1]){
-                std::string numero;
-                if(numerosLinha[i] < 10)
-                    numero = '0' + std::to_string(numerosLinha[i]);
-                else
-                    numero = std::to_string(numerosLinha[i]);
-                
-                std::string linhaArquivo = leituraLinhaArquivoNumero("datasets/" + numero + ".txt");
-                double resultadoArquivo = calcularResultadoArquivoNumero(linhaArquivo);
-                resultadoAnterior = resultadoArquivo;
-            }
-        } else {
-            std::string numero;
-            if(numerosLinha[i] < 10)
-                numero = '0' + std::to_string(numerosLinha[i]);
-            else
-                numero = std::to_string(numerosLinha[i]);
-            
+        std::string numero;
+        if(numerosLinha[i] < 10)
+            numero = '0' + std::to_string(numerosLinha[i]);
+        else
+            numero = std::to_string(numerosLinha[i]);
+        
+        if(resultadosArquivos[numerosLinha[i]] == 0.0){
             std::string linhaArquivo = leituraLinhaArquivoNumero("datasets/" + numero + ".txt");
             double resultadoArquivo = calcularResultadoArquivoNumero(linhaArquivo);
-            resultadoAnterior = resultadoArquivo;
+            resultadosArquivos[numerosLinha[i]] = resultadoArquivo;
         }
-        resultadoLinhaProcesso += resultadoAnterior;
-
-        /* VERSÃO 2
-        if(resultadosArquivos[numerosLinha[i] - 1] == 0.0){
-            std::string linhaArquivo = leituraLinhaArquivoNumero("datasets/" + numero + ".txt");
-            double resultadoArquivo = calcularResultadoArquivoNumero(linhaArquivo);
-            resultadosArquivos[numerosLinha[i] - 1] = resultadoArquivo;
-        }
-        resultadoLinhaProcesso += resultadosArquivos[numerosLinha[i] - 1];*/
+        resultadoLinhaProcesso += resultadosArquivos[numerosLinha[i]];
     }
 
     return std::make_pair(elementosLinha[0], resultadoLinhaProcesso);

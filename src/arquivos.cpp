@@ -70,9 +70,10 @@ void leituraLinhaProcesso(std::string nomeArquivo, std::map<std::string, double>
 
     if(arquivo.is_open()){
         std::string linha;
+        std::map<int, double> resultadosArquivos;
         while(getline(arquivo, linha)){
             auto inicio = std::chrono::high_resolution_clock::now();
-            resultadoLinha = executarLinhaProcesso(linha);
+            resultadoLinha = executarLinhaProcesso(linha, resultadosArquivos);
             auto fim = std::chrono::high_resolution_clock::now();
             std::chrono::duration<double> tempoTotal = fim - inicio;
             temposProcessos.emplace(nomeArquivo + "-" + resultadoLinha.first, tempoTotal.count());
