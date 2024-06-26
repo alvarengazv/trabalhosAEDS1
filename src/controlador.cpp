@@ -78,22 +78,22 @@ std::pair<std::string, double> executarLinhaProcesso(std::string linha){
             numerosLinha.push_back(std::stoi(stringNumero));
         i++;
     }
-    //sort(numerosLinha.begin(), numerosLinha.end());
+    sort(numerosLinha.begin(), numerosLinha.end());
 
     double resultadoLinhaProcesso = 0.0;
 
+    
     int max = *std::max_element(numerosLinha.begin(), numerosLinha.end());
-
     double resultadosArquivos[max] = {0.0};
 
     for(i = 0; i < numerosLinha.size(); i++){
-        std::string numero;
-        if(numerosLinha[i] < 10)
-            numero = '0' + std::to_string(numerosLinha[i]);
-        else
-            numero = std::to_string(numerosLinha[i]);
-        
         if(resultadosArquivos[numerosLinha[i] - 1] == 0.0){
+            std::string numero;
+            if(numerosLinha[i] < 10)
+                numero = '0' + std::to_string(numerosLinha[i]);
+            else
+                numero = std::to_string(numerosLinha[i]);
+            
             std::string linhaArquivo = leituraLinhaArquivoNumero("datasets/" + numero + ".txt");
             double resultadoArquivo = calcularResultadoArquivoNumero(linhaArquivo);
             resultadosArquivos[numerosLinha[i] - 1] = resultadoArquivo;
