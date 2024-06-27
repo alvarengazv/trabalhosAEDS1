@@ -155,6 +155,7 @@ Com o ambiente preparado, os seguintes passos são para a instalação, compila�
 1. Clone a _branch_ [`Lista1Problema11`][branchL1P11-url] do repositório no diretório desejado:
   ```console
   git clone -b Lista1Problema11 https://github.com/alvarengazv/trabalhosAEDS1.git
+  cd trabalhosAEDS1
   ```
 2. Compile o programa com o ___make___, o que gera a pasta `build`, que contém arquivos de objeto e um arquivo executável:
   ```console
@@ -189,7 +190,7 @@ O trabalho foi desenvolvido, compilado e executado no ambiente com as configura�
 
 SO | Compilador | CPU | RAM | Dispositivo de Armazenamento 
 --- | --- | --- | --- | ---
-Ubuntu 22.04.4 LTS | g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0 | Ryzen 5 5500U 2.1GHz | 2x4GB 3200MHz | SSD M.2 NVME 256GB (3500MB/s de Leitura x 1200MB/s de Escrita) 
+Ubuntu 24.04 LTS | g++ (Ubuntu 13.2.0-23ubuntu4) 13.2.0 | Ryzen 5 5500U 2.1GHz | 2x4GB 3200MHz | SSD M.2 NVME 256GB (3500MB/s de Leitura x 1200MB/s de Escrita) 
 
 </div>
 

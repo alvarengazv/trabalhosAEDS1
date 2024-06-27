@@ -130,7 +130,7 @@ void gerarArquivoResultados(std::map<std::string, double> resultadosProcesso, st
     std::time_t t = std::time(nullptr);
     std::tm tm = *std::localtime(&t);
     std::stringstream buffer;
-    buffer << std::put_time(&tm, "%d-%m-%Y-%H:%M:%S");
+    buffer << std::put_time(&tm, "%d-%m-%Y-%H-%M-%S");
     std::string dateTime(buffer.str());
     std::string diretorioArquivo = "datasets/temposDeExecucao-versao" + std::to_string(VERSION) + "-" + dateTime + ".txt";
     std::ofstream arquivo(diretorioArquivo);
