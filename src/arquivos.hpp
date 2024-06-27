@@ -11,10 +11,10 @@
 #include <map>
 #include <ctime>
 
-#define MIN_LINHAS 10
-#define MAX_LINHAS 15 
-#define MIN_NUMEROS 5
-#define MAX_NUMEROS 15
+#define MIN_LINHAS 20
+#define MAX_LINHAS 50 
+#define MIN_NUMEROS 15
+#define MAX_NUMEROS 50
 
 void gerarArquivosNumeros(int qtdArquivos);
 void gerarArquivosProcessos(int qtdArquivosProcessos, int qtdArquivosNumeros);
