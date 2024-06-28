@@ -1,4 +1,3 @@
-#include "arquivos.hpp"
 #include "controlador.hpp"
 
 int main(){

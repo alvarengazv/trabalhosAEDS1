@@ -1,5 +1,4 @@
 #include "arquivos.hpp"
-#include "controlador.hpp"
 
 void gerarArquivosNumeros(int qtdArquivos){
     for(int i = 1; i <= qtdArquivos; i++){

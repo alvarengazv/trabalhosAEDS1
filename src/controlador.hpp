@@ -9,6 +9,7 @@
 #include <bits/stdc++.h>
 #include <map>
 #include <vector>
+#include "arquivos.hpp"
 
 #define VERSION 4
 

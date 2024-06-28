@@ -1,5 +1,4 @@
 #include "controlador.hpp"
-#include "arquivos.hpp"
 
 void controladorEscolha(int escolha){
     switch(escolha){

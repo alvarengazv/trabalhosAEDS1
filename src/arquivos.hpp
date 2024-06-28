@@ -10,6 +10,7 @@
 #include <filesystem>
 #include <map>
 #include <ctime>
+#include "controlador.hpp"
 
 #define MIN_LINHAS 20
 #define MAX_LINHAS 50 
