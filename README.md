@@ -43,6 +43,19 @@ Algoritmos e Estruturas de Dados I
     </li>
     <li>
       <a href="#-Testes-e-Análises-dos-Resultados">📊 Testes e Análises dos Resultados</a>
+      <ul>
+        <li><a href="#Versão-1">Versão 1</a></li>
+        <li>
+          <a href="#Versões-2-e-2-1">Versões 2 e 2.1</a>
+          <ul>
+            <li><a href="#1-Versão-Principal">1. Versão Principal</a></li>
+            <li><a href="#2-Versão-Alternativa">2. Versão Alternativa</a></li>
+          </ul>
+        </li>
+        <li><a href="#Versão-3">Versão 3</a></li>
+        <li><a href="#Versão-4">Versão 4</a></li>
+        <li><a href="#Interpretação-dos-Resultados-e-Primeiras-Conclusões">Interpretação dos Resultados e Primeiras Conclusões</a></li>
+      </ul>
     </li>
     <li><a href="#-Conclusão">🏁 Conclusão</a></li>
     <li>
@@ -176,7 +189,272 @@ Abaixo estão as funções essenciais para o funcionamento do programa. Com a fi
 
 <div  align="justify">
 
+A solução proposta se divide em 4 principais versões do programa, a serem comparadas em termos de custo computacional e eficiência ao calcular os resultados dos processos solicitados. 
 
+As funções custo da execução principal do programa dependem primariamente do seguinte método:
+
+```cpp
+// sendo a = qtdProcessos
+// sendo b = qtd de bytes lidos em cada linha (qtdArquivos/linha)
+// sendo d = qtd de arquivos solicitados na linha
+// sendo n = qtd de linhas do processo (qtdLinhas/Processo)
+// b e d são proporcionais, entao b = d
+
+void executarProcessos(int qtdProcessos){
+  std::map<std::string, double> resultadosProcessos;    // -> Custo: constante (1) 
+  std::map<std::string, double> temposProcessos;        // -> Custo: constante (1)
+
+  for(int i = 1; i <= qtdProcessos; i++){               // -> Custo: Qtd de elementos = a - 0 + 1 = a + 1; Comparações/Atribuições = 2 p/ execução, ou seja: 2*(a+1)
+      leituraLinhaProcesso("P" + std::to_string(i), resultadosProcessos, temposProcessos);     // -> Custo: (a)*(custo da função de acordo com a versão)
+      std::cout << "Processo " << i << std::endl;       // -> Custo: (a)*(1)
+      std::cout << std::fixed << std::setprecision(6) << "Resultado: " << resultadosProcessos.at("P" + std::to_string(i)) << std::endl;    // -> Custo: (a)*(1)
+  }
+  
+  gerarArquivoResultados(resultadosProcessos, temposProcessos, qtdProcessos);   // -> Custo: qtdBytes escritos (depende da quantidade de processos e linhas)
+}
+// 2a - for
+// a(2bn + nlog(n) + 2log(a)) - todo a execução principal do processo
+// 2a - saídas cout
+// a*n - aproximadamente a quantidade de Bytes escritos
+// = 2a + a*2bn + a*n*log(n) + a*2log(a) + 2a + a*n
+// Ignorando constantes e funções com crescimento menor:
+// Total = 2abn + an + anlog(n) + a2log(a)
+```
+
+Para determinar o custo real de $O(2abn + an + an\log(n) + 2a\log(a))$, deve-se conhecer o custo do método `void leituraLinhaProcesso()`, que depende da quantidade de linhas e arquivos por linha no processo em questão. Além disso, em cada versão do código ele possui uma função de custo diferente. O principal bloco de código que influencia no seu custo é composto pelo `while-loop` ao se ler as linhas do processo.
+
+### Versão 1
+
+Na primeira versão do algoritmo, a função `void leituraLinhaProcesso()` possuia os seguintes custos por comandos:
+
+```cpp
+// sendo c = qtd de bytes escritos 
+std::string linha;                                               // -> Custo: constante (1)
+std::pair<std::string, double> resultadoLinha;                   // -> Custo: constante (1)
+
+while(getline(arquivo, linha)){                                  // -> Custo: b*n
+    auto inicio = std::chrono::high_resolution_clock::now();     // -> Custo: n*(1)
+    resultadoLinha = executarLinhaProcesso(linha);               // -> Custo: n*(custo da função de acordo com a versão)
+    auto fim = std::chrono::high_resolution_clock::now();        // -> Custo: n*(1)
+    std::chrono::duration<double> tempoTotal = fim - inicio;     // -> Custo: n*(1)
+    temposProcessos.emplace(nomeArquivo + "-" + resultadoLinha.first, tempoTotal.count());            // -> Custo: n*log(n)  - quantidade de linhas nos processos
+
+    if(!resultadoLinha.first.compare("L1"))                      // -> Custo: n*(1)
+        resultado += resultadoLinha.second;                      // -> Custo -- somados = n*1
+    else                                                         //          --
+        resultado -= resultadoLinha.second;                      // -> Custo -- somados = n*1
+}
+resultadosProcessos.emplace(nomeArquivo + "-qtdLinhas", std::stoi(resultadoLinha.first.substr(1)));   // -> Custo: log(a) - quantidade de processos executados
+gerarArquivoSaida("output", resultado, nomeArquivo);             // -> Custo: c
+resultadosProcessos.emplace(nomeArquivo, resultado);             // -> Custo: log(a) - quantidade de processos executados
+
+// b*n -while
+// n*(d) - calcular resultado
+// 3n - tempos
+// nlog(n) - adicionar ao map de tempos
+// 2n - if-else
+// log(a) - adicionar ao map de resultados
+// c - escrita no arquivo (constante, pois é sempre um float com 6 casas decimais)
+// log(a) - adicionar ao map de resultados
+// = bn + nb + 5n + nlog(n) + c + 2log(a)
+// Ignorando constantes e funções com crescimento menor:
+// Total = 2bn + nlog(n) + 2log(a)
+
+```
+
+Ademais, para encontrar o custo total buscado, deve-se calcular o custo do método `pair<string, double> executarLinhaProcesso()`, e é nele onde a maior parte das mudanças entre as versões do algoritmo estarão explícitas.
+
+```cpp
+std::pair<std::string, double> executarLinhaProcesso(std::string linha){
+    std::stringstream streamLinha(linha);                      // -> Custo: constante (1)
+    std::string stringNumero;                                  // -> Custo: constante (1)
+    std::vector<std::string> elementosLinha;                   // -> Custo: constante (1)
+    std::vector<int> numerosLinha;                             // -> Custo: constante (1)
+    long unsigned int i = 0;                                   // -> Custo: constante (1)
+
+    while(std::getline(streamLinha, stringNumero, ',')){       // -> Custo: d + 1
+        elementosLinha.push_back(stringNumero);                // -> Custo: d + 1
+        if(i > 0)                                              // -> Custo: d + 1
+            numerosLinha.push_back(std::stoi(stringNumero));   // -> Custo: d
+        i++;                                                   // -> Custo: d + 1
+    }
+
+    double resultadoLinhaProcesso = 0.0;                       // -> Custo: constante (1)
+
+    for(i = 0; i < numerosLinha.size(); i++){        // -> Custo: Qtd de elementos = d - 0 + 1 = d + 1; Comparações/Atribuições = 2 p/ execução, ou seja: 2*(d + 1)
+        std::string numero;                                    // -> Custo: (d)*(1)
+        if(numerosLinha[i] < 10)                               // -> Custo: (d)*(1)
+            numero = '0' + std::to_string(numerosLinha[i]);    // -> Custo -- somados = (d)*(1)
+        else                                                   //          -- 
+            numero = std::to_string(numerosLinha[i]);          // -> Custo -- somados = (d)*(1)
+        
+        std::string linhaArquivo = leituraLinhaArquivoNumero("datasets/" + numero + ".txt");    // -> Custo: (d)*(constante de 100000 números lidos do arquivo)
+        resultadoLinhaProcesso += calcularResultadoArquivoNumero(linhaArquivo);                 // -> Custo: (d)*(custo da função que calcula a raiz dos 100000 números e suas somas)
+    }
+
+    return std::make_pair(elementosLinha[0], resultadoLinhaProcesso);     // -> Custo: constante (1)
+}
+//5d - while
+//2d - for
+//3d - criação da string numero
+//100000d - leitura da linha dos 100000 números do arquivo
+//d - cálculo das raízes e somas
+// = 100011d
+// Total: 100011d -> O(d)
+```
+
+Por fim, a função que calcula a soma das raízes dos números de um mesmo arquivo:
+
+```cpp
+double calcularResultadoArquivoNumero(std::string linhaArquivo){
+    std::stringstream streamLinha(linhaArquivo);               // -> Custo: constante (1)
+    std::string stringNumero;                                  // -> Custo: constante (1)
+    std::vector<std::string> elementosLinha;                   // -> Custo: constante (1)
+    double resultado = 0;                                      // -> Custo: constante (1)
+
+    while(std::getline(streamLinha, stringNumero, ',')){       // -> Custo: constante (100000)
+        resultado += sqrt(std::stof(stringNumero));            // -> Custo: constante 100000*(log(x))
+    }
+
+    return resultado;                                          // -> Custo: constante (1)
+}
+// Total: 100000 -> O(1)
+```
+
+Com cada um dos custos encontrados, podemos somar seus valores e encontrar uma função de complexidade de tempo para a primeira versão do programa. Por uma questão de simplificação, todos os custos de tempo constantes serão desconsiderados. Com isso, encontra-se a expressão de custo: $C(a, b, n) = abn + an + an\log(n) + 2a\log(a)$, sendo:
+ - $a$ - quantidade de processos solicitados
+ - $b$ - quantidade de arquivos em cada linha do processos
+ - $n$ - quantidade de linhas dos processos
+
+Como todas essas são variáveis, é possível considerar que todas sejam iguais e tenham seus valores tendendo a infinito. Assim, com $a = b = n$, nosso algoritmo atinge um custo de: $C(n) = 2n^{3} + n^{2} + n^2\log(n) + 2n\log(n)$. Visivelmente, a classe assintótica que domina a função $C(n)$ é $\mathcal{O}(n^3)$, caso o número de processos, arquivos e linhas por processo tenham valores proporcionais e cada vez maiores.
+
+Ao executar o programa com 5 processos, 5 arquivos de números, 5-10 arquivos por linha e 10-15 linhas por processo, a versão 1 do programa, segundo dados do [arquivo de tempo de execução da versão 1](./datasets/temposDeExecucao-versao1-25-06-2024-18-19-56.txt), estava demorando entre  de $0,08$ a $0,24$ para executar cada linha dos processos. Com isso, cada processo estava levando entre $1,5$ e $2,0 s$ para terminar e, no total, o programa finalizou sua execução em cerca de **$8,7 s$**.
+
+### Versões 2 e 2.1
+
+Nessa versão, as únicas alterações ocorreram na função `executarLinhaProcesso()`, em que se tinha o objetivo de não abrir e recalcular, para uma mesma linha, arquivos que já haviam sido considerados.
+
+###### 1. Versão principal
+
+Primeiramente, foram adicionadas as seguintes variáveis antes do ciclo principal de abertura de arquivos e cálculo:
+
+```cpp
+int max = *std::max_element(numerosLinha.begin(), numerosLinha.end());
+double resultadosArquivos[max] = {0.0};
+```
+
+A variável `max` serve para descobrir qual o maior número de arquivo da linha para posteriormente se criar um vetor `resultadosArquivos`, que precisará de, no máximo, `max` posições (todas iniciadas em 0).
+
+Após isso, o ciclo principal da função foi substituído por:
+
+```cpp
+if(resultadosArquivos[numerosLinha[i] - 1] == 0.0){
+  std::string linhaArquivo = leituraLinhaArquivoNumero("datasets/" + numero + ".txt");
+  double resultadoArquivo = calcularResultadoArquivoNumero(linhaArquivo);
+  resultadosArquivos[numerosLinha[i] - 1] = resultadoArquivo;
+}
+resultadoLinhaProcesso += resultadosArquivos[numerosLinha[i] - 1];
+```
+
+Com essa alteração, a abertura dos arquivos e os cálculos apenas serão realizados caso o valor na posição do vetor referente ao número do arquivo em questão seja igual a 0. A função de custo do algoritmo no pior caso não teve mudança já que, caso nenhum arquivo se repita na mesma linha, todos deverão ser abertos e executados. Já para casos como o testado, em que a quantidade de arquivos total não é maior que a quantidade de arquivos por linha, isto é, eles repetem, essa mudança causa uma melhoria de eficiência drástica.
+
+Em média, sempre haverão arquivos repetidos nas linhas dos processos. Com isso, observando os resultados para o mesmo teste da versão 1, no [arquivo gerado para a versão 2](./datasets/temposDeExecucao-versao2-26-06-2024-18-16-35.txt), cada linha dos processos estava levando entre $0,05$ e $0,089 s$ para executar. Consequentemente, houve uma diminuição do tempo por processo, que passou a demorar de $0,7$ a $0,89 s$ e o tempo total de execução diminuiu, em média, um pouco mais de 2 vezes em relação à primeira versão, chegando a $3,84 s$. 
+
+###### 2. Versão alternativa
+
+Nessa versão, a estrutura `if` da versão 2 estava composta, também, pela parte do código que cria o nome do arquivo (o que deveria ter sido realizado desde o início para evitar execuções de código desnecessárias):
+
+```cpp
+if(resultadosArquivos[numerosLinha[i] - 1] == 0.0){
+    std::string numero;
+    if(numerosLinha[i] < 10)
+        numero = '0' + std::to_string(numerosLinha[i]);
+    else
+        numero = std::to_string(numerosLinha[i]);
+
+    std::string linhaArquivo = leituraLinhaArquivoNumero("datasets/" + numero + ".txt");
+    double resultadoArquivo = calcularResultadoArquivoNumero(linhaArquivo);
+    resultadosArquivos[numerosLinha[i] - 1] = resultadoArquivo;
+}
+```
+
+Como esperado, essa execução não teve tanta diferença para a versão 2 principal, tendo ainda, um ínfimo aumento no tempo de execução total, que passou para cerca de $3,97 s$. Porém, em média, essa alteração não fez diferença para o teste realizado - algo que poderia fazer alguma diferença caso $n$ fosse muito grande.  
+
+### Versão 3
+
+Já na versão 3, foi idealizada uma maneira de evitar repetições no curso de execução das linhas dos processos, mas que não necessitasse da mesma quantidade de memória que a versão 2 (o vetor adicional de $n$ posições). A ideia consiste em ordenar o vetor que contém os números dos arquivos da linha e, reutilizar o último valor calculado até o número do arquivo se alterar.
+
+As mudanças foram a criação da variável `resultadoAnterior` para armazenar o último valor calculado, e a mudança do ciclo principal do programa para:
+
+```cpp
+if(i > 0){
+    if(numerosLinha[i] != numerosLinha[i - 1]){
+        std::string numero;
+        if(numerosLinha[i] < 10)
+            numero = '0' + std::to_string(numerosLinha[i]);
+        else
+            numero = std::to_string(numerosLinha[i]);
+
+        std::string linhaArquivo = leituraLinhaArquivoNumero("datasets/" + numero + ".txt");
+        double resultadoArquivo = calcularResultadoArquivoNumero(linhaArquivo);
+        resultadoAnterior = resultadoArquivo;
+    }
+} else {
+    std::string numero;
+    if(numerosLinha[i] < 10)
+        numero = '0' + std::to_string(numerosLinha[i]);
+    else
+        numero = std::to_string(numerosLinha[i]);
+
+    std::string linhaArquivo = leituraLinhaArquivoNumero("datasets/" + numero + ".txt");
+    double resultadoArquivo = calcularResultadoArquivoNumero(linhaArquivo);
+    resultadoAnterior = resultadoArquivo;
+}
+resultadoLinhaProcesso += resultadoAnterior;
+```
+
+Como esperado, a execução realizará a mesma quantidade de cálculos que a versão 2 com uma complexidade de espaço similar, mas com um vetor "a menos". Porém, também há de ser considerado o tempo de execução do método `sort()` utilizado, que resulta em uma complexidade de tempo $n\log(n)$ vezes maior para cada linha executada. E, na prática, vemos que de fato não fez muita diferença, já que o tempo de execução chegou aos $3,9 s$. Isso pode ser considerado, em média, um mesmo tempo de execução que a melhoria vista na segunda versão do programa.
+
+### Versão 4
+
+Já na quarta e última versão do programa, foi idealizada a ideia de que, se um processo já realizou o cálculo de um arquivo em uma linha, esse valor pode ser reaproveitado nas linhas subsequentes. Então, foi criada uma variável para armazenar o "cache" dos arquivos já calculados pelo processo. Sendo ela `map<int, double> resultadosArquivos`, criada na função `leituraLinhaProcesso()` e passada por referência para o método principal da execução do programa `executarLinhaProcesso()`. Após isso, ao se criar o vetor de números dos arquivos necessários da linha, um registro será incluído no `map` com a chave (número do arquivo) e o valor (0 inicialmente), caso já não exista, com o método `try_emplace()`:
+
+```cpp
+while(std::getline(streamLinha, stringNumero, ',')){
+    elementosLinha.push_back(stringNumero);
+    if(i > 0){
+        int num = std::stoi(stringNumero);
+        numerosLinha.push_back(num);
+        resultadosArquivos.try_emplace(num, 0.0);  // linha adicionada
+    }
+    i++;
+}
+```
+
+E, também, o ciclo principal de abertura de arquivos e cálculos ficou similar à versão 2 do programa:
+
+```cpp
+if(resultadosArquivos[numerosLinha[i]] == 0.0){
+    std::string linhaArquivo = leituraLinhaArquivoNumero("datasets/" + numero + ".txt");
+    double resultadoArquivo = calcularResultadoArquivoNumero(linhaArquivo);
+    resultadosArquivos[numerosLinha[i]] = resultadoArquivo;
+}
+resultadoLinhaProcesso += resultadosArquivos[numerosLinha[i]];
+```
+
+Com isso, será verificado na variável de "cache" (`resultadosArquivos`), se já existe um registro daquele arquivo com valor igual a 0 para não repetir o mesmo cálculo em um mesmo processo. Novamente, a complexidade de tempo do programa no pior caso não foi alterada, já que se os arquivos não forem repetidos em nenhum momento do processo, não haverá uma utilidade para a variável de "cache". Porém, como no enunciado e nos testes realizados os arquivos se repetem para um mesmo processo, a mudança foi muito importante para melhorar os tempos de execução do programa. Para o teste básico realizado para todas as versões, com essa última alteração, o tempo total foi cerca de $0,41 s$. 
+
+Ao se observar os tempos de execução para cada linha de um mesmo processo, observa-se que a primeira linha continua com um tempo médio de $0,08 s$, mas, todas as próximas linhas executaram entre 1000 e 10000 vezes mais rápido que a primeira. Assim, cada processo levou cerca de $0,08 s$ para ser executado. Isso nos dá uma melhora média de 20 vezes mais velocidade nos casos em que há uma repetição de arquivos requisitados.
+
+Além do teste básico, para a versão quatro do programa, foi realizado um [teste médio](./datasets/testeMedio/), com 20 arquivos de processos, 15 arquivos de números, 5-10 arquivos por linha e 10-15 linhas por processo. Aqui, como a quantidade de arquivos de números é maior, e o número de arquivos por linha continuou o mesmo, as duas primeiras linhas possuem um tempo de execução maior, entre $0,08 s$ e $0,13 s$, e o restante com tempos de execução ínfimos da ordem de 10000 vezes mais rápido. Assim, cada processo está levando pouco mais que o dobro de tempo que no teste básico (mudança esperada, já que o número de arquivos aumentou em 3 vezes).
+
+Por fim, um [teste mais pesado](./datasets/testePesado/) foi testado, em que haviam 50 processos, 50 arquivos de números, 15-50 números por linha e 20-50 linhas por processo. Dessa forma, as 7 primeiras linhas dos processos estavam com tempos de execução consideráveis (de $0,01 s$ até $0,3 s$), ou seja, até que todos os arquivos fossem abertos e calculados. Para o restante das linhas os tempos foram ínfimos e, então, cada processo demorou cerca de $0,8 s$ para ser executado.
+
+Para se tentar diminuir a complexidade de tempo ou espaço do algoritmo, uma melhoria que poderia ser realizada seria a utilização de alguma estrutura de dados mais eficiente que o `std::map`. Para tal, foi testado, para a mesma versão 4 do programa, o uso do `std::unordered_map`, que possui uma complexidade de tempo média da ordem de $\mathcal{O}(1)$. Porém, essa troca não trouxe aumento de velocidade significativo, mantendo-se, em média, os mesmos valores para os 3 testes realizados.
+
+### Interpretação dos Resultados e Primeiras Conclusões
+
+É evidente que o algoritmo proposto depende naturalmente das variáveis citadas nos testes acima (quantidade de processos, quantidade de arquivos de números, quantidade de números por linha e quantidade de linhas por processo). A versão 4 possui um comportamento satisfatório para casos em que os arquivos podem ser repetidos nas linhas de um mesmo processo. Contudo, sua complexidade de tempo continua exponencial em relação às variáveis citadas e, quanto maiores elas forem, o tempo será exponencialmente maior. Portanto, vale ressaltar que a versão 4 do programa pode ser mais eficiente em termos de complexidade de tempo do que as versões anteriores, e lança mão de uma variável a mais do tipo `map`, o que aumenta ligeiramente a complexidade de espaço do programa. Mas todas têm em comum o pior caso de função de custo de tempo igual a $\mathcal{O}(n^3)$, caso os arquivos não se repitam.
 
 </div>
 
@@ -186,7 +464,15 @@ Abaixo estão as funções essenciais para o funcionamento do programa. Com a fi
 
 <div  align="justify">
 
+Ao se considerar todas as limitações impostas pelo encunciado, pode-se chegar à conclusão de que a solução aqui proposta é bem satisfatória pela quantidade de dados que consegue reaproveitar e pela baixa utilização de recursos computacionais. Isso porque, muito provavelmente, caso algum arquivo/processo/linha não fossem considerados, o resultado encontrado pelo programa, apesar de mais rápido, não estaria correto.
 
+Fora isso, para melhorar ainda mais a performance do programa, levando em conta que os arquivos podem se repetir nos processos, poderia-se considerar que todos eles teriam acesso aos cálculos realizados pelos outros processos já finalizados. Assim, os arquivos já calculados antes por algum processo não seriam recalculados e isso salvaria muito tempo para as execuções seguintes. Porém, como em um sistema computacional a segurança é um dos principais pontos a serem considerados, talvez essa resolução para o problema não fosse a ideal. Já caso não houvesse essa preocupação, uma variável de "cache" poderia ser criada para o sistema todo. Assim, o primeiro processo levaria mais tempo para executar todos os arquivos que não foram abertos ainda e, para os seguintes, o tempo de execução seria consideravelmente menor. Com isso, a complexidade de tempo do programa não chegaria a $\mathcal{O}(n^3)$ antes encontrado, já que os arquivos não seriam considerados para todo processo e linha.
+
+Além disso, como discutido, o maior desafio do problema apareceria caso os arquivos solicitados nas linhas dos processos não se repetissem e, então, nenhuma das soluções propostas acima teriam validade. Para estes casos, se o enunciado permitisse a execução de mais linhas e/ou processos ao mesmo tempo, uma solução plausível para o problema seria a utilização de técnicas de paralelismo e processamento assíncrono para que as execuções não dependessem do término das anteriores para serem iniciadas. 
+
+De qualquer forma, para uma implementação "perfeita" do sistema idealizado no exercício, seria necessário que fosse concedido o máximo de informações possíveis sobre as características dos processos executados e as quantidades médias de arquivos e linhas obrigatórios. Como em Knuth (1998, p. 180), sobre algoritmos de multiplicação e representações polinomiais: "[...] não há uma melhor maneira de se definir 'melhor' [...] em cada caso foi necessário formular uma definição simples do 'melhor algoritmo possível', para alcançar uma estrutura suficiente para tornar o problema viável"*.
+
+*Versão traduzida
 
 </div>
 
@@ -267,6 +553,10 @@ Ubuntu 24.04 LTS | g++ (Ubuntu 13.2.0-23ubuntu4) 13.2.0 | Ryzen 5 5500U 2.1GHz |
 
 ## 📚 Referências
 
+C++ Reference. **CPPReference**, 2017. Disponível em: https://en.cppreference.com/w/cpp. Acesso em: 30 jun. 2024.
+
+KNUTH, D. E. **The Art of Computer Programming**, Volume 3: Sorting and Searching. 2 ed. 1998.
+
 <p align="right">(<a href="#readme-topo">voltar ao topo</a>)</p>
 
 ## 📨 Contato
@@ -282,7 +572,7 @@ Ubuntu 24.04 LTS | g++ (Ubuntu 13.2.0-23ubuntu4) 13.2.0 | Ryzen 5 5500U 2.1GHz |
 
 <p align="right">(<a href="#readme-topo">voltar ao topo</a>)</p>
 
-[^3]: C++ Reference. **CPPReference**, 2017. Disponível em: https://en.cppreference.com/w/cpp. Acesso em: 10 abr. 2024.
+[^3]: C++ Reference. **CPPReference**, 2017. Disponível em: https://en.cppreference.com/w/cpp. Acesso em: 30 jun. 2024.
 
 [vscode-badge]: https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white
 [vscode-url]: https://code.visualstudio.com/docs/?dv=linux64_deb
@@ -300,7 +590,7 @@ Ubuntu 24.04 LTS | g++ (Ubuntu 13.2.0-23ubuntu4) 13.2.0 | Ryzen 5 5500U 2.1GHz |
 [hppArquivos-ref]: src/arquivos.hpp
 [cppControlador-ref]: src/controlador.cpp
 [hppControlador-ref]: src/controlador.hpp
-[makefile]: ./makefile
+[makefile]: ./makefilep
 
 [bash-url]: https://www.hostgator.com.br/blog/o-que-e-bash/
 [branchL1P11-url]: https://github.com/alvarengazv/trabalhosAEDS1/tree/Lista1Problema11

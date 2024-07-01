@@ -1,0 +1,1888 @@
+Versão 4 - 30-06-2024-21-12-26
+Processo P1
+Resultado: -80655406770.187271
+Tempo de execução L1: 0.412082s
+Tempo de execução L2: 0.259041s
+Tempo de execução L3: 0.073981s
+Tempo de execução L4: 0.092945s
+Tempo de execução L5: 0.055361s
+Tempo de execução L6: 0.018699s
+Tempo de execução L7: 0.018744s
+Tempo de execução L8: 0.000018s
+Tempo de execução L9: 0.000019s
+Tempo de execução L10: 0.000011s
+Tempo de execução L11: 0.000019s
+Tempo de execução L12: 0.000019s
+Tempo de execução L13: 0.000015s
+Tempo de execução L14: 0.000008s
+Tempo de execução L15: 0.000018s
+Tempo de execução L16: 0.000010s
+Tempo de execução L17: 0.000019s
+Tempo de execução L18: 0.000010s
+Tempo de execução L19: 0.000016s
+Tempo de execução L20: 0.000018s
+Tempo de execução L21: 0.000014s
+Tempo de execução L22: 0.000012s
+Tempo de execução L23: 0.000012s
+Tempo de execução L24: 0.000015s
+Tempo de execução L25: 0.000010s
+Tempo de execução L26: 0.000010s
+Tempo de execução L27: 0.000019s
+Tempo de execução L28: 0.000018s
+Tempo de execução L29: 0.000011s
+Tempo de execução L30: 0.000014s
+Tempo de execução L31: 0.000017s
+Tempo de execução L32: 0.000008s
+Tempo de execução L33: 0.000013s
+Tempo de execução L34: 0.000016s
+Tempo de execução L35: 0.000016s
+Tempo de execução L36: 0.000017s
+Tempo de execução L37: 0.000009s
+Tempo de execução total do processo P1: 0.931284s
+
+
+Processo P2
+Resultado: -47325672565.451385
+Tempo de execução L1: 0.313385s
+Tempo de execução L2: 0.172788s
+Tempo de execução L3: 0.244132s
+Tempo de execução L4: 0.070146s
+Tempo de execução L5: 0.035086s
+Tempo de execução L6: 0.017375s
+Tempo de execução L7: 0.017357s
+Tempo de execução L8: 0.000014s
+Tempo de execução L9: 0.000011s
+Tempo de execução L10: 0.000012s
+Tempo de execução L11: 0.000009s
+Tempo de execução L12: 0.000013s
+Tempo de execução L13: 0.000009s
+Tempo de execução L14: 0.000014s
+Tempo de execução L15: 0.000014s
+Tempo de execução L16: 0.000016s
+Tempo de execução L17: 0.000013s
+Tempo de execução L18: 0.000017s
+Tempo de execução L19: 0.000012s
+Tempo de execução L20: 0.000015s
+Tempo de execução L21: 0.000009s
+Tempo de execução L22: 0.000018s
+Tempo de execução L23: 0.000012s
+Tempo de execução total do processo P2: 0.870478s
+
+
+Processo P3
+Resultado: -97254967583.153320
+Tempo de execução L1: 0.416260s
+Tempo de execução L2: 0.298456s
+Tempo de execução L3: 0.105908s
+Tempo de execução L4: 0.034844s
+Tempo de execução L5: 0.017633s
+Tempo de execução L6: 0.000014s
+Tempo de execução L7: 0.000012s
+Tempo de execução L8: 0.000011s
+Tempo de execução L9: 0.000007s
+Tempo de execução L10: 0.000017s
+Tempo de execução L11: 0.000016s
+Tempo de execução L12: 0.000012s
+Tempo de execução L13: 0.000019s
+Tempo de execução L14: 0.000011s
+Tempo de execução L15: 0.000016s
+Tempo de execução L16: 0.000019s
+Tempo de execução L17: 0.000018s
+Tempo de execução L18: 0.000018s
+Tempo de execução L19: 0.000018s
+Tempo de execução L20: 0.000010s
+Tempo de execução L21: 0.000013s
+Tempo de execução L22: 0.000009s
+Tempo de execução L23: 0.000012s
+Tempo de execução L24: 0.000013s
+Tempo de execução L25: 0.000015s
+Tempo de execução L26: 0.000014s
+Tempo de execução L27: 0.000016s
+Tempo de execução L28: 0.000015s
+Tempo de execução L29: 0.000016s
+Tempo de execução L30: 0.000010s
+Tempo de execução L31: 0.000011s
+Tempo de execução L32: 0.000014s
+Tempo de execução L33: 0.000018s
+Tempo de execução L34: 0.000024s
+Tempo de execução L35: 0.000011s
+Tempo de execução L36: 0.000018s
+Tempo de execução L37: 0.000009s
+Tempo de execução L38: 0.000015s
+Tempo de execução L39: 0.000010s
+Tempo de execução L40: 0.000010s
+Tempo de execução L41: 0.000010s
+Tempo de execução L42: 0.000009s
+Tempo de execução L43: 0.000018s
+Tempo de execução L44: 0.000017s
+Tempo de execução L45: 0.000018s
+Tempo de execução L46: 0.000018s
+Tempo de execução total do processo P3: 0.873682s
+
+
+Processo P4
+Resultado: -71457042963.005478
+Tempo de execução L1: 0.369558s
+Tempo de execução L2: 0.277630s
+Tempo de execução L3: 0.068804s
+Tempo de execução L4: 0.069309s
+Tempo de execução L5: 0.052231s
+Tempo de execução L6: 0.017365s
+Tempo de execução L7: 0.000019s
+Tempo de execução L8: 0.017483s
+Tempo de execução L9: 0.000025s
+Tempo de execução L10: 0.000012s
+Tempo de execução L11: 0.000017s
+Tempo de execução L12: 0.000011s
+Tempo de execução L13: 0.000011s
+Tempo de execução L14: 0.000013s
+Tempo de execução L15: 0.000019s
+Tempo de execução L16: 0.000012s
+Tempo de execução L17: 0.000012s
+Tempo de execução L18: 0.000017s
+Tempo de execução L19: 0.000015s
+Tempo de execução L20: 0.000011s
+Tempo de execução L21: 0.000010s
+Tempo de execução L22: 0.000012s
+Tempo de execução L23: 0.000019s
+Tempo de execução L24: 0.000015s
+Tempo de execução L25: 0.000010s
+Tempo de execução L26: 0.000018s
+Tempo de execução L27: 0.000009s
+Tempo de execução L28: 0.000010s
+Tempo de execução L29: 0.000019s
+Tempo de execução L30: 0.000014s
+Tempo de execução L31: 0.000009s
+Tempo de execução L32: 0.000016s
+Tempo de execução L33: 0.000017s
+Tempo de execução L34: 0.000014s
+Tempo de execução total do processo P4: 0.872762s
+
+
+Processo P5
+Resultado: -36194121535.909348
+Tempo de execução L1: 0.366695s
+Tempo de execução L2: 0.305693s
+Tempo de execução L3: 0.051871s
+Tempo de execução L4: 0.087011s
+Tempo de execução L5: 0.000019s
+Tempo de execução L6: 0.068882s
+Tempo de execução L7: 0.000012s
+Tempo de execução L8: 0.000018s
+Tempo de execução L9: 0.000011s
+Tempo de execução L10: 0.000008s
+Tempo de execução L11: 0.000010s
+Tempo de execução L12: 0.000014s
+Tempo de execução L13: 0.000013s
+Tempo de execução L14: 0.000019s
+Tempo de execução L15: 0.000018s
+Tempo de execução L16: 0.000011s
+Tempo de execução L17: 0.000013s
+Tempo de execução L18: 0.000008s
+Tempo de execução L19: 0.000018s
+Tempo de execução L20: 0.000008s
+Tempo de execução total do processo P5: 0.880348s
+
+
+Processo P6
+Resultado: -61051894047.967979
+Tempo de execução L1: 0.470871s
+Tempo de execução L2: 0.156548s
+Tempo de execução L3: 0.138404s
+Tempo de execução L4: 0.034535s
+Tempo de execução L5: 0.051705s
+Tempo de execução L6: 0.000014s
+Tempo de execução L7: 0.017390s
+Tempo de execução L8: 0.000018s
+Tempo de execução L9: 0.000016s
+Tempo de execução L10: 0.000019s
+Tempo de execução L11: 0.000012s
+Tempo de execução L12: 0.000017s
+Tempo de execução L13: 0.000010s
+Tempo de execução L14: 0.000011s
+Tempo de execução L15: 0.000017s
+Tempo de execução L16: 0.000010s
+Tempo de execução L17: 0.000016s
+Tempo de execução L18: 0.000009s
+Tempo de execução L19: 0.000009s
+Tempo de execução L20: 0.000017s
+Tempo de execução L21: 0.000010s
+Tempo de execução L22: 0.000013s
+Tempo de execução L23: 0.000014s
+Tempo de execução L24: 0.000018s
+Tempo de execução L25: 0.000016s
+Tempo de execução L26: 0.000011s
+Tempo de execução L27: 0.000014s
+Tempo de execução L28: 0.000018s
+Tempo de execução L29: 0.000009s
+Tempo de execução L30: 0.000010s
+Tempo de execução L31: 0.000010s
+Tempo de execução total do processo P6: 0.869793s
+
+
+Processo P7
+Resultado: -41658602760.566193
+Tempo de execução L1: 0.576584s
+Tempo de execução L2: 0.176133s
+Tempo de execução L3: 0.035267s
+Tempo de execução L4: 0.035574s
+Tempo de execução L5: 0.018023s
+Tempo de execução L6: 0.035527s
+Tempo de execução L7: 0.000018s
+Tempo de execução L8: 0.000012s
+Tempo de execução L9: 0.000010s
+Tempo de execução L10: 0.000008s
+Tempo de execução L11: 0.000017s
+Tempo de execução L12: 0.000009s
+Tempo de execução L13: 0.000018s
+Tempo de execução L14: 0.000011s
+Tempo de execução L15: 0.000012s
+Tempo de execução L16: 0.000019s
+Tempo de execução L17: 0.000011s
+Tempo de execução L18: 0.000011s
+Tempo de execução L19: 0.000011s
+Tempo de execução L20: 0.000009s
+Tempo de execução L21: 0.000014s
+Tempo de execução L22: 0.000014s
+Tempo de execução L23: 0.000014s
+Tempo de execução total do processo P7: 0.877328s
+
+
+Processo P8
+Resultado: -94380454884.477051
+Tempo de execução L1: 0.315530s
+Tempo de execução L2: 0.337947s
+Tempo de execução L3: 0.138752s
+Tempo de execução L4: 0.017267s
+Tempo de execução L5: 0.034728s
+Tempo de execução L6: 0.034678s
+Tempo de execução L7: 0.000032s
+Tempo de execução L8: 0.000012s
+Tempo de execução L9: 0.000018s
+Tempo de execução L10: 0.000010s
+Tempo de execução L11: 0.000015s
+Tempo de execução L12: 0.000018s
+Tempo de execução L13: 0.000016s
+Tempo de execução L14: 0.000015s
+Tempo de execução L15: 0.000014s
+Tempo de execução L16: 0.000016s
+Tempo de execução L17: 0.000014s
+Tempo de execução L18: 0.000015s
+Tempo de execução L19: 0.000010s
+Tempo de execução L20: 0.000012s
+Tempo de execução L21: 0.000010s
+Tempo de execução L22: 0.000015s
+Tempo de execução L23: 0.000017s
+Tempo de execução L24: 0.000014s
+Tempo de execução L25: 0.000018s
+Tempo de execução L26: 0.000017s
+Tempo de execução L27: 0.000017s
+Tempo de execução L28: 0.000014s
+Tempo de execução L29: 0.000017s
+Tempo de execução L30: 0.000016s
+Tempo de execução L31: 0.000010s
+Tempo de execução L32: 0.000009s
+Tempo de execução L33: 0.000009s
+Tempo de execução L34: 0.000010s
+Tempo de execução L35: 0.000014s
+Tempo de execução L36: 0.000015s
+Tempo de execução L37: 0.000009s
+Tempo de execução L38: 0.000009s
+Tempo de execução L39: 0.000016s
+Tempo de execução L40: 0.000009s
+Tempo de execução L41: 0.000019s
+Tempo de execução L42: 0.000008s
+Tempo de execução L43: 0.000019s
+Tempo de execução L44: 0.000015s
+Tempo de execução total do processo P8: 0.879446s
+
+
+Processo P9
+Resultado: -64789619087.001740
+Tempo de execução L1: 0.403883s
+Tempo de execução L2: 0.244953s
+Tempo de execução L3: 0.105043s
+Tempo de execução L4: 0.052579s
+Tempo de execução L5: 0.034709s
+Tempo de execução L6: 0.034713s
+Tempo de execução L7: 0.000012s
+Tempo de execução L8: 0.000013s
+Tempo de execução L9: 0.000010s
+Tempo de execução L10: 0.000016s
+Tempo de execução L11: 0.000017s
+Tempo de execução L12: 0.000010s
+Tempo de execução L13: 0.000012s
+Tempo de execução L14: 0.000013s
+Tempo de execução L15: 0.000015s
+Tempo de execução L16: 0.000015s
+Tempo de execução L17: 0.000018s
+Tempo de execução L18: 0.000012s
+Tempo de execução L19: 0.000016s
+Tempo de execução L20: 0.000009s
+Tempo de execução L21: 0.000009s
+Tempo de execução L22: 0.000009s
+Tempo de execução L23: 0.000011s
+Tempo de execução L24: 0.000009s
+Tempo de execução L25: 0.000016s
+Tempo de execução L26: 0.000016s
+Tempo de execução L27: 0.000018s
+Tempo de execução L28: 0.000009s
+Tempo de execução L29: 0.000018s
+Tempo de execução L30: 0.000016s
+Tempo de execução L31: 0.000012s
+Tempo de execução L32: 0.000015s
+Tempo de execução total do processo P9: 0.876226s
+
+
+Processo P10
+Resultado: -96780798921.107986
+Tempo de execução L1: 0.297510s
+Tempo de execução L2: 0.404727s
+Tempo de execução L3: 0.052541s
+Tempo de execução L4: 0.122128s
+Tempo de execução L5: 0.000014s
+Tempo de execução L6: 0.000017s
+Tempo de execução L7: 0.000009s
+Tempo de execução L8: 0.000018s
+Tempo de execução L9: 0.000008s
+Tempo de execução L10: 0.000016s
+Tempo de execução L11: 0.000014s
+Tempo de execução L12: 0.000010s
+Tempo de execução L13: 0.000010s
+Tempo de execução L14: 0.000010s
+Tempo de execução L15: 0.000015s
+Tempo de execução L16: 0.000012s
+Tempo de execução L17: 0.000017s
+Tempo de execução L18: 0.000014s
+Tempo de execução L19: 0.000012s
+Tempo de execução L20: 0.000014s
+Tempo de execução L21: 0.000017s
+Tempo de execução L22: 0.000016s
+Tempo de execução L23: 0.000012s
+Tempo de execução L24: 0.000009s
+Tempo de execução L25: 0.000011s
+Tempo de execução L26: 0.000011s
+Tempo de execução L27: 0.000008s
+Tempo de execução L28: 0.000016s
+Tempo de execução L29: 0.000018s
+Tempo de execução L30: 0.000017s
+Tempo de execução L31: 0.000013s
+Tempo de execução L32: 0.000017s
+Tempo de execução L33: 0.000020s
+Tempo de execução L34: 0.000018s
+Tempo de execução L35: 0.000016s
+Tempo de execução L36: 0.000017s
+Tempo de execução L37: 0.000015s
+Tempo de execução L38: 0.000014s
+Tempo de execução L39: 0.000008s
+Tempo de execução L40: 0.000018s
+Tempo de execução L41: 0.000012s
+Tempo de execução L42: 0.000017s
+Tempo de execução L43: 0.000008s
+Tempo de execução L44: 0.000015s
+Tempo de execução L45: 0.000009s
+Tempo de execução L46: 0.000009s
+Tempo de execução L47: 0.000015s
+Tempo de execução total do processo P10: 0.877495s
+
+
+Processo P11
+Resultado: -49722028976.566483
+Tempo de execução L1: 0.369809s
+Tempo de execução L2: 0.141902s
+Tempo de execução L3: 0.225673s
+Tempo de execução L4: 0.017077s
+Tempo de execução L5: 0.052049s
+Tempo de execução L6: 0.017647s
+Tempo de execução L7: 0.017336s
+Tempo de execução L8: 0.017561s
+Tempo de execução L9: 0.000018s
+Tempo de execução L10: 0.000017s
+Tempo de execução L11: 0.017386s
+Tempo de execução L12: 0.000012s
+Tempo de execução L13: 0.000010s
+Tempo de execução L14: 0.000019s
+Tempo de execução L15: 0.000016s
+Tempo de execução L16: 0.000017s
+Tempo de execução L17: 0.000009s
+Tempo de execução L18: 0.000011s
+Tempo de execução L19: 0.000011s
+Tempo de execução L20: 0.000010s
+Tempo de execução L21: 0.000018s
+Tempo de execução L22: 0.000017s
+Tempo de execução L23: 0.000019s
+Tempo de execução L24: 0.000015s
+Tempo de execução total do processo P11: 0.876657s
+
+
+Processo P12
+Resultado: -67521892244.742828
+Tempo de execução L1: 0.414536s
+Tempo de execução L2: 0.160043s
+Tempo de execução L3: 0.122718s
+Tempo de execução L4: 0.036245s
+Tempo de execução L5: 0.071906s
+Tempo de execução L6: 0.071510s
+Tempo de execução L7: 0.000019s
+Tempo de execução L8: 0.017745s
+Tempo de execução L9: 0.000024s
+Tempo de execução L10: 0.000014s
+Tempo de execução L11: 0.000015s
+Tempo de execução L12: 0.000014s
+Tempo de execução L13: 0.000018s
+Tempo de execução L14: 0.000014s
+Tempo de execução L15: 0.000017s
+Tempo de execução L16: 0.000012s
+Tempo de execução L17: 0.000016s
+Tempo de execução L18: 0.000014s
+Tempo de execução L19: 0.000015s
+Tempo de execução L20: 0.000010s
+Tempo de execução L21: 0.000019s
+Tempo de execução L22: 0.000009s
+Tempo de execução L23: 0.000018s
+Tempo de execução L24: 0.000018s
+Tempo de execução L25: 0.000012s
+Tempo de execução L26: 0.000018s
+Tempo de execução L27: 0.000010s
+Tempo de execução L28: 0.000018s
+Tempo de execução L29: 0.000017s
+Tempo de execução L30: 0.000010s
+Tempo de execução L31: 0.000018s
+Tempo de execução L32: 0.000017s
+Tempo de execução total do processo P12: 0.895088s
+
+
+Processo P13
+Resultado: -54388918292.784370
+Tempo de execução L1: 0.301715s
+Tempo de execução L2: 0.354665s
+Tempo de execução L3: 0.157747s
+Tempo de execução L4: 0.034517s
+Tempo de execução L5: 0.017567s
+Tempo de execução L6: 0.000013s
+Tempo de execução L7: 0.000016s
+Tempo de execução L8: 0.017383s
+Tempo de execução L9: 0.000013s
+Tempo de execução L10: 0.000018s
+Tempo de execução L11: 0.000027s
+Tempo de execução L12: 0.000010s
+Tempo de execução L13: 0.000010s
+Tempo de execução L14: 0.000012s
+Tempo de execução L15: 0.000008s
+Tempo de execução L16: 0.000016s
+Tempo de execução L17: 0.000018s
+Tempo de execução L18: 0.000017s
+Tempo de execução L19: 0.000015s
+Tempo de execução L20: 0.000014s
+Tempo de execução L21: 0.000016s
+Tempo de execução L22: 0.000011s
+Tempo de execução L23: 0.000009s
+Tempo de execução L24: 0.000017s
+Tempo de execução L25: 0.000013s
+Tempo de execução L26: 0.000009s
+Tempo de execução L27: 0.000008s
+Tempo de execução L28: 0.000014s
+Tempo de execução total do processo P13: 0.883899s
+
+
+Processo P14
+Resultado: -51721766599.604668
+Tempo de execução L1: 0.518622s
+Tempo de execução L2: 0.205996s
+Tempo de execução L3: 0.120954s
+Tempo de execução L4: 0.034341s
+Tempo de execução L5: 0.017164s
+Tempo de execução L6: 0.000014s
+Tempo de execução L7: 0.000015s
+Tempo de execução L8: 0.000018s
+Tempo de execução L9: 0.000012s
+Tempo de execução L10: 0.000010s
+Tempo de execução L11: 0.000010s
+Tempo de execução L12: 0.000011s
+Tempo de execução L13: 0.000011s
+Tempo de execução L14: 0.000012s
+Tempo de execução L15: 0.000019s
+Tempo de execução L16: 0.000015s
+Tempo de execução L17: 0.000010s
+Tempo de execução L18: 0.000012s
+Tempo de execução L19: 0.000008s
+Tempo de execução L20: 0.000008s
+Tempo de execução L21: 0.000017s
+Tempo de execução L22: 0.000017s
+Tempo de execução L23: 0.000018s
+Tempo de execução L24: 0.000009s
+Tempo de execução L25: 0.000017s
+Tempo de execução L26: 0.000018s
+Tempo de execução L27: 0.000011s
+Tempo de execução total do processo P14: 0.897371s
+
+
+Processo P15
+Resultado: -58190074655.930557
+Tempo de execução L1: 0.481440s
+Tempo de execução L2: 0.311630s
+Tempo de execução L3: 0.068968s
+Tempo de execução L4: 0.000024s
+Tempo de execução L5: 0.017199s
+Tempo de execução L6: 0.000015s
+Tempo de execução L7: 0.000009s
+Tempo de execução L8: 0.000017s
+Tempo de execução L9: 0.000016s
+Tempo de execução L10: 0.000011s
+Tempo de execução L11: 0.000017s
+Tempo de execução L12: 0.000014s
+Tempo de execução L13: 0.000010s
+Tempo de execução L14: 0.000011s
+Tempo de execução L15: 0.000019s
+Tempo de execução L16: 0.000016s
+Tempo de execução L17: 0.000015s
+Tempo de execução L18: 0.000010s
+Tempo de execução L19: 0.000008s
+Tempo de execução L20: 0.000012s
+Tempo de execução L21: 0.000017s
+Tempo de execução L22: 0.000014s
+Tempo de execução L23: 0.000016s
+Tempo de execução L24: 0.000011s
+Tempo de execução L25: 0.000009s
+Tempo de execução L26: 0.000012s
+Tempo de execução L27: 0.000017s
+Tempo de execução L28: 0.000015s
+Tempo de execução L29: 0.000016s
+Tempo de execução total do processo P15: 0.879587s
+
+
+Processo P16
+Resultado: -61190787058.407852
+Tempo de execução L1: 0.364088s
+Tempo de execução L2: 0.227886s
+Tempo de execução L3: 0.155539s
+Tempo de execução L4: 0.053484s
+Tempo de execução L5: 0.037049s
+Tempo de execução L6: 0.018591s
+Tempo de execução L7: 0.017862s
+Tempo de execução L8: 0.000026s
+Tempo de execução L9: 0.000017s
+Tempo de execução L10: 0.000016s
+Tempo de execução L11: 0.000012s
+Tempo de execução L12: 0.000014s
+Tempo de execução L13: 0.000013s
+Tempo de execução L14: 0.000019s
+Tempo de execução L15: 0.000009s
+Tempo de execução L16: 0.000014s
+Tempo de execução L17: 0.000017s
+Tempo de execução L18: 0.000012s
+Tempo de execução L19: 0.000017s
+Tempo de execução L20: 0.000019s
+Tempo de execução L21: 0.000010s
+Tempo de execução L22: 0.000012s
+Tempo de execução L23: 0.000016s
+Tempo de execução L24: 0.000017s
+Tempo de execução L25: 0.000019s
+Tempo de execução L26: 0.000015s
+Tempo de execução L27: 0.000017s
+Tempo de execução L28: 0.000016s
+Tempo de execução total do processo P16: 0.874823s
+
+
+Processo P17
+Resultado: -78250801757.304398
+Tempo de execução L1: 0.465343s
+Tempo de execução L2: 0.261693s
+Tempo de execução L3: 0.104765s
+Tempo de execução L4: 0.017724s
+Tempo de execução L5: 0.000024s
+Tempo de execução L6: 0.000009s
+Tempo de execução L7: 0.034948s
+Tempo de execução L8: 0.000020s
+Tempo de execução L9: 0.000010s
+Tempo de execução L10: 0.000009s
+Tempo de execução L11: 0.000015s
+Tempo de execução L12: 0.000015s
+Tempo de execução L13: 0.000010s
+Tempo de execução L14: 0.000017s
+Tempo de execução L15: 0.000012s
+Tempo de execução L16: 0.000010s
+Tempo de execução L17: 0.000010s
+Tempo de execução L18: 0.000019s
+Tempo de execução L19: 0.000018s
+Tempo de execução L20: 0.000009s
+Tempo de execução L21: 0.000009s
+Tempo de execução L22: 0.000012s
+Tempo de execução L23: 0.000009s
+Tempo de execução L24: 0.000017s
+Tempo de execução L25: 0.000012s
+Tempo de execução L26: 0.000015s
+Tempo de execução L27: 0.000010s
+Tempo de execução L28: 0.000023s
+Tempo de execução L29: 0.000017s
+Tempo de execução L30: 0.000018s
+Tempo de execução L31: 0.000011s
+Tempo de execução L32: 0.000009s
+Tempo de execução L33: 0.000016s
+Tempo de execução L34: 0.000010s
+Tempo de execução L35: 0.000018s
+Tempo de execução L36: 0.000015s
+Tempo de execução L37: 0.000016s
+Tempo de execução L38: 0.000009s
+Tempo de execução L39: 0.000014s
+Tempo de execução L40: 0.000015s
+Tempo de execução total do processo P17: 0.884955s
+
+
+Processo P18
+Resultado: -34259025015.952698
+Tempo de execução L1: 0.525333s
+Tempo de execução L2: 0.174011s
+Tempo de execução L3: 0.087038s
+Tempo de execução L4: 0.017703s
+Tempo de execução L5: 0.017772s
+Tempo de execução L6: 0.017286s
+Tempo de execução L7: 0.018169s
+Tempo de execução L8: 0.017660s
+Tempo de execução L9: 0.000021s
+Tempo de execução L10: 0.000009s
+Tempo de execução L11: 0.000013s
+Tempo de execução L12: 0.000008s
+Tempo de execução L13: 0.000016s
+Tempo de execução L14: 0.000016s
+Tempo de execução L15: 0.000021s
+Tempo de execução L16: 0.000009s
+Tempo de execução L17: 0.000016s
+Tempo de execução L18: 0.000009s
+Tempo de execução L19: 0.000010s
+Tempo de execução L20: 0.000010s
+Tempo de execução total do processo P18: 0.875131s
+
+
+Processo P19
+Resultado: -51519966537.857681
+Tempo de execução L1: 0.331537s
+Tempo de execução L2: 0.348640s
+Tempo de execução L3: 0.138570s
+Tempo de execução L4: 0.000025s
+Tempo de execução L5: 0.017310s
+Tempo de execução L6: 0.035173s
+Tempo de execução L7: 0.000022s
+Tempo de execução L8: 0.000011s
+Tempo de execução L9: 0.000016s
+Tempo de execução L10: 0.000012s
+Tempo de execução L11: 0.000010s
+Tempo de execução L12: 0.000009s
+Tempo de execução L13: 0.000012s
+Tempo de execução L14: 0.000017s
+Tempo de execução L15: 0.000015s
+Tempo de execução L16: 0.000010s
+Tempo de execução L17: 0.000015s
+Tempo de execução L18: 0.000016s
+Tempo de execução L19: 0.000015s
+Tempo de execução L20: 0.000014s
+Tempo de execução L21: 0.000012s
+Tempo de execução L22: 0.000018s
+Tempo de execução L23: 0.000014s
+Tempo de execução L24: 0.000011s
+Tempo de execução L25: 0.000011s
+Tempo de execução total do processo P19: 0.871515s
+
+
+Processo P20
+Resultado: -105580823314.600296
+Tempo de execução L1: 0.516235s
+Tempo de execução L2: 0.122842s
+Tempo de execução L3: 0.089257s
+Tempo de execução L4: 0.070272s
+Tempo de execução L5: 0.017974s
+Tempo de execução L6: 0.052708s
+Tempo de execução L7: 0.000018s
+Tempo de execução L8: 0.017600s
+Tempo de execução L9: 0.000015s
+Tempo de execução L10: 0.000010s
+Tempo de execução L11: 0.000017s
+Tempo de execução L12: 0.000011s
+Tempo de execução L13: 0.000011s
+Tempo de execução L14: 0.000011s
+Tempo de execução L15: 0.000016s
+Tempo de execução L16: 0.000009s
+Tempo de execução L17: 0.000018s
+Tempo de execução L18: 0.000012s
+Tempo de execução L19: 0.000016s
+Tempo de execução L20: 0.000013s
+Tempo de execução L21: 0.000017s
+Tempo de execução L22: 0.000017s
+Tempo de execução L23: 0.000012s
+Tempo de execução L24: 0.000016s
+Tempo de execução L25: 0.000015s
+Tempo de execução L26: 0.000013s
+Tempo de execução L27: 0.000015s
+Tempo de execução L28: 0.000018s
+Tempo de execução L29: 0.000012s
+Tempo de execução L30: 0.000008s
+Tempo de execução L31: 0.000010s
+Tempo de execução L32: 0.000009s
+Tempo de execução L33: 0.000014s
+Tempo de execução L34: 0.000017s
+Tempo de execução L35: 0.000010s
+Tempo de execução L36: 0.000062s
+Tempo de execução L37: 0.000011s
+Tempo de execução L38: 0.000010s
+Tempo de execução L39: 0.000016s
+Tempo de execução L40: 0.000019s
+Tempo de execução L41: 0.000016s
+Tempo de execução L42: 0.000018s
+Tempo de execução L43: 0.000012s
+Tempo de execução L44: 0.000018s
+Tempo de execução L45: 0.000013s
+Tempo de execução L46: 0.000019s
+Tempo de execução L47: 0.000010s
+Tempo de execução L48: 0.000016s
+Tempo de execução L49: 0.000018s
+Tempo de execução L50: 0.000010s
+Tempo de execução total do processo P20: 0.887535s
+
+
+Processo P21
+Resultado: -49057097575.944771
+Tempo de execução L1: 0.475491s
+Tempo de execução L2: 0.226900s
+Tempo de execução L3: 0.122984s
+Tempo de execução L4: 0.054041s
+Tempo de execução L5: 0.000021s
+Tempo de execução L6: 0.000011s
+Tempo de execução L7: 0.000013s
+Tempo de execução L8: 0.000016s
+Tempo de execução L9: 0.000015s
+Tempo de execução L10: 0.000016s
+Tempo de execução L11: 0.000031s
+Tempo de execução L12: 0.000015s
+Tempo de execução L13: 0.000019s
+Tempo de execução L14: 0.000018s
+Tempo de execução L15: 0.000014s
+Tempo de execução L16: 0.000017s
+Tempo de execução L17: 0.000015s
+Tempo de execução L18: 0.000009s
+Tempo de execução L19: 0.000014s
+Tempo de execução L20: 0.000009s
+Tempo de execução L21: 0.000018s
+Tempo de execução L22: 0.000019s
+Tempo de execução total do processo P21: 0.879704s
+
+
+Processo P22
+Resultado: -62724391257.321747
+Tempo de execução L1: 0.304797s
+Tempo de execução L2: 0.316986s
+Tempo de execução L3: 0.122401s
+Tempo de execução L4: 0.069899s
+Tempo de execução L5: 0.017299s
+Tempo de execução L6: 0.017250s
+Tempo de execução L7: 0.017322s
+Tempo de execução L8: 0.000016s
+Tempo de execução L9: 0.000026s
+Tempo de execução L10: 0.000011s
+Tempo de execução L11: 0.000017s
+Tempo de execução L12: 0.017328s
+Tempo de execução L13: 0.000022s
+Tempo de execução L14: 0.000009s
+Tempo de execução L15: 0.000011s
+Tempo de execução L16: 0.000018s
+Tempo de execução L17: 0.000009s
+Tempo de execução L18: 0.000012s
+Tempo de execução L19: 0.000016s
+Tempo de execução L20: 0.000018s
+Tempo de execução L21: 0.000012s
+Tempo de execução L22: 0.000010s
+Tempo de execução L23: 0.000016s
+Tempo de execução L24: 0.000009s
+Tempo de execução L25: 0.000012s
+Tempo de execução L26: 0.000010s
+Tempo de execução L27: 0.000009s
+Tempo de execução L28: 0.000017s
+Tempo de execução L29: 0.000011s
+Tempo de execução L30: 0.000009s
+Tempo de execução L31: 0.000009s
+Tempo de execução L32: 0.000017s
+Tempo de execução L33: 0.000008s
+Tempo de execução total do processo P22: 0.883617s
+
+
+Processo P23
+Resultado: -88519484460.123337
+Tempo de execução L1: 0.465584s
+Tempo de execução L2: 0.178410s
+Tempo de execução L3: 0.034165s
+Tempo de execução L4: 0.017413s
+Tempo de execução L5: 0.087209s
+Tempo de execução L6: 0.000017s
+Tempo de execução L7: 0.069121s
+Tempo de execução L8: 0.017349s
+Tempo de execução L9: 0.000022s
+Tempo de execução L10: 0.000016s
+Tempo de execução L11: 0.000011s
+Tempo de execução L12: 0.000010s
+Tempo de execução L13: 0.000019s
+Tempo de execução L14: 0.000011s
+Tempo de execução L15: 0.017105s
+Tempo de execução L16: 0.000016s
+Tempo de execução L17: 0.000011s
+Tempo de execução L18: 0.000019s
+Tempo de execução L19: 0.000010s
+Tempo de execução L20: 0.000014s
+Tempo de execução L21: 0.000011s
+Tempo de execução L22: 0.000011s
+Tempo de execução L23: 0.000018s
+Tempo de execução L24: 0.000018s
+Tempo de execução L25: 0.000008s
+Tempo de execução L26: 0.000016s
+Tempo de execução L27: 0.000012s
+Tempo de execução L28: 0.000016s
+Tempo de execução L29: 0.000009s
+Tempo de execução L30: 0.000011s
+Tempo de execução L31: 0.000012s
+Tempo de execução L32: 0.000011s
+Tempo de execução L33: 0.000017s
+Tempo de execução L34: 0.000008s
+Tempo de execução L35: 0.000013s
+Tempo de execução L36: 0.000016s
+Tempo de execução L37: 0.000016s
+Tempo de execução L38: 0.000009s
+Tempo de execução L39: 0.000018s
+Tempo de execução L40: 0.000016s
+Tempo de execução L41: 0.000018s
+Tempo de execução L42: 0.000015s
+Tempo de execução L43: 0.000017s
+Tempo de execução total do processo P23: 0.886850s
+
+
+Processo P24
+Resultado: -48122064440.865997
+Tempo de execução L1: 0.505887s
+Tempo de execução L2: 0.210705s
+Tempo de execução L3: 0.034869s
+Tempo de execução L4: 0.103484s
+Tempo de execução L5: 0.017201s
+Tempo de execução L6: 0.000015s
+Tempo de execução L7: 0.000014s
+Tempo de execução L8: 0.000016s
+Tempo de execução L9: 0.000011s
+Tempo de execução L10: 0.000013s
+Tempo de execução L11: 0.000018s
+Tempo de execução L12: 0.000011s
+Tempo de execução L13: 0.000016s
+Tempo de execução L14: 0.000010s
+Tempo de execução L15: 0.000009s
+Tempo de execução L16: 0.000012s
+Tempo de execução L17: 0.000012s
+Tempo de execução L18: 0.000008s
+Tempo de execução L19: 0.000008s
+Tempo de execução L20: 0.000012s
+Tempo de execução L21: 0.000013s
+Tempo de execução L22: 0.000017s
+Tempo de execução L23: 0.000014s
+Tempo de execução L24: 0.000011s
+Tempo de execução L25: 0.000009s
+Tempo de execução L26: 0.000011s
+Tempo de execução total do processo P24: 0.872405s
+
+
+Processo P25
+Resultado: -61854460902.554771
+Tempo de execução L1: 0.347110s
+Tempo de execução L2: 0.294517s
+Tempo de execução L3: 0.138172s
+Tempo de execução L4: 0.051848s
+Tempo de execução L5: 0.000014s
+Tempo de execução L6: 0.034110s
+Tempo de execução L7: 0.000016s
+Tempo de execução L8: 0.000016s
+Tempo de execução L9: 0.000018s
+Tempo de execução L10: 0.000019s
+Tempo de execução L11: 0.000011s
+Tempo de execução L12: 0.000014s
+Tempo de execução L13: 0.000011s
+Tempo de execução L14: 0.000009s
+Tempo de execução L15: 0.000010s
+Tempo de execução L16: 0.000010s
+Tempo de execução L17: 0.000016s
+Tempo de execução L18: 0.000008s
+Tempo de execução L19: 0.000019s
+Tempo de execução L20: 0.000018s
+Tempo de execução L21: 0.000014s
+Tempo de execução L22: 0.000012s
+Tempo de execução L23: 0.000016s
+Tempo de execução L24: 0.000015s
+Tempo de execução L25: 0.000015s
+Tempo de execução L26: 0.000012s
+Tempo de execução L27: 0.000017s
+Tempo de execução L28: 0.000014s
+Tempo de execução L29: 0.000016s
+Tempo de execução total do processo P25: 0.866099s
+
+
+Processo P26
+Resultado: -81251309450.551239
+Tempo de execução L1: 0.471524s
+Tempo de execução L2: 0.190511s
+Tempo de execução L3: 0.137590s
+Tempo de execução L4: 0.017337s
+Tempo de execução L5: 0.017305s
+Tempo de execução L6: 0.034613s
+Tempo de execução L7: 0.000023s
+Tempo de execução L8: 0.000018s
+Tempo de execução L9: 0.000011s
+Tempo de execução L10: 0.000018s
+Tempo de execução L11: 0.000016s
+Tempo de execução L12: 0.000015s
+Tempo de execução L13: 0.000009s
+Tempo de execução L14: 0.000018s
+Tempo de execução L15: 0.000019s
+Tempo de execução L16: 0.000016s
+Tempo de execução L17: 0.000017s
+Tempo de execução L18: 0.000012s
+Tempo de execução L19: 0.000014s
+Tempo de execução L20: 0.000018s
+Tempo de execução L21: 0.000017s
+Tempo de execução L22: 0.000011s
+Tempo de execução L23: 0.000012s
+Tempo de execução L24: 0.000016s
+Tempo de execução L25: 0.000016s
+Tempo de execução L26: 0.000011s
+Tempo de execução L27: 0.000010s
+Tempo de execução L28: 0.000012s
+Tempo de execução L29: 0.000008s
+Tempo de execução L30: 0.000011s
+Tempo de execução L31: 0.000010s
+Tempo de execução L32: 0.000013s
+Tempo de execução L33: 0.000015s
+Tempo de execução L34: 0.000010s
+Tempo de execução L35: 0.000017s
+Tempo de execução L36: 0.000012s
+Tempo de execução L37: 0.000015s
+Tempo de execução total do processo P26: 0.869321s
+
+
+Processo P27
+Resultado: -45258671587.445175
+Tempo de execução L1: 0.435879s
+Tempo de execução L2: 0.138760s
+Tempo de execução L3: 0.172782s
+Tempo de execução L4: 0.051896s
+Tempo de execução L5: 0.017232s
+Tempo de execução L6: 0.034760s
+Tempo de execução L7: 0.017330s
+Tempo de execução L8: 0.000012s
+Tempo de execução L9: 0.000011s
+Tempo de execução L10: 0.000012s
+Tempo de execução L11: 0.000017s
+Tempo de execução L12: 0.000011s
+Tempo de execução L13: 0.000016s
+Tempo de execução L14: 0.000009s
+Tempo de execução L15: 0.000018s
+Tempo de execução L16: 0.000008s
+Tempo de execução L17: 0.000011s
+Tempo de execução L18: 0.000016s
+Tempo de execução L19: 0.000017s
+Tempo de execução L20: 0.000013s
+Tempo de execução L21: 0.000017s
+Tempo de execução L22: 0.000017s
+Tempo de execução L23: 0.000009s
+Tempo de execução L24: 0.000011s
+Tempo de execução total do processo P27: 0.868862s
+
+
+Processo P28
+Resultado: -81853931626.150986
+Tempo de execução L1: 0.243916s
+Tempo de execução L2: 0.261342s
+Tempo de execução L3: 0.207811s
+Tempo de execução L4: 0.069379s
+Tempo de execução L5: 0.069197s
+Tempo de execução L6: 0.000015s
+Tempo de execução L7: 0.017313s
+Tempo de execução L8: 0.000012s
+Tempo de execução L9: 0.000010s
+Tempo de execução L10: 0.000017s
+Tempo de execução L11: 0.000017s
+Tempo de execução L12: 0.000018s
+Tempo de execução L13: 0.000018s
+Tempo de execução L14: 0.000016s
+Tempo de execução L15: 0.000018s
+Tempo de execução L16: 0.000015s
+Tempo de execução L17: 0.000016s
+Tempo de execução L18: 0.000011s
+Tempo de execução L19: 0.000018s
+Tempo de execução L20: 0.000020s
+Tempo de execução L21: 0.000018s
+Tempo de execução L22: 0.000008s
+Tempo de execução L23: 0.000017s
+Tempo de execução L24: 0.000016s
+Tempo de execução L25: 0.000010s
+Tempo de execução L26: 0.000015s
+Tempo de execução L27: 0.000013s
+Tempo de execução L28: 0.000009s
+Tempo de execução L29: 0.000016s
+Tempo de execução L30: 0.000015s
+Tempo de execução L31: 0.000012s
+Tempo de execução L32: 0.000009s
+Tempo de execução L33: 0.000013s
+Tempo de execução L34: 0.000018s
+Tempo de execução L35: 0.000010s
+Tempo de execução L36: 0.000009s
+Tempo de execução L37: 0.000015s
+Tempo de execução L38: 0.000010s
+Tempo de execução total do processo P28: 0.869410s
+
+
+Processo P29
+Resultado: -38858944966.493263
+Tempo de execução L1: 0.569338s
+Tempo de execução L2: 0.120133s
+Tempo de execução L3: 0.104317s
+Tempo de execução L4: 0.017143s
+Tempo de execução L5: 0.017381s
+Tempo de execução L6: 0.000017s
+Tempo de execução L7: 0.017447s
+Tempo de execução L8: 0.000015s
+Tempo de execução L9: 0.017324s
+Tempo de execução L10: 0.000019s
+Tempo de execução L11: 0.000011s
+Tempo de execução L12: 0.000012s
+Tempo de execução L13: 0.000011s
+Tempo de execução L14: 0.000018s
+Tempo de execução L15: 0.000013s
+Tempo de execução L16: 0.000012s
+Tempo de execução L17: 0.000014s
+Tempo de execução L18: 0.000012s
+Tempo de execução L19: 0.000017s
+Tempo de execução L20: 0.000017s
+Tempo de execução total do processo P29: 0.863270s
+
+
+Processo P30
+Resultado: -87517245814.553925
+Tempo de execução L1: 0.259727s
+Tempo de execução L2: 0.309548s
+Tempo de execução L3: 0.206801s
+Tempo de execução L4: 0.017266s
+Tempo de execução L5: 0.000012s
+Tempo de execução L6: 0.035605s
+Tempo de execução L7: 0.000019s
+Tempo de execução L8: 0.000010s
+Tempo de execução L9: 0.000017s
+Tempo de execução L10: 0.034503s
+Tempo de execução L11: 0.000021s
+Tempo de execução L12: 0.000017s
+Tempo de execução L13: 0.000016s
+Tempo de execução L14: 0.000014s
+Tempo de execução L15: 0.000018s
+Tempo de execução L16: 0.000010s
+Tempo de execução L17: 0.000011s
+Tempo de execução L18: 0.000013s
+Tempo de execução L19: 0.000012s
+Tempo de execução L20: 0.000018s
+Tempo de execução L21: 0.000009s
+Tempo de execução L22: 0.000018s
+Tempo de execução L23: 0.000011s
+Tempo de execução L24: 0.000014s
+Tempo de execução L25: 0.000010s
+Tempo de execução L26: 0.000009s
+Tempo de execução L27: 0.000018s
+Tempo de execução L28: 0.000011s
+Tempo de execução L29: 0.000009s
+Tempo de execução L30: 0.000014s
+Tempo de execução L31: 0.000014s
+Tempo de execução L32: 0.000015s
+Tempo de execução L33: 0.000014s
+Tempo de execução L34: 0.000018s
+Tempo de execução L35: 0.000010s
+Tempo de execução L36: 0.000015s
+Tempo de execução L37: 0.000018s
+Tempo de execução L38: 0.000015s
+Tempo de execução L39: 0.000014s
+Tempo de execução L40: 0.000014s
+Tempo de execução total do processo P30: 0.863930s
+
+
+Processo P31
+Resultado: -53060020426.894012
+Tempo de execução L1: 0.415725s
+Tempo de execução L2: 0.261545s
+Tempo de execução L3: 0.103691s
+Tempo de execução L4: 0.017411s
+Tempo de execução L5: 0.017300s
+Tempo de execução L6: 0.017271s
+Tempo de execução L7: 0.017231s
+Tempo de execução L8: 0.017313s
+Tempo de execução L9: 0.000019s
+Tempo de execução L10: 0.000012s
+Tempo de execução L11: 0.000011s
+Tempo de execução L12: 0.000009s
+Tempo de execução L13: 0.000009s
+Tempo de execução L14: 0.000011s
+Tempo de execução L15: 0.000014s
+Tempo de execução L16: 0.000013s
+Tempo de execução L17: 0.000018s
+Tempo de execução L18: 0.000008s
+Tempo de execução L19: 0.000016s
+Tempo de execução L20: 0.000010s
+Tempo de execução L21: 0.000015s
+Tempo de execução L22: 0.000018s
+Tempo de execução L23: 0.000018s
+Tempo de execução L24: 0.000014s
+Tempo de execução L25: 0.000015s
+Tempo de execução L26: 0.000009s
+Tempo de execução L27: 0.000010s
+Tempo de execução L28: 0.000010s
+Tempo de execução total do processo P31: 0.867741s
+
+
+Processo P32
+Resultado: -64658656216.136185
+Tempo de execução L1: 0.558724s
+Tempo de execução L2: 0.103996s
+Tempo de execução L3: 0.103959s
+Tempo de execução L4: 0.017354s
+Tempo de execução L5: 0.034997s
+Tempo de execução L6: 0.000015s
+Tempo de execução L7: 0.017277s
+Tempo de execução L8: 0.000015s
+Tempo de execução L9: 0.017544s
+Tempo de execução L10: 0.000019s
+Tempo de execução L11: 0.000015s
+Tempo de execução L12: 0.000018s
+Tempo de execução L13: 0.000010s
+Tempo de execução L14: 0.000011s
+Tempo de execução L15: 0.000009s
+Tempo de execução L16: 0.017198s
+Tempo de execução L17: 0.000014s
+Tempo de execução L18: 0.000009s
+Tempo de execução L19: 0.000010s
+Tempo de execução L20: 0.000011s
+Tempo de execução L21: 0.000012s
+Tempo de execução L22: 0.000018s
+Tempo de execução L23: 0.000018s
+Tempo de execução L24: 0.000014s
+Tempo de execução L25: 0.000009s
+Tempo de execução L26: 0.000018s
+Tempo de execução L27: 0.000017s
+Tempo de execução L28: 0.000016s
+Tempo de execução L29: 0.000014s
+Tempo de execução L30: 0.000012s
+Tempo de execução L31: 0.000013s
+Tempo de execução L32: 0.000012s
+Tempo de execução total do processo P32: 0.871379s
+
+
+Processo P33
+Resultado: -97312823440.768036
+Tempo de execução L1: 0.226655s
+Tempo de execução L2: 0.382225s
+Tempo de execução L3: 0.121947s
+Tempo de execução L4: 0.000014s
+Tempo de execução L5: 0.104215s
+Tempo de execução L6: 0.034827s
+Tempo de execução L7: 0.000019s
+Tempo de execução L8: 0.000019s
+Tempo de execução L9: 0.000017s
+Tempo de execução L10: 0.000017s
+Tempo de execução L11: 0.000009s
+Tempo de execução L12: 0.000017s
+Tempo de execução L13: 0.000012s
+Tempo de execução L14: 0.000018s
+Tempo de execução L15: 0.000013s
+Tempo de execução L16: 0.000010s
+Tempo de execução L17: 0.000014s
+Tempo de execução L18: 0.000008s
+Tempo de execução L19: 0.000010s
+Tempo de execução L20: 0.000017s
+Tempo de execução L21: 0.000010s
+Tempo de execução L22: 0.000010s
+Tempo de execução L23: 0.000016s
+Tempo de execução L24: 0.000018s
+Tempo de execução L25: 0.000011s
+Tempo de execução L26: 0.000015s
+Tempo de execução L27: 0.000010s
+Tempo de execução L28: 0.000016s
+Tempo de execução L29: 0.000011s
+Tempo de execução L30: 0.000011s
+Tempo de execução L31: 0.000017s
+Tempo de execução L32: 0.000011s
+Tempo de execução L33: 0.000019s
+Tempo de execução L34: 0.000016s
+Tempo de execução L35: 0.000011s
+Tempo de execução L36: 0.000009s
+Tempo de execução L37: 0.000012s
+Tempo de execução L38: 0.000021s
+Tempo de execução L39: 0.000010s
+Tempo de execução L40: 0.000015s
+Tempo de execução L41: 0.000009s
+Tempo de execução L42: 0.000011s
+Tempo de execução L43: 0.000019s
+Tempo de execução L44: 0.000017s
+Tempo de execução L45: 0.000017s
+Tempo de execução L46: 0.000009s
+Tempo de execução L47: 0.000017s
+Tempo de execução total do processo P33: 0.870445s
+
+
+Processo P34
+Resultado: -98583669765.134598
+Tempo de execução L1: 0.348539s
+Tempo de execução L2: 0.190633s
+Tempo de execução L3: 0.189883s
+Tempo de execução L4: 0.069502s
+Tempo de execução L5: 0.068960s
+Tempo de execução L6: 0.000014s
+Tempo de execução L7: 0.000010s
+Tempo de execução L8: 0.000011s
+Tempo de execução L9: 0.000015s
+Tempo de execução L10: 0.000013s
+Tempo de execução L11: 0.000017s
+Tempo de execução L12: 0.000011s
+Tempo de execução L13: 0.000008s
+Tempo de execução L14: 0.000012s
+Tempo de execução L15: 0.000015s
+Tempo de execução L16: 0.000019s
+Tempo de execução L17: 0.000022s
+Tempo de execução L18: 0.000018s
+Tempo de execução L19: 0.000018s
+Tempo de execução L20: 0.000012s
+Tempo de execução L21: 0.000014s
+Tempo de execução L22: 0.000018s
+Tempo de execução L23: 0.000009s
+Tempo de execução L24: 0.000011s
+Tempo de execução L25: 0.000017s
+Tempo de execução L26: 0.000015s
+Tempo de execução L27: 0.000014s
+Tempo de execução L28: 0.000017s
+Tempo de execução L29: 0.000015s
+Tempo de execução L30: 0.000008s
+Tempo de execução L31: 0.000012s
+Tempo de execução L32: 0.000015s
+Tempo de execução L33: 0.000016s
+Tempo de execução L34: 0.000017s
+Tempo de execução L35: 0.000010s
+Tempo de execução L36: 0.000011s
+Tempo de execução L37: 0.000011s
+Tempo de execução L38: 0.000010s
+Tempo de execução L39: 0.000014s
+Tempo de execução L40: 0.000012s
+Tempo de execução L41: 0.000017s
+Tempo de execução L42: 0.000017s
+Tempo de execução L43: 0.000009s
+Tempo de execução L44: 0.000014s
+Tempo de execução L45: 0.000018s
+Tempo de execução L46: 0.000010s
+Tempo de execução L47: 0.000009s
+Tempo de execução L48: 0.000017s
+Tempo de execução total do processo P34: 0.868112s
+
+
+Processo P35
+Resultado: -57189421388.124619
+Tempo de execução L1: 0.451822s
+Tempo de execução L2: 0.139210s
+Tempo de execução L3: 0.207122s
+Tempo de execução L4: 0.034797s
+Tempo de execução L5: 0.034645s
+Tempo de execução L6: 0.000021s
+Tempo de execução L7: 0.000013s
+Tempo de execução L8: 0.000011s
+Tempo de execução L9: 0.000012s
+Tempo de execução L10: 0.000010s
+Tempo de execução L11: 0.000010s
+Tempo de execução L12: 0.000010s
+Tempo de execução L13: 0.000014s
+Tempo de execução L14: 0.000011s
+Tempo de execução L15: 0.000009s
+Tempo de execução L16: 0.000016s
+Tempo de execução L17: 0.000009s
+Tempo de execução L18: 0.000010s
+Tempo de execução L19: 0.000016s
+Tempo de execução L20: 0.000010s
+Tempo de execução L21: 0.000010s
+Tempo de execução L22: 0.000014s
+Tempo de execução L23: 0.000014s
+Tempo de execução L24: 0.000016s
+Tempo de execução L25: 0.000012s
+Tempo de execução L26: 0.000018s
+Tempo de execução L27: 0.000012s
+Tempo de execução L28: 0.000015s
+Tempo de execução L29: 0.000016s
+Tempo de execução L30: 0.000016s
+Tempo de execução total do processo P35: 0.867921s
+
+
+Processo P36
+Resultado: -38258081526.654701
+Tempo de execução L1: 0.522274s
+Tempo de execução L2: 0.161659s
+Tempo de execução L3: 0.103963s
+Tempo de execução L4: 0.069359s
+Tempo de execução L5: 0.017288s
+Tempo de execução L6: 0.000015s
+Tempo de execução L7: 0.000010s
+Tempo de execução L8: 0.000017s
+Tempo de execução L9: 0.000010s
+Tempo de execução L10: 0.000016s
+Tempo de execução L11: 0.000010s
+Tempo de execução L12: 0.000009s
+Tempo de execução L13: 0.000018s
+Tempo de execução L14: 0.000013s
+Tempo de execução L15: 0.000015s
+Tempo de execução L16: 0.000014s
+Tempo de execução L17: 0.000010s
+Tempo de execução L18: 0.000016s
+Tempo de execução L19: 0.000019s
+Tempo de execução L20: 0.000015s
+Tempo de execução total do processo P36: 0.874749s
+
+
+Processo P37
+Resultado: -109445403246.429688
+Tempo de execução L1: 0.225387s
+Tempo de execução L2: 0.294023s
+Tempo de execução L3: 0.191673s
+Tempo de execução L4: 0.086754s
+Tempo de execução L5: 0.017289s
+Tempo de execução L6: 0.017325s
+Tempo de execução L7: 0.017317s
+Tempo de execução L8: 0.000023s
+Tempo de execução L9: 0.017386s
+Tempo de execução L10: 0.000015s
+Tempo de execução L11: 0.000013s
+Tempo de execução L12: 0.000018s
+Tempo de execução L13: 0.000014s
+Tempo de execução L14: 0.000016s
+Tempo de execução L15: 0.000018s
+Tempo de execução L16: 0.000010s
+Tempo de execução L17: 0.000017s
+Tempo de execução L18: 0.000016s
+Tempo de execução L19: 0.000019s
+Tempo de execução L20: 0.000014s
+Tempo de execução L21: 0.000008s
+Tempo de execução L22: 0.000012s
+Tempo de execução L23: 0.000015s
+Tempo de execução L24: 0.000010s
+Tempo de execução L25: 0.000008s
+Tempo de execução L26: 0.000015s
+Tempo de execução L27: 0.000010s
+Tempo de execução L28: 0.000017s
+Tempo de execução L29: 0.000009s
+Tempo de execução L30: 0.000015s
+Tempo de execução L31: 0.000015s
+Tempo de execução L32: 0.000017s
+Tempo de execução L33: 0.000013s
+Tempo de execução L34: 0.000012s
+Tempo de execução L35: 0.000014s
+Tempo de execução L36: 0.000017s
+Tempo de execução L37: 0.000015s
+Tempo de execução L38: 0.000016s
+Tempo de execução L39: 0.000017s
+Tempo de execução L40: 0.000017s
+Tempo de execução L41: 0.000012s
+Tempo de execução L42: 0.000012s
+Tempo de execução L43: 0.000018s
+Tempo de execução L44: 0.000019s
+Tempo de execução L45: 0.000012s
+Tempo de execução L46: 0.000010s
+Tempo de execução L47: 0.000012s
+Tempo de execução L48: 0.000012s
+Tempo de execução L49: 0.000012s
+Tempo de execução L50: 0.000025s
+Tempo de execução total do processo P37: 0.867761s
+
+
+Processo P38
+Resultado: -81052313168.877914
+Tempo de execução L1: 0.467633s
+Tempo de execução L2: 0.138746s
+Tempo de execução L3: 0.121197s
+Tempo de execução L4: 0.051883s
+Tempo de execução L5: 0.034522s
+Tempo de execução L6: 0.035028s
+Tempo de execução L7: 0.000023s
+Tempo de execução L8: 0.017338s
+Tempo de execução L9: 0.000014s
+Tempo de execução L10: 0.000012s
+Tempo de execução L11: 0.000017s
+Tempo de execução L12: 0.000010s
+Tempo de execução L13: 0.000014s
+Tempo de execução L14: 0.000018s
+Tempo de execução L15: 0.000017s
+Tempo de execução L16: 0.000018s
+Tempo de execução L17: 0.000015s
+Tempo de execução L18: 0.000009s
+Tempo de execução L19: 0.000011s
+Tempo de execução L20: 0.000015s
+Tempo de execução L21: 0.000016s
+Tempo de execução L22: 0.000010s
+Tempo de execução L23: 0.000012s
+Tempo de execução L24: 0.000008s
+Tempo de execução L25: 0.000011s
+Tempo de execução L26: 0.000008s
+Tempo de execução L27: 0.000012s
+Tempo de execução L28: 0.000017s
+Tempo de execução L29: 0.000018s
+Tempo de execução L30: 0.000018s
+Tempo de execução L31: 0.000017s
+Tempo de execução L32: 0.000009s
+Tempo de execução L33: 0.000010s
+Tempo de execução L34: 0.000012s
+Tempo de execução L35: 0.000010s
+Tempo de execução L36: 0.000017s
+Tempo de execução L37: 0.000018s
+Tempo de execução L38: 0.000017s
+Tempo de execução L39: 0.000012s
+Tempo de execução L40: 0.000010s
+Tempo de execução total do processo P38: 0.866800s
+
+
+Processo P39
+Resultado: -53390392929.477997
+Tempo de execução L1: 0.382149s
+Tempo de execução L2: 0.241855s
+Tempo de execução L3: 0.138166s
+Tempo de execução L4: 0.051930s
+Tempo de execução L5: 0.017318s
+Tempo de execução L6: 0.000022s
+Tempo de execução L7: 0.017160s
+Tempo de execução L8: 0.000011s
+Tempo de execução L9: 0.000008s
+Tempo de execução L10: 0.017297s
+Tempo de execução L11: 0.000020s
+Tempo de execução L12: 0.000013s
+Tempo de execução L13: 0.000011s
+Tempo de execução L14: 0.000010s
+Tempo de execução L15: 0.000018s
+Tempo de execução L16: 0.000012s
+Tempo de execução L17: 0.000008s
+Tempo de execução L18: 0.000014s
+Tempo de execução L19: 0.000011s
+Tempo de execução L20: 0.000016s
+Tempo de execução L21: 0.000011s
+Tempo de execução L22: 0.000011s
+Tempo de execução L23: 0.000019s
+Tempo de execução L24: 0.000016s
+Tempo de execução L25: 0.000015s
+Tempo de execução L26: 0.000015s
+Tempo de execução L27: 0.000013s
+Tempo de execução L28: 0.000015s
+Tempo de execução L29: 0.000014s
+Tempo de execução total do processo P39: 0.866177s
+
+
+Processo P40
+Resultado: -49855704270.676102
+Tempo de execução L1: 0.505906s
+Tempo de execução L2: 0.104394s
+Tempo de execução L3: 0.174046s
+Tempo de execução L4: 0.052081s
+Tempo de execução L5: 0.017192s
+Tempo de execução L6: 0.000015s
+Tempo de execução L7: 0.000012s
+Tempo de execução L8: 0.000011s
+Tempo de execução L9: 0.000018s
+Tempo de execução L10: 0.017257s
+Tempo de execução L11: 0.000014s
+Tempo de execução L12: 0.000013s
+Tempo de execução L13: 0.000014s
+Tempo de execução L14: 0.000011s
+Tempo de execução L15: 0.000013s
+Tempo de execução L16: 0.000018s
+Tempo de execução L17: 0.000018s
+Tempo de execução L18: 0.000015s
+Tempo de execução L19: 0.000012s
+Tempo de execução L20: 0.000016s
+Tempo de execução L21: 0.000018s
+Tempo de execução L22: 0.000012s
+Tempo de execução L23: 0.000011s
+Tempo de execução L24: 0.000018s
+Tempo de execução total do processo P40: 0.871137s
+
+
+Processo P41
+Resultado: -79851008187.845078
+Tempo de execução L1: 0.487499s
+Tempo de execução L2: 0.121217s
+Tempo de execução L3: 0.138220s
+Tempo de execução L4: 0.069201s
+Tempo de execução L5: 0.034567s
+Tempo de execução L6: 0.017500s
+Tempo de execução L7: 0.000014s
+Tempo de execução L8: 0.000018s
+Tempo de execução L9: 0.000014s
+Tempo de execução L10: 0.000019s
+Tempo de execução L11: 0.000015s
+Tempo de execução L12: 0.000018s
+Tempo de execução L13: 0.000012s
+Tempo de execução L14: 0.000015s
+Tempo de execução L15: 0.000010s
+Tempo de execução L16: 0.000010s
+Tempo de execução L17: 0.000013s
+Tempo de execução L18: 0.000018s
+Tempo de execução L19: 0.000009s
+Tempo de execução L20: 0.000019s
+Tempo de execução L21: 0.000011s
+Tempo de execução L22: 0.000019s
+Tempo de execução L23: 0.000008s
+Tempo de execução L24: 0.000010s
+Tempo de execução L25: 0.000016s
+Tempo de execução L26: 0.000012s
+Tempo de execução L27: 0.000012s
+Tempo de execução L28: 0.000012s
+Tempo de execução L29: 0.000009s
+Tempo de execução L30: 0.000011s
+Tempo de execução L31: 0.000016s
+Tempo de execução L32: 0.000012s
+Tempo de execução L33: 0.000014s
+Tempo de execução L34: 0.000013s
+Tempo de execução L35: 0.000017s
+Tempo de execução L36: 0.000018s
+Tempo de execução L37: 0.000016s
+Tempo de execução L38: 0.000011s
+Tempo de execução L39: 0.000020s
+Tempo de execução L40: 0.000009s
+Tempo de execução total do processo P41: 0.868671s
+
+
+Processo P42
+Resultado: -84721690177.114471
+Tempo de execução L1: 0.590103s
+Tempo de execução L2: 0.103935s
+Tempo de execução L3: 0.034459s
+Tempo de execução L4: 0.103548s
+Tempo de execução L5: 0.017253s
+Tempo de execução L6: 0.000016s
+Tempo de execução L7: 0.017173s
+Tempo de execução L8: 0.000014s
+Tempo de execução L9: 0.000014s
+Tempo de execução L10: 0.000009s
+Tempo de execução L11: 0.000013s
+Tempo de execução L12: 0.000017s
+Tempo de execução L13: 0.000016s
+Tempo de execução L14: 0.000009s
+Tempo de execução L15: 0.000010s
+Tempo de execução L16: 0.000017s
+Tempo de execução L17: 0.000016s
+Tempo de execução L18: 0.000011s
+Tempo de execução L19: 0.000017s
+Tempo de execução L20: 0.000017s
+Tempo de execução L21: 0.000015s
+Tempo de execução L22: 0.000016s
+Tempo de execução L23: 0.000012s
+Tempo de execução L24: 0.000015s
+Tempo de execução L25: 0.000011s
+Tempo de execução L26: 0.000010s
+Tempo de execução L27: 0.000015s
+Tempo de execução L28: 0.000012s
+Tempo de execução L29: 0.000009s
+Tempo de execução L30: 0.000011s
+Tempo de execução L31: 0.000019s
+Tempo de execução L32: 0.000016s
+Tempo de execução L33: 0.000010s
+Tempo de execução L34: 0.000019s
+Tempo de execução L35: 0.000017s
+Tempo de execução L36: 0.000011s
+Tempo de execução L37: 0.000011s
+Tempo de execução L38: 0.000010s
+Tempo de execução L39: 0.000009s
+Tempo de execução L40: 0.000009s
+Tempo de execução L41: 0.000016s
+Tempo de execução L42: 0.000016s
+Tempo de execução L43: 0.000012s
+Tempo de execução L44: 0.000011s
+Tempo de execução total do processo P42: 0.866977s
+
+
+Processo P43
+Resultado: -57922339377.044296
+Tempo de execução L1: 0.609535s
+Tempo de execução L2: 0.139150s
+Tempo de execução L3: 0.052223s
+Tempo de execução L4: 0.017272s
+Tempo de execução L5: 0.017319s
+Tempo de execução L6: 0.034411s
+Tempo de execução L7: 0.000022s
+Tempo de execução L8: 0.000014s
+Tempo de execução L9: 0.000011s
+Tempo de execução L10: 0.000013s
+Tempo de execução L11: 0.000012s
+Tempo de execução L12: 0.000017s
+Tempo de execução L13: 0.000018s
+Tempo de execução L14: 0.000017s
+Tempo de execução L15: 0.000015s
+Tempo de execução L16: 0.000018s
+Tempo de execução L17: 0.000013s
+Tempo de execução L18: 0.000011s
+Tempo de execução L19: 0.000012s
+Tempo de execução L20: 0.000011s
+Tempo de execução L21: 0.000013s
+Tempo de execução L22: 0.000012s
+Tempo de execução L23: 0.000015s
+Tempo de execução L24: 0.000018s
+Tempo de execução L25: 0.000016s
+Tempo de execução L26: 0.000012s
+Tempo de execução L27: 0.000013s
+Tempo de execução total do processo P43: 0.870213s
+
+
+Processo P44
+Resultado: -42860413588.428741
+Tempo de execução L1: 0.522141s
+Tempo de execução L2: 0.138131s
+Tempo de execução L3: 0.104306s
+Tempo de execução L4: 0.051667s
+Tempo de execução L5: 0.051941s
+Tempo de execução L6: 0.000023s
+Tempo de execução L7: 0.000013s
+Tempo de execução L8: 0.000014s
+Tempo de execução L9: 0.000031s
+Tempo de execução L10: 0.000009s
+Tempo de execução L11: 0.000011s
+Tempo de execução L12: 0.000016s
+Tempo de execução L13: 0.000019s
+Tempo de execução L14: 0.000011s
+Tempo de execução L15: 0.000008s
+Tempo de execução L16: 0.000019s
+Tempo de execução L17: 0.000017s
+Tempo de execução L18: 0.000017s
+Tempo de execução L19: 0.000011s
+Tempo de execução L20: 0.000018s
+Tempo de execução total do processo P44: 0.868422s
+
+
+Processo P45
+Resultado: -70189595286.555130
+Tempo de execução L1: 0.486420s
+Tempo de execução L2: 0.259769s
+Tempo de execução L3: 0.017519s
+Tempo de execução L4: 0.051778s
+Tempo de execução L5: 0.017341s
+Tempo de execução L6: 0.017383s
+Tempo de execução L7: 0.017350s
+Tempo de execução L8: 0.000014s
+Tempo de execução L9: 0.000013s
+Tempo de execução L10: 0.000013s
+Tempo de execução L11: 0.000009s
+Tempo de execução L12: 0.000017s
+Tempo de execução L13: 0.000011s
+Tempo de execução L14: 0.000018s
+Tempo de execução L15: 0.000015s
+Tempo de execução L16: 0.000010s
+Tempo de execução L17: 0.000011s
+Tempo de execução L18: 0.000017s
+Tempo de execução L19: 0.000016s
+Tempo de execução L20: 0.000011s
+Tempo de execução L21: 0.000009s
+Tempo de execução L22: 0.000012s
+Tempo de execução L23: 0.000015s
+Tempo de execução L24: 0.000011s
+Tempo de execução L25: 0.000010s
+Tempo de execução L26: 0.000013s
+Tempo de execução L27: 0.000019s
+Tempo de execução L28: 0.000017s
+Tempo de execução L29: 0.000011s
+Tempo de execução L30: 0.000008s
+Tempo de execução L31: 0.000020s
+Tempo de execução L32: 0.000011s
+Tempo de execução L33: 0.000015s
+Tempo de execução L34: 0.000008s
+Tempo de execução L35: 0.000009s
+Tempo de execução L36: 0.000018s
+Tempo de execução total do processo P45: 0.867942s
+
+
+Processo P46
+Resultado: -44250865181.825935
+Tempo de execução L1: 0.504334s
+Tempo de execução L2: 0.120966s
+Tempo de execução L3: 0.103847s
+Tempo de execução L4: 0.051988s
+Tempo de execução L5: 0.052367s
+Tempo de execução L6: 0.017618s
+Tempo de execução L7: 0.017514s
+Tempo de execução L8: 0.000022s
+Tempo de execução L9: 0.000009s
+Tempo de execução L10: 0.000012s
+Tempo de execução L11: 0.000017s
+Tempo de execução L12: 0.000012s
+Tempo de execução L13: 0.000009s
+Tempo de execução L14: 0.000017s
+Tempo de execução L15: 0.000015s
+Tempo de execução L16: 0.000016s
+Tempo de execução L17: 0.000014s
+Tempo de execução L18: 0.000012s
+Tempo de execução L19: 0.000013s
+Tempo de execução L20: 0.000010s
+Tempo de execução L21: 0.000018s
+Tempo de execução L22: 0.000010s
+Tempo de execução L23: 0.000010s
+Tempo de execução L24: 0.000009s
+Tempo de execução L25: 0.000008s
+Tempo de execução L26: 0.000009s
+Tempo de execução total do processo P46: 0.868876s
+
+
+Processo P47
+Resultado: -109644839171.143265
+Tempo de execução L1: 0.615371s
+Tempo de execução L2: 0.124776s
+Tempo de execução L3: 0.054191s
+Tempo de execução L4: 0.036326s
+Tempo de execução L5: 0.036417s
+Tempo de execução L6: 0.018707s
+Tempo de execução L7: 0.000016s
+Tempo de execução L8: 0.000017s
+Tempo de execução L9: 0.000016s
+Tempo de execução L10: 0.000017s
+Tempo de execução L11: 0.000011s
+Tempo de execução L12: 0.000010s
+Tempo de execução L13: 0.000019s
+Tempo de execução L14: 0.000015s
+Tempo de execução L15: 0.000009s
+Tempo de execução L16: 0.000014s
+Tempo de execução L17: 0.000017s
+Tempo de execução L18: 0.000015s
+Tempo de execução L19: 0.000012s
+Tempo de execução L20: 0.000012s
+Tempo de execução L21: 0.000017s
+Tempo de execução L22: 0.000015s
+Tempo de execução L23: 0.000009s
+Tempo de execução L24: 0.000014s
+Tempo de execução L25: 0.000012s
+Tempo de execução L26: 0.000011s
+Tempo de execução L27: 0.000008s
+Tempo de execução L28: 0.000017s
+Tempo de execução L29: 0.000016s
+Tempo de execução L30: 0.000018s
+Tempo de execução L31: 0.000014s
+Tempo de execução L32: 0.000015s
+Tempo de execução L33: 0.000013s
+Tempo de execução L34: 0.000016s
+Tempo de execução L35: 0.000017s
+Tempo de execução L36: 0.000014s
+Tempo de execução L37: 0.000015s
+Tempo de execução L38: 0.000010s
+Tempo de execução L39: 0.000010s
+Tempo de execução L40: 0.000016s
+Tempo de execução L41: 0.000008s
+Tempo de execução L42: 0.000010s
+Tempo de execução L43: 0.000017s
+Tempo de execução L44: 0.000018s
+Tempo de execução L45: 0.000018s
+Tempo de execução L46: 0.000011s
+Tempo de execução L47: 0.000012s
+Tempo de execução L48: 0.000019s
+Tempo de execução L49: 0.000017s
+Tempo de execução L50: 0.000016s
+Tempo de execução total do processo P47: 0.886411s
+
+
+Processo P48
+Resultado: -48654895376.545166
+Tempo de execução L1: 0.546890s
+Tempo de execução L2: 0.246690s
+Tempo de execução L3: 0.052917s
+Tempo de execução L4: 0.017530s
+Tempo de execução L5: 0.000021s
+Tempo de execução L6: 0.000018s
+Tempo de execução L7: 0.017141s
+Tempo de execução L8: 0.000025s
+Tempo de execução L9: 0.000011s
+Tempo de execução L10: 0.000018s
+Tempo de execução L11: 0.000019s
+Tempo de execução L12: 0.000018s
+Tempo de execução L13: 0.000010s
+Tempo de execução L14: 0.000027s
+Tempo de execução L15: 0.000016s
+Tempo de execução L16: 0.000017s
+Tempo de execução L17: 0.000016s
+Tempo de execução L18: 0.000014s
+Tempo de execução L19: 0.000012s
+Tempo de execução L20: 0.000015s
+Tempo de execução L21: 0.000019s
+Tempo de execução L22: 0.000017s
+Tempo de execução total do processo P48: 0.881459s
+
+
+Processo P49
+Resultado: -98913861285.804657
+Tempo de execução L1: 0.316501s
+Tempo de execução L2: 0.280188s
+Tempo de execução L3: 0.190198s
+Tempo de execução L4: 0.086159s
+Tempo de execução L5: 0.000016s
+Tempo de execução L6: 0.000010s
+Tempo de execução L7: 0.000008s
+Tempo de execução L8: 0.000010s
+Tempo de execução L9: 0.000011s
+Tempo de execução L10: 0.000015s
+Tempo de execução L11: 0.000018s
+Tempo de execução L12: 0.000017s
+Tempo de execução L13: 0.000015s
+Tempo de execução L14: 0.000019s
+Tempo de execução L15: 0.000011s
+Tempo de execução L16: 0.000012s
+Tempo de execução L17: 0.000009s
+Tempo de execução L18: 0.000011s
+Tempo de execução L19: 0.000018s
+Tempo de execução L20: 0.000014s
+Tempo de execução L21: 0.000015s
+Tempo de execução L22: 0.000018s
+Tempo de execução L23: 0.000011s
+Tempo de execução L24: 0.000015s
+Tempo de execução L25: 0.000015s
+Tempo de execução L26: 0.000018s
+Tempo de execução L27: 0.000008s
+Tempo de execução L28: 0.000010s
+Tempo de execução L29: 0.000015s
+Tempo de execução L30: 0.000015s
+Tempo de execução L31: 0.000012s
+Tempo de execução L32: 0.000012s
+Tempo de execução L33: 0.000011s
+Tempo de execução L34: 0.000013s
+Tempo de execução L35: 0.000015s
+Tempo de execução L36: 0.000014s
+Tempo de execução L37: 0.000019s
+Tempo de execução L38: 0.000019s
+Tempo de execução L39: 0.000020s
+Tempo de execução L40: 0.000012s
+Tempo de execução L41: 0.000014s
+Tempo de execução L42: 0.000019s
+Tempo de execução L43: 0.000010s
+Tempo de execução L44: 0.000009s
+Tempo de execução L45: 0.000019s
+Tempo de execução L46: 0.000017s
+Tempo de execução total do processo P49: 0.873634s
+
+
+Processo P50
+Resultado: -48658031826.931976
+Tempo de execução L1: 0.554007s
+Tempo de execução L2: 0.139151s
+Tempo de execução L3: 0.034407s
+Tempo de execução L4: 0.103491s
+Tempo de execução L5: 0.017383s
+Tempo de execução L6: 0.017330s
+Tempo de execução L7: 0.000023s
+Tempo de execução L8: 0.000014s
+Tempo de execução L9: 0.000011s
+Tempo de execução L10: 0.000017s
+Tempo de execução L11: 0.000012s
+Tempo de execução L12: 0.000008s
+Tempo de execução L13: 0.000016s
+Tempo de execução L14: 0.000015s
+Tempo de execução L15: 0.000018s
+Tempo de execução L16: 0.000019s
+Tempo de execução L17: 0.000012s
+Tempo de execução L18: 0.000018s
+Tempo de execução L19: 0.000017s
+Tempo de execução L20: 0.000010s
+Tempo de execução L21: 0.000015s
+Tempo de execução L22: 0.000008s
+Tempo de execução L23: 0.000013s
+Tempo de execução L24: 0.000012s
+Tempo de execução L25: 0.000012s
+Tempo de execução total do processo P50: 0.866037s
+
+
+Tempo de execução total dos processos: 43.769736s
